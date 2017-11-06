@@ -1,0 +1,7 @@
+% !Rnw root = ../smil.Rnw
+<<setupclit, cache=FALSE, echo=FALSE, include=FALSE, results='asis'>>=
+opts_knit$set(self.contained=FALSE)
+@
+
+\chapter{Graphemic words and new paradigms: cliticised articles}
+\label{sec:graphemicwordsandnewparadigms}

@@ -1,0 +1,78 @@
+\documentclass[
+  nonewtxmath
+  , output=inprep
+  , nonflat
+  , modfonts
+  , colorlinks
+  , showindex
+  , draftmode
+]{langsci/langscibook}
+  
+\input{localmetadata.tex}
+\input{localpackages.tex}
+\input{localhyphenation.tex}
+\input{localcommands.tex} 
+
+\addbibresource{localbibliography.bib}
+
+\begin{document}     
+
+\maketitle                
+\frontmatter
+
+\currentpdfbookmark{Contents}{name} 
+\tableofcontents
+\include{chapters/preface}
+\include{chapters/acknowledgments}
+\include{chapters/abbreviations} 
+\mainmatter  
+
+<< setup, cache=FALSE, echo=FALSE, include=FALSE, results='asis'>>=
+opts_knit$set(self.contained=FALSE)
+
+opts_chunk$set(cache.path='cache/',
+               fig.path='figures/',
+               fig.pos='H', message=FALSE,
+               cache=TRUE, warning=FALSE,
+               fig.align='center', comment ="",
+	       background='#F7F7F7',
+	       tidy=FALSE,
+               formatR.arrow = TRUE)
+
+
+render_listings()
+
+@
+
+\part{Framework}
+
+<<child="chapters/introduction.Rnw">>=
+@
+
+<<child="chapters/statistics.Rnw">>=
+@
+
+\part{Case studies}
+
+<<child="chapters/clitics.Rnw">>=
+@
+
+<<child="chapters/measurenps.Rnw">>=
+@
+
+<<child="chapters/adjectives.Rnw">>=
+@
+
+<<child="chapters/compounds.Rnw">>=
+@
+
+<<child="chapters/weaknouns.Rnw">>=
+@
+
+<<child="chapters/weil.Rnw">>=
+@
+
+% \input{localseealso.tex} 
+\input{backmatter.tex} 
+\end{document} 
+

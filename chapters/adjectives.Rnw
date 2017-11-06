@@ -1,0 +1,7 @@
+% !Rnw root = ../smil.Rnw
+<<setupadj, cache=FALSE, echo=FALSE, include=FALSE, results='asis'>>=
+opts_knit$set(self.contained=FALSE)
+@
+
+\chapter{Probable structures: sequences of oblique attributive adjectives}
+\label{sec:probablestructures}

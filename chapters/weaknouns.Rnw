@@ -1,0 +1,7 @@
+% !Rnw root = ../smil.Rnw
+<<setupweak, cache=FALSE, echo=FALSE, include=FALSE, results='asis'>>=
+opts_knit$set(self.contained=FALSE)
+@
+
+\chapter{Prototypes and paradigms: the strength of weak nouns}
+\label{sec:prototypesandparadigms}

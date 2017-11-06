@@ -1,0 +1,7 @@
+% !Rnw root = ../smil.Rnw
+<<setupweil, cache=FALSE, echo=FALSE, include=FALSE, results='asis'>>=
+opts_knit$set(self.contained=FALSE)
+@
+
+\chapter{Protoypical syntax and punctuation: (non-)embedded V2 clauses}
+\label{sec:prototypicalsyntaxandpunctuation}

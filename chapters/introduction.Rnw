@@ -1,0 +1,7 @@
+% !Rnw root = ../smil.Rnw
+<<setupintro, cache=FALSE, echo=FALSE, include=FALSE, results='asis'>>=
+opts_knit$set(self.contained=FALSE)
+@
+
+\chapter{From cases of doubt to probabilistic grammar}
+\label{sec:fromcasesofdoubttoprobabilisticgrammar}
