@@ -3,5 +3,878 @@
 opts_knit$set(self.contained=FALSE)
 @
 
-\chapter{Graphemic words and new paradigms: cliticised articles}
+\chapter{Graphemic words and new paradigms: the cliticised indefinite article}
 \label{sec:graphemicwordsandnewparadigms}
+
+\tblsframebox{lsLightGray}{}{This chapter is based on \textcite{SchaeferSayatz2014}.
+It was translated from German by Elizabeth Pankratz.}
+
+\section{Paradigms and analyses of the German indefinite article}
+\label{sec:1paradigmsAndAnalyses}
+
+In this chapter, we examine the formal and distributional factors that trigger the writing of the cliticised forms of the German indefinite article (i.e. abbreviated forms like \textit{n} of full forms like \textit{ein}, `a/one'), as well as the exact morphophonological and graphematic realizations of these written forms. 
+In several linguistic corpus studies in a large web corpus of German, we show for the first time for the graphematics of German that very large corpora exist for the investigation of Gebrauchsschreibungen, and that graphematic hypotheses can be tested with inferential statistical methods with these corpora.
+
+In Section~\ref{sec:1paradigmsAndAnalyses}, we start by introducing the phenomenon (Section~\ref{subsec:11GermIndefArticle}), then we discuss the resulting paradigms of the abbreviated forms as well as their systematic and historical development (Section~\ref{subsec:12formInventory}).
+Section~\ref{subsec:13cliticsGraphematics} is dedicated to the status of the abbreviated form (for example, whether they constitute a grammatical word) and the integration of their written forms in German's graphematic system.
+In Section~\ref{subsec:14distributionalFactors} we summarize the distributional factors that are considered relevant for Klitisierungsschreibungen and finally, in Section~\ref{subsec:15researchQuestions} we put forward hypotheses that will be empirically tested in Section~\ref{sec:2corpusStudies} based on five corpus studies.
+In Section~\ref{sec:3conclusions}, we will discuss our results and relate them to our initial question about distributional conditions for the establishment of a new written paradigm of abbreviated forms.
+
+\subsection{The German indefinite article}
+\label{subsec:11GermIndefArticle}
+
+% Jedes Mal, nach jeder neuen Zitation, Biber neu laufen lassen?
+% Wie macht man Seitenzahlen? (In eckigen Klammern vor dem Artikelnamen)
+% Wie zitiert man mehrere Artikel hintereinander?
+
+The indefinite article has, in addition to its full forms, vernacular cliticised forms that can be considered the final stage in the reduction process from full forms, both in the spoken standard and in the written non-standard (\citealt[190]{Eisenberg2013b}; \citealt[19]{Nuebling1992}; \citealt[112]{Nuebling2005}). %bib entry wrong for this last one?
+The following examples show the expected clitic form in the nominative neuter (\ref{ex:0001}), in the accusative masculine (\ref{ex:0002}), and in the dative feminine (\ref{ex:0003}).\footnote{All examples come from the web corpus DECOW2012 (see Section \ref{subsec:21choiceOfCorpus}), where they can be identified based on their URLs. For this reason, the date of each instance is not given. The URLs for each example can be found in the appendix.}
+In (\ref{ex:002}) are examples for extended forms (\textit{nen} rather than \textit{n}) in the nominative neuter (\ref{ex:0004}) and nominative masculine (\ref{ex:0005}).
+
+\begin{exe}
+\ex\label{ex:001}
+	\begin{xlist}
+	\ex\label{ex:0001}\gll is doch nur n Spiel.\\
+	is PART only a game\\
+	\trans It's just a game.
+	\ex\label{ex:0002}\gll Claudia hat nen {Schäferhund ...}\\
+	Claudia has a {German shepherd}\\
+	\trans Claudia has a German shepherd ...
+	\ex\label{ex:0003}\gll Frag doch mal in ner Werkstatt nach, ob 125 Grad noch ok {sind ...}\\
+	Ask PART PART in a workshop VPART, if 125 degrees still OK are\\
+	\trans Ask in a workshop whether 125 degrees would still be OK ...
+	\end{xlist}
+\ex\label{ex:002}
+	\begin{xlist}
+	\ex\label{ex:0004}\gll Ansonsten ists nen schönes Spiel :)\\
+	Otherwise is-it a nice game\\
+	\trans Otherwise it's a nice game :)
+	\ex\label{ex:0005}\gll War mal nen guter Tip vom Sattler.\\
+	Was PART a good tip from Sattler\\
+	\trans That was a good tip from Sattler.
+	\end{xlist}	
+\end{exe}
+
+Several papers in recent years have focused on the question of whether a new paradigm of cliticised forms of the indefinite article is emerging. 
+These approaches examined on the one hand specific contexts of usage, such as standard vs. sub-standard \citep{Volmert1995,Schiering2002,Ziegler2011} and spoken vs. written language, for example, chat speak or press texts \citep{Tophinke2002,Burri2003,Vogel2006,Ziegler2012}, and on the other hand functional system expansion concerning \textit{son} (\textit{so} + \textit{n}, `such a') \citep{HoleKlumpp2000,LenerzLohnstein2005,Eroms2008,Heusinger2012}, paradigm Ausgleich concerning \textit{nen} \citep{Vogel2006}, as well as "form erosion" on the "path of grammaticalisation from the numeral \textit{eins} 'one' to the indefinite article" \citep[79]{Szczepaniak2009}.
+
+Factors affecting the graphematic establishment of these cliticised forms have been thus far disregarded or unsatisfactorily evaluated. 
+This is either because the data have come from corpora of spoken language, or because the chat corpora used are too small to be evaluated with inferential statistics. Established corpora of near-standard language are unlikely to contain this phenomenon.\footnote{
+	The only quantitative analysis of the abbreviated form \textit{nen} in newspaper texts from \citet{Ziegler2012} on the basis of several newspaper corpora from IDS \citep{KupietzKeibel2009} does not examine any further forms of the article, neither the full forms nor the other abbreviated ones. 
+	The "data were completely biased toward the explicit forms" \citep[301]{Ziegler2012}. 
+	She sees in the "domain of near-standard spoken language" a development toward the dominance of the abbreviated form over the full form (in the nominative with 78\% and in the accusative with a full 100\%). 
+	Ziegler does not provide robust quantitative data for written abbreviated forms in comparison to the full forms.}
+
+The primary goal of the current study is to quantitatively examine the formal and distributional influences on the writing of the cliticised forms of indefinite articles in relation to their full forms using the DECOW2012 web corpus, which contains 9.1 million tokens.\footnote{
+	For a description of the corpus, see Section \ref{subsec:21choiceOfCorpus}.}
+We are especially interested by the factors that secure the constituency of a "monosyllabic autonomic word" \citep[188]{Vogel2006} and consequently the "minimal extent" of a phonological and graphematic word \citep{Jacobs2005,Fuhrhop2008}.
+
+\subsection{Form inventory and its emergence}
+\label{subsec:12formInventory}
+
+In this section, we discuss the observed cliticised forms of indefinite articles (and the resulting paradigm) as well as theories about how this paradigm came to be. 
+The structurally possible cliticised forms of the indefinite article are shown in Table 1.\footnote{
+	A further abbreviated form of the accusative masculine article is \textit{ein}. Since this form behaves formally and paradigmatically differently than the abbreviated forms which begin with nasal consonants, we do not consider it in the current analysis.}
+
+\begin{table}
+	\centering
+	\begin{tabular}{llll}
+		\toprule
+		\textbf{} & \textbf{Feminine} & \textbf{Masculine} & \textbf{Neuter} \\
+		\midrule
+		Nominative & \textit{ne} & \textit{n / nen} & \textit{n / nen} \\
+		Accusative & \textit{ne} & \textit{n / nen} & \textit{n / nen} \\
+		Dative & \textit{ner} & \textit{nem} & \textit{nem} \\
+		Genitive & \textit{ner} & \textit{nes} & \textit{nes} \\
+		\bottomrule
+	\end{tabular}
+	\caption{Structurally possible cliticised forms of the German indefinite article}
+	\label{tab:0001}
+\end{table}
+
+The reduction of indefinite articles have been described as a multi-step process of sequential diminishing (cf. especially \citealt[46]{Dedenbach1987} and \citet[92]{Prinz1991} for standard German and \citealt{Schiering2002} for Ruhrdeutsch, the dialect spoken in the Ruhr region of Germany). 
+The result of this process are monosyllabic clitic forms. 
+Based on their relation to the original full forms, three sorts can be distinguished.
+
+\begin{enumerate}
+\item The monosyllabic form \textit{ein} [a͡ɛn] becomes [n] in a three-stage reduction process. 
+First, it is monophthongised to [an], followed by vowel reduction to schwa [ən] and finally through elision of the schwa to [n] (cf. \citealt[47]{Dedenbach1987}).\footnote{
+	IPA transcriptions are standardized here according to \citet{KrechEa2009} and thus may vary from the transcriptions provided by the cited authors.}
+\item The bisyllabic forms of the masculine and neuter pronouns in the dative case (\textit{einem} [a͡ɛnəm]) and the accusative masculine pronoun (\textit{einen} [a͡ɛnən]) go through a fourth reduction stage, where [nəm] and [nən] become [nm̩] and [nn̩], ending on a syllabic nasal. 
+\citet[48]{Dedenbach1987} considers the "final stage of the diminishment" to be a non-syllabic [m] or [n] after elision of the first nasal.
+\citet[93]{Prinz1991}, however, justifies his view of the reduced form as [n̩] and [nm̩] with the sonorant as the nucleus by saying that "clitics either have a schwa or a vocalised sonorant as nucleus".
+According to Prinz, the choice of which option applies is predictable: syllable-final sonorants in clitics always make up the nucleus; these forms are standardized.
+In all other cases, for example the feminine cliticised article \textit{ne} [nə], according to the derivation scheme \citet[92]{Prinz1991} proposes, schwa makes up the nucleus.
+\item For forms such as \textit{nen} in the accusative masculine, "two reduction paths" \citep[76]{Ziegler2011} could be possible. 
+Either the reduction is not fully carried out, or after the complete reduction, a ``phonetic expansion" [``phonetische Auffüllung''] in the sense of ``Jespersen's Cycle" takes place.\footnote{
+	See also \citet[189]{Vogel2006}.}
+\citet[84]{Prinz1991} considers clitics with the form \textit{nen} (including the masculine accusative) to belong to the substandard. 
+However, \citet{Vogel2006}, \citet{Burri2003}, \citet{Tophinke2002}, and \citet{Ziegler2011,Ziegler2012} describe \textit{nen} in the nominative masculine, nominative neuter, and accusative neuter as well as in the so-called monocase (\textit{nen paar}, `a few') as new ``extended'' [``erweiterte''] abbreviated forms that do not conform to the standard. 
+They are considered variants to the full form as well as to the ``normal'' abbreviated form. 
+These variants appear not only in spoken language but in written language too, especially in texts with a spontaneous register (for example, chats) and press texts.
+\end{enumerate}
+
+An abbreviated form of a genitive article in any of the three grammatical genders was not found by any of the aforementioned researchers, not in standard nor in non-standard language use. 
+\citet[5]{Burri2003} interprets this as ``genitive loss, advancing especially strongly in spoken language use'' [``insbesondere im Mündlichen fortschreitenden Genitiv-Abbau''], while \citet[178]{Vogel2006}, here in reference to \citet[112]{Prinz1991}, considers the genitive form to be lexically blocked.\footnote{
+	``It is possible that [the restriction of the abbreviated genitive form to contexts governed by prepositions] can be better justified by saying that the genitive is so important for marking attribution that only the full form can adequately fulfill this function.
+	In the prepositional phrase, the primary weight lies on the preoposition itself, so that in principle, the shortened form may also occur.'' [``Möglicherweise lässt sich [die Beschränkung des verkürzten Genitivs auf präpositionsregierte Kontexte] besser damit begründen, dass der Genitiv für die Markierung der Attribution so wichtig ist, dass nur die Vollform diese Funktion adäquat erfüllen kann. In der Präpositionalphrase liegt das Hauptgewicht jedoch auf der Präposition selbst, so dass hier prinzipiell auch die Kurzform stehen kann.''] \citep[178]{Vogel2006}}
+\citet[76]{Ziegler2011} presents \textit{nes} (a shortened form of masculine and neuter indefinite pronoun \textit{eines}) in the paradigms of masculine and neuter articles as a ``pronunciation variant" [``Aussprachevariant''], though she does not back this up with data.
+For the cliticised \textit{son}, a genitive form is also assumed, but, again, not empirically supported \citep[30]{Heusinger2012}.
+For more discussion about the marginal anchoring of abbreviated genitive forms, see the results in Sections \ref{subsec:22distribInCorpus} and \ref{subsec:24s2GenLoss}, and for comments on \textit{sones} see Footnote \ref{fn:23}.
+
+\subsection{Clitics in German's graphematic system}
+\label{subsec:13cliticsGraphematics}
+
+In this section, we first clarify the categorial status of clitics, then we evaluate the establishment of their written forms in German's graphematical system.
+
+According to \citet[11]{Nuebling1992}, the categorical description of clitics lies on a ``scale between the poles of word [...] and inflection [...]'' [``Skala zwischen den Polen Wort [...] und Flexiv [...]''], and although clitics have mostly ``given up their syntactic and phonological independence'' [``ihre syntaktische und phonologische Selbstständigkeit eingebüßt''], they are not yet grammaticalized as inflectional markers.\footnote{
+	See \citet[36]{Nuebling1992} and \citet[98]{Prinz1991} for further discussion.}
+Determining clitics' categorial status is relevant for the present study because of the question of how clitics interact with other linguistic units on the phonological and graphematic levels, under the assumption that enclisis is preferred.\footnote{
+	Articles may only be proclitic in \textit{Allegroverbindung} \citep{Nuebling1992}.}
+This preference means that that cliticised forms generally will not appear in focus-marked positions (\citealt[140]{Prinz1991}; \citealt[173]{Tophinke2002}).
+A functional reason for the preference for enlisis over proclisis is, according to \citet{Nuebling2005} for the cliticised forms of definite as well as indefinite articles, that attributive elements can stand between the article and the noun in a noun phrase.
+
+Compared to the definite article, the indefinite article ``across every one of its forms in the spoken language fuses equally readily; the diphthong is deleted and the nasal-initial syllabic remainder is agglutinated onto the preposition, so the integrity of the preposition is always maintained (\textit{in} + \textit{eine} \rightarrow\ \textit{in'ne} [`in a'], \textit{auf} + \textit{einem} \rightarrow\ \textit{auf'nem} [`on a'], \textit{mit} + \textit{einer} \rightarrow\ \textit{mit'ner} [`with a'] etc.)''.\footnote{
+	``bezüglich jeder seiner Einzelformen in der gesprochenen Sprache gleichermaßen verschmelzungsfreudig, wobei der Diphthong getilgt wird und der nasal anlautende, silbische Rest an die Präposition agglutiniert, d.h. die Integrität der Präposition bleibt immer gewährt (\textit{in} + \textit{eine} \rightarrow\ \textit{in'ne} , \textit{auf} + \textit{einem} \rightarrow\ \textit{auf'nem}, \textit{mit} + \textit{einer} \rightarrow\ \textit{mit'ner} usw.)''}
+This, as well as the minimal grammaticalisation that is not graduated over inflectional forms, differentiate the cliticised article from the definite one.
+Cliticisations like \textit{mit'ner} `with a' do not occur with a preposition followed by a definite article.
+\citet[95]{Dedenbach1987} analyzes forms like \textit{durch'n} `through a' as syncretic fusions of prepositions with a definite or an indefinite article, however.
+
+We now turn to the graphematic establishment of the indefinite article's cliticised forms. 
+Like with all clitics, this must be considered over the backdrop of the principles of written German.
+German is a language with a strong written tradition. 
+Its writing system, driven by syllabic, morphological, and syntactic principles that overshadow phonographic spellings, for the most part does not represent phonetic reduction processes \citep[309]{Eisenberg2013a}.
+The degree of grammaticalization of a clitic is what determines its establishment in the graphematic system of German.
+For the definite articles, this means that only the grammaticalised forms of preposition + article, such as \textit{im} (\textit{in} + \textit{dem}, `in the'), \textit{zum} (\textit{zu} + \textit{dem}, `to the'), and \textit{zur} (\textit{zu} + \textit{der}, `to the') are established in the written language \citep[304]{Nuebling1992}.
+Allegro forms and simple clitics like \textit{durchs} (\textit{durch} + \textit{das}, `through the'), \textit{aufs} (\textit{auf} + \textit{das}, `on the'), and \textit{ums} (\textit{um} + \textit{das}, `around the') depend on the ``parameters of the so-called conceptual oral-ness" of a text [``vom Parameter der sog. konzeptionellen Mündlichkeit''] \citep[305]{Nuebling1992}.
+Written forms with an apostrophe such as \textit{auf's} (\textit{auf} + \textit{das}, `on the'), \textit{mit'm} (\textit{mit} + \textit{dem}, `with the'), and \textit{für'n} (\textit{für} + \textit{den}, `for the') are not prototypical graphematic words \citep{Fuhrhop2008} and, according to \citet[308]{Nuebling1992}, signal ``a low degree of grammaticalisation and thus a low acceptance of the fusion" [``einen geringen Grammatikalisierungsgrad und damit eine geringere Akzeptanz der betreffenden Verschmelzung''].
+The apostrophe's presence signifies for \citet{Bredel2008,Bredel2011} an irreversible defect, which is to say that it shows that specific information about a word is missing and cannot be found in the textual surroundings.
+\citet[103]{Bredel2008} suggests a so-called ``monofunction" of the apostrophe as a ``graphematic repair sign for the reading process" [``graphisches Reparaturzeichen für den Leseprozess''].
+According to this, the apostrophe signals to the reader that ``a characteristic of the word that is necessary for its decoding is not available in its spelling" [``eine für den Dekodierprozess erforderliche Worteigenschaft nicht durch Buchstaben ausgedrückt ist''] \citep[42]{Bredel2011}.
+Especially important for \citet[43]{Bredel2008} is that the missing information about the word is not related to its "underlying presence".
+As a graphematic sign, the apostrophe can encode phonological, morphological, or syntactic information.
+The traditional subtypes of elision apostrophes and stem form apostrophes are thus subsumed into a single function.\footnote{
+	That it is not always possible to separate these two functions is apparent when one considers cliticisation. With the forms \textit{auf's}, \textit{auf'm}, or \textit{für'n}, the apostrophe marks missing graphematic material (possibly due to missing phonological material) as well as a morpheme boundary. For further discussion, see \citet[307]{Nuebling1992}, \citet[41]{Bredel2011}, and \citet[104]{Bredel2008}.} 
+
+The graphematic realizations of cliticised forms of German's indefinite articles range from enclitic spellings with and without apostrophes (\ref{ex:003}) to spellings separated by spaces, also with and without apostrophes (\ref{ex:004}).
+
+\begin{exe}
+	\ex\label{ex:003}
+	\begin{xlist}
+		\ex\label{ex:0006}\gll Michael -- der auch gerade darüber nachdenkt seine PWM-Schaltung rauszuschmeissen und so'nen Relais an das jetzt gefundene D+ anzuschließen.\\
+		Michael -- who also now {about it} thinks his PWM-shifting {to throw out} and a relay to the now found D+ {to connect}\\
+		\trans Michael -- who is thinking now about throwing out his PWM shifting and attaching some kind of relay to the D+ he's found now.
+		\ex\label{ex:0007}\gll Dort gibt's 3 Tische undne Theke und mit 20 Leuten ist der Laden voll.\\
+		there {gives it} 3 tables {and a} counter and with 20 people is the shop full\\
+		\trans There are 3 tables and a counter there, and with 20 people, the place is full.
+	\end{xlist}
+	\ex\label{ex:004}
+	\begin{xlist}
+		\ex\label{ex:0008}\gll Der Typ ist ein Panzer auf zwei Beinen -- mit 'nem Schuß wie ein Stier.\\
+		the guy is a tank on two legs -- with a shot like a bull.\\
+		\trans The guy is a tank on two legs -- with a shot like a bull.
+		\ex\label{ex:0009}\gll Ich mein jetz wenn er zuhause schon meistens nicht richtig in der Abteilung läuft, dann klappts auf nem Tunier ja sowieso nicht!\\
+		I mean now if he {at home} already mostly not correctly in the division runs, then {works it} at a tournament PART anyway not\\
+		\trans I mean, if he can't even run properly in the division, then it won't work at a tournament either!
+	\end{xlist}	
+\end{exe}
+
+These data contradict \citet{Prinz1991}, who assumes that cliticised forms ``always appear with a preceding apostrophe and are never written together with the previous or following word" [``immer mit vorangehendem Apostroph versehen und niemals mit dem vorangehenden oder folgenden Wort zusammengeschrieben''], meaning \textit{was für'n Ding} `what kind of thing' but *\textit{was fürn Ding} \citep[114]{Prinz1991}. 
+Prinz describes missing spaces as ``typical for affixed words in the lexicon'' [``typisch für im Lexikon affigierte Wörter''] \citep[101]{Prinz1991}.
+The graphematic realisation of the form that is ``separated from the partner by an apostrophe'' [``vom Partner durch ein Apostroph getrennt''] is considered by Prinz to be a rule for the reduced indefinite article as independent lexical unit.
+
+In the examination by \citet[173]{Tophinke2002}, only independent written forms of the cliticised articles were documented (\textit{ne, nen, n, en, ner, nem}), with the exception of \textit{fürn} `for a'.
+\citet[312]{Ziegler2011} interprets the written variant of \textit{nen} with apostrophe as an explicit indication of ``writing against the rules" [``Schreiben gegen die Regel''] and postulates the existence of a ``field of tension" [``Spannungsfeld'']between oral-ness and written-ness.\footnote{
+	Our data shows, however (see Section \ref{subsec:26s4NormExtendedCliticForm}), that \textit{nen} in particular actually disprefers the written variant with apostrophe.
+	The apostrophe therefore does not represent a(n orthographic) violation of the rules in and of itself.
+	After all, it is a part of the (standard) punctiation system of German and established in the written language.
+	Its function fundamentally exceeds that of simply marking phonological reduction.
+	It also shows syllable or morpheme boundaries and as such, has to do not only with oral-ness, as Ziegler claims, but also written-ness.
+	For further discussion, see Section \ref{sec:3conclusions}.}
+In contrast to \citet{Prinz1991}, \citet[7]{Burri2003} documented enclitic forms on the particle \textit{so} `such' as well as non-standard cliticised variants of the definite articles with prepositions, such as \textit{aufm}, \textit{aufn}, and \textit{aufer} (`on the'), in her analysis of chat texts.
+She presumes an analogy to the corresponding forms of the definite article (e.g. \textit{im, zur})that have already made their way into the standard language.
+
+Thus, the following aspects play a role in determining the graphematic (lexical) status of the indefinite article's cliticised forms and investigating their graphematical interaction with other linguistic units:
+\begin{enumerate}
+	\item graphematic enclisis written as one word, such as \textit{son} (\textit{so} + \textit{n}, `such a') or \textit{fürn} (\textit{für} + \textit{n} `for a')
+	\item written variant with an apostrophe, such as \textit{so'n}, \textit{für'n}
+	\item independent written variant with a space, such as \textit{so n}, \textit{für n}.\footnote{
+		We will not discuss the difference between written variants with an apostrophe with and without spaces, because the corpus we are using does not make this distinction. 
+		The corpus processes spaces as (potential) word or token boundaries and then deletes them.
+		See also, for example, \citet[Ch. 4]{SchaeferBildhauer2013}.}
+\end{enumerate}
+
+According to \citet[99]{Jacobs2005}, writing expressions as a single word is required when these expressions do not make up ``the minimal extent'' [``den Minimalumfang''] of a phonological word.\footnote{
+	The definition of a phonological word is given in \citet[22]{Jacobs2005} and particularly pertains to expressions with phonological representations which have a hierarchically well-formed domain structure that contains a word node.}
+For Jacobs, this is explained through the fact that ``clitics, even if they [are] not morphologically contructed expressions'' ``are separated in many writing systems not through spaces, but rather through apostrophes or something similar'' [``Klitika, auch wenn sie keine morphologisch gebildeten Ausdrücke'' seien, ``in vielen Schriftsystemen generell nicth druch Spatien (sondern allenfalls durch Apostrophen oder Ähnliches) abgetrennt werden''] \citep[99]{Jacobs2005}.
+According to this, written variants with an apostrophe are preferred over variants with a space.
+The extended cliticised form \textit{nen} could then be considered a ``phonetic expansion'' [``lautliche Auffüllung''] \citep[188]{Vogel2006} on a phonological level as well as on a graphematic one, fulfilling its minimal extent (cf. \citealt{Jacobs2005}).
+This graphematic minimal extent is also fulfilled through the synthetic written variant such as \textit{son}.
+One must keep in mind that, in addition to the form \textit{n}, other monosyllabic graphic forms like \textit{ne} do not fulfill the minimal extent of a graphematic word \citep[198]{Fuhrhop2008}.
+This consists minimally of a graphic full syllable (consonant grapheme plus full vowel grapheme).
+The grapheme <e> when it appears as a long vowel requires some graphematic indication of its length, so it is not interpreted as a schwa (for example in \textit{Reh} [ʁeː] `deer').
+The only German words with a similar graphic form to \textit{ne} are \textit{je} `each, per' and \textit{Re} (a move in the card game skat).
+In both of those forms, <e> appears irregularly as a full vowel grapheme (cf. especially Study 5 in Section \ref{subsec:27s5GraphEnclisis}).
+
+Because of the generally assumed non-standard nature of this phenomenon, the obvious hypothesis is that the written forms of these cliticised indefinite articles only appear in texts with registers that tolerate a certain amount of deviation from the standard.
+Correspondingly, the forms in general (and especially the extended cliticised form \textit{nen} in the neutral and nominative masculine) are described as ``markers of oral-ness'' [``Mündlichkeitsmarker''] \citep{Ziegler2011,Ziegler2012} as well as ``oral characterisation'' [``orate Charakterisierung''] \citep[171]{Tophinke2002} of a ``new register in written language'' [eines ``neuen schriftsprachlichen Registers''] (\citealt{Weingarten1997}, cited in \citealt[3]{Burri2003}) of quasi-spontaneous written-ness.
+Additionally, they are used as a special form of relating spoken language in press texts \citep{Ziegler2012}.
+However, a variety-specific distinction of \textit{nen} in particular cannot be determined (cf. \citealt[183]{Vogel2006}).
+Special features of the written cliticised indefinite article include the nearness to spoken language as well as the ``manifestation of colloquial language'' [``Manifestation von Umgangssprache''] \citep[4]{Burri2003}, among other things.
+These spellings thus join the ranks of other phonographic written forms which graphically show the reductions and assimilations of spoken language and do not conform to the standard \citep{Burri2003,Tophinke2002,SchusterTophinke2012}. 
+These include, for instance, apocope of <t> after a fricative, such as in \textit{is} (standard: \textit{ist} `is'), incorporation of schwa elisions and assimilation of the reduced syllable such as \textit{holn} (standard: \textit{holen} `to fetch'), and enclisis or dropping of postposed personal pronouns in the second and third person such as \textit{kannse} (standard: \textit{kannst du} `can you').
+
+In conclusion, we would also like to point out that the relation of non-standard and standard written variants is also discussed in conjunction with the question of to what extent these variants arise systematically and thus may lead to language change \citep{HaaseEa1997,Naumann1998,Burri2003,SchusterTophinke2012}.
+\citet[307]{Nuebling1992} assumes a ``bridging function" [``Brückenfunktion''] in conceptually spoken-language-like text types such that the written variants of spoken clitics open a way into the standard language.
+Statements such as this require (as Nübling also said) a precise and statistically well-founded examination.
+No such examination has been carried out thus far for any of these phenomena of non-standard written variants described above.
+However, it's fairly safe to assume that a sufficiently sophisticated corpus (especially a diachronic one) that would allow this kind of study does not exist.
+
+\subsection{Distributional factors: Cliticised form vs. full form, \textit{n} vs. \textit{nen}}
+\label{subsec:14distributionalFactors}
+
+We already mentioned that the written forms of cliticised indefinite articles are restricted to certain positions and registers.
+Additional distributional factors for these written cliticised forms as well as the extended cliticised form (i.e. \textit{nen} as nominative masculine and neutral as well as accusative neutral) could come into play.
+These are:
+
+\begin{enumerate}
+	\item affinity of the cliticised or extended form for particular parts of speech in context,
+	\item phonetic and graphic surroundings (e.g. avoidance of hiatus),
+	\item topological aspects, e.g. sentence-initial position or position in the prepositional phrase, and
+	\item specific combinations of case and gender.
+\end{enumerate}
+
+\textit{On 1:}
+The distribution of the cliticised forms and full forms in the existing qualitative analyses does not indicate sensitivity for context concerning particular parts of speech.
+Among the 75 nominal lemmas examined by \citet[182]{Vogel2006}, ``no precise phonological, morphological, or semantic specification" [``keine eindeutige lautliche, morphologische oder semantische Spezifizierung''] could be discerned.
+
+\textit{On 2:}
+The question of what determines the distribution of the pairing \textit{nen} and \textit{n} is discussed with regard to the role of phonetic surroundings. 
+For example, hiatus avoidance or another combinatorial restriction could have an influence on their distribution.
+\citet[7]{Burri2003} considers \textit{nen} a variation of \textit{n} following a vowel-final or nasal-final word (\textit{dann nen jahr} `then a year').
+\citet[185]{Vogel2006}, however, not confirm the hypothesis of hiatus avoidance using \textit{nen}.
+In particular, after graphematically vowel-final words (not just phonetically vowel-final ones like \textit{aber} [aːbɐ] `but'), an enclitic article like \textit{son} `such a' actually occurs more frequently than an extension of the form to \textit{nen}.
+
+\textit{On 3:}
+Concerning topological aspects of distribution, a small handful of Vogel's data (only six cases in the corpus) show a preference of \textit{nen} to appear sentence-initially.
+With regard to the alternation of \textit{nen} and \textit{n} in the nominative masculine, Vogel discusses a distribution of the articles among syntactic functions, suggesting a preference for \textit{nen} as the thematic subject.
+This would speak against the assumption of overgeneralization of the \textit{nen}-form of the accusative masculine to the nominative.
+Vogel assumes here rather atypical syntactic contexts, such as rhematic subject and predicative \citep[184]{Vogel2006}.
+\citet[301]{Ziegler2012} puts forward the idea that the written occurrence of \textit{nen} has a text-pragmatic-based usage in running text ``in the function of a comment by the author'' [``in der Funktion eines Autorenkommentars''], while the usage in headlines as a ``quotation of literal speech'' [``Zitat wörtlicher Rede''] \citep[301]{Ziegler2012} is less important or relevant.
+
+\textit{On 4:}
+In the previous studies, a distributional preference of cliticised forms over full forms can be observed in the feminine forms in all cases except for genitive.
+\citet[185]{Vogel2006} gives the ratios of 1:2 for \textit{eine} vs. \textit{ne} and 2:3 for \textit{einer} (dative only, not the syncretic genitive) vs. \textit{ner}.
+For masculine and neuter articles, a preference for the cliticised form over the full form is strongly connected with whether the full form is bisyllabic or not.\footnote{
+	This is also clear in the data from \citet[173]{Tophinke2002}, who observes overwhelming usage of reduced written variants with \textit{eine} and \textit{einen}, though she does not connect this with their bisyllabicity.
+	Rather, Tophinke interprets the reduced written forms as realisations of phonetic clitics, instead of as ``orthographic written forms'' [``orthographische Schreibungen''] in such cases ``where in the spoken language no cliticisation occurs'' [``in denen in der gesprochenen Sprache keine Klitisierung vorliegt''].}
+This correlation, according to Vogel, is especially apparent when one considers the nominative masculine; despite the documented variants \textit{n} and \textit{nen}, the full form \textit{ein} dominates the cliticised forms with a ratio of 3:1.
+Vogel thus concludes a general dominance of monosyllabic forms in the indefinite article paradigm.
+The ``false'' cliticised form \textit{nen} in the nominative masculine article as well as neuter articles in nominative and accusative should, then, be interpreted as securing an autonomic functional word which has a paradigm dominated by monosyllabicity.
+The ``epenthesis of \textit{n} in modern-day language use'' [``gegenwartssprachliche Epenthese von \textit{n}''] \citep[198]{Vogel2006} thus prevents enclesis and unifies the cliticised paradigm with a nasal word and syllable onset.
+Since these results come from a relatively small data set, the question is raised of whether this finding can be replicated and possibly refined among large data sets.
+In Section \ref{sec:2corpusStudies} we address this question.
+
+\subsection{Establishing research questions and hypotheses}
+\label{subsec:15researchQuestions}
+
+None of the morphological or distributional factors discussed in the existing research seem to offer a complete account of the distribution of cliticised forms and full forms of German indefinite articles.
+The same can be said for the factors that may affect the distribution of \textit{n} vs. \textit{nen}.
+The results of our corpus studies will therefore be analyzed using a multifactorial model, which will consider formal and distributional factors at the phonetic, morphological, and graphematic levels and will consider these factors merely tendencies.
+In the rest of this section, we will put forward several hypotheses and succinctly describe the influence of these variables and the theoretical motivation behind them.
+
+\begin{enumerate}
+	\item We presume that there is a preference for monosyllabic over bisyllabic forms in the distribution of cliticised form vs. full form, so that the entire paradigm will tend toward monosyllabicity.
+	Hypothesis: The cliticised form will be preferred in positions in the paradigm where the full form bisyllabic ist (which is to say, in all positions except for the nominative masculine and nominative and accusative neuter).
+	\item Cliticised forms of the indefinite articles in genitive noun phrases are at most marginally documented, if at all.
+	Possible explanations could be the general genitive loss in the relevant register or the low salience or strong obliqueness of the genitive.
+	Hypothesis: The short forms of the genitive are structurally possible, but factually blocked.
+	\item Hiatus avoidance has been put forward as a possible factor for the selection of a cliticised form over a full one as well as for the alternation of \textit{n} vs. \textit{nen}.
+	Hypothesis: A preceding vowel-final word and/or a subsequent vowel-initial word correlate with the selection of the cliticised form in general and/or with the selection of \textit{n} vs. \textit{nen}.
+	\item Additionally, we will examine whether sentence-initial position could have an influence on the appearance of the cliticised form, because enclisis is blocked in sentence-initial position and we, along with the older literature concerning construction of cliticised forms, presume that enclisis is the preferred cliticisation process.
+	Hypothesis: In sentence-initial position, the cliticised form is dispreferred.
+	\item Independent of whether the preceding or subsequent word begins or ends in a vowel, other diverse morphosyntactic factors that have been mentioned with varying explicitness in the literature could play a role in the selection of the cliticised form over the full form.
+	We will restrict our investigation to two specific contexts (vs. all others). 
+	Hypothesis: Certain syntactic words left of the indefinite article (i.e. prepositions, \textit{so} `such', or others) influence the preference or dispreference for cliticised forms of the indefinite article.
+	\item In addition to the distribution of full form and cliticised form, we also examine the variation of \textit{n} vs. \textit{nen}. 
+	We presume that the \textit{nen}-clitic makes up a graphematically autonomous word, in contrast to \textit{n}.
+	This is because \textit{nen} fulfills the minimal requirements to be a graphematic word: it is a well-formed graphematic syllable with a vowel grapheme (cf. \citealt[197]{Fuhrhop2008}).\footnote{
+		For further discussion of the graphematic syllable, see \citet{FuhrhopBuchmann2009}.}
+	Thus, we expect that the tendency to fill out the short form \textit{n} to \textit{nen} is purely formally conditioned, rather than functionally (which it would be if it had a preference for particular number or case).
+	Hypothesis: Independent from the expected frequent appearance of the form \textit{nen} in the accusative masculine (given the full form \textit{einen}), the appearance of \textit{nen} in nominative masculine and nominative and accusative neuter is in principle equal.
+	\item Finally, we will investigate the apostrophe to the left of the clitic.
+	We assume a correlation between written variants with apostrophes and graphematic word status.
+	Hypothesis: The appearance of the extended form \textit{nen} (as opposed to \textit{n}) correlates positively with writing the clitic without an apostrophe.	
+\end{enumerate}
+
+In Sections \ref{subsec:25s3FullFormAbbrevForm} and \ref{subsec:26s4NormExtendedCliticForm}, these hypotheses will be empirically tested in two corpus studies.
+First, however, in order to better be able to relate this phenomenon to others, we will perform two auxiliary studies on register-specific language use and on the genitive loss in Sections \ref{subsec:23s1Alternation} and \ref{subsec:24s2GenLoss}.
+Section \ref{subsec:27s5GraphEnclisis} details a smaller study that otherwise not examined variants of indefinite article clitics that are written together with the word to their left.
+
+\section{Corpus studies}
+\label{sec:2corpusStudies}
+
+In this section, we first explain our choice of corpus for the current study (Section \ref{subsec:21choiceOfCorpus}) before turning to a general descriptive quantification of the distribution of cliticised forms in Section \ref{subsec:22distribInCorpus}.
+In sections \ref{subsec:23s1Alternation}--\ref{subsec:27s5GraphEnclisis}, five corpus studies which investigate the hypotheses proposed in Section \ref{subsec:15researchQuestions} will be described.
+
+\subsection{Choice of corpus}
+\label{subsec:21choiceOfCorpus}
+
+A corpus that is suitable to answer our research questions must on the one hand contain texts with the type of register that would contain cliticised forms of the indefinite article as spontaneously written forms (rather than reproducing forms found in speech).
+On the other hand, the corpus must be large enough to represent such an low-frequency phenomenon plentifully enough that inferential statistic methods can be applied.
+The established corpora of near-standard German do not fulfill these requirements.
+DeReKo (z.B. \citealt{KupietzKeibel2009}) and the DWDS-Kernkorpus \citep{Geyken2007} contain exclusively near-standard written language use.
+The DWDS-Kernkorpus, with its 122.8 million tokens, is also relatively small.
+Because the goal of our investigation is to examine this written phenomenon, corpora of spoken language are out of the question, since they would necessitate working from transcripts and are quite small anyway.
+Written versions of non-standard-conforming spoken language can be found primarily in texts used for quasi-spontaneous communication, for example in internet forums, blogs, etc.
+These texts are available plentifully and for free on the Internet, and thus also in web corpora.\footnote{
+	For a discussion of the stratification of web corpora, see also \citet[Ch. 5]{SchaeferBildhauer2013} and \citet[46]{BiemannEa2013}.}\footnote{
+	Results from search engines are, for conceptual and technical reasons, not an alternative to web corpora that have been constructed for the aim of linguistic research. For further discussion, see \citealt{Kilgarriff2006} and \citealt[Ch. 1]{SchaeferBildhauer2013}.}
+
+The German corpus DECOW2012 contains 9.1 billion tokens in 7.8 million documents that were downloaded in 2011 from pages in the national domain \textit{.de} (\citealt{SchaeferBildhauer2012} and similarly, \citealt{BaroniEa2009}).
+The stratification of genre and register was captured through samples in a taxonomy described in \citet{Scharoff2006}.
+For the present investigation, the classification according to \textit{mode} (colloquial for `register') is especially interesting.
+Within this classification, the category \textit{quasi-spontaneous} is defined as the already mentioned sort of relatively spontaneous and generally unedited texts from forums, blog discussions, etc.
+We can presume that quasi-spontaneous texts contain characteristics of spoken language, but are not to be made equivalent with spoken language. 
+The category \textit{blogmix} is defined as a mixture of non-spontaneous and quasi-spontaneous texts (e.g. blog entries with comments).
+\citet[492]{SchaeferBildhauer2012} state that 22.5\% of the entire DECOW2012 corpus is made up of quasi-spontaneous documents and 4.5\% of blogmix documents. 
+In total, an estimated 27\% of the corpus consists of documents that potentially contain grammatical and graphematic variation beyond the standard (ca. 1.95 million documents).
+The results in the following sections support our perspective that only a corpus like DECOW2012 should be used for the current investigation.
+
+\subsection{General distribution of abbreviated forms and full forms in the corpus}
+\label{subsec:22distribInCorpus}
+
+First, we provide an estimation of the absolute frequency of the individual forms.
+This is helpful, because it allows us to estimate the general productivity of cliticisation of the indefinite article in the corpus.
+
+We searched for occurrences of concrete cliticised or full forms of the indefinite article, optionally followed by an adjective and obligatorily followed b a noun.
+In total, we found 130,112,190 instances, 126,575,593 of those are the full form and 3,536,597 are the cliticised form.
+The estimated refined distribution is shown in Table \ref{tab:0002}.
+\begin{table}
+	\centering
+	\begin{tabular}{llll}
+		\toprule
+		\textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} \\
+		\midrule
+		a & b & c & d \\
+		e & f & g & h \\
+		\bottomrule
+	\end{tabular}
+	\caption{Placeholder for actual Table 2}
+	\label{tab:0002}
+\end{table}
+The reason that these values are only estimates is that the concordances include false hits in addition to the desired search item.
+The amount of false hits was estimated with a high confidence level at one sample per 1,000 examples (per row in Table \ref{tab:0002}).
+It is noteworthy that despite the high absolute value of 3,142,482 cliticised forms, they make up a mere 2.51\% of all indefinite articles.
+
+Descriptively, we already notice several eyecatching distributional asymmetries.
+For example, when we consider the full form and the cliticised form of the syncretic nominative and accusative feminine article \textit{eine} and \textit{ne}, we see that the full form \textit{eine} makes up 17.6\% of full forms in the corpus, but that the cliticised form \textit{ne} makes up 35.6\% of all cliticised forms -- almost exactly double as much.
+The tendency to avoid the cliticised form \textit{nes} in the genitive masculine singular also seems very strong.
+The examples where this form occurs are otherwise fine (\ref{ex:005}), meaning that this form must be considered to be at least marginally anchored within the system. %are they really fine though? "wen du dich"? gemeint "wenn"? spelling also not great
+However, the absolute frequencies in DECOW2012 are so low that the genitive must be excluded from the inferential statistics (see Section \ref{subsec:25s3FullFormAbbrevForm}).
+
+\begin{exe}
+\ex\label{ex:005}
+	\begin{xlist}
+	\ex\label{ex:0010}\gll Wen du dich während nes Schubs ans Bett fesselst bleiben die offenen Stellen mit sicherheit gröstenteils aus\\
+	who/when you REFL during a ??? {to the} bed shackled stay the open positions with safety largely out\\
+	\trans xxx
+	\ex\label{ex:0011}\gll Das Zweite erinnert mich in punkto Fixieren daran, wie ich in der Schule einmal den Rat nes Lehrers annahm und mein Bild fixieren wollte ... und zum falschen Spray gegriffen hab ...\\
+	the second reminds me regarding {} ?securing? {there of}, how I in the school once the advice {of a} teacher accepted and my image {?to secure?} wanted ... and to wrong spray reached have ...\\
+	\trans xxx
+	\end{xlist}
+\end{exe}
+
+The syncretic form \textit{ner} as a feminine article does exist, but again, generally not as a genitive. %Did you take samples of 1000 items for each situation, based on which you relate the following information? Say that somewhere other than in the table caption!
+Of the 1,000 instances of \textit{ner} without an adjective, two are unambiguously attributive genitives, and three others are governed by \textit{während} `while' and \textit{bezüglich} `regarding' (which traditionally require their argument to appear in the genitive case, but colloquially are used with dative arguments too), meaning they could either be genitive or dative.
+There are 251 genitives in the corresponding concordance for the full form \textit{einer}.
+Among the 1,000 instances of \textit{ner} with an attributive adjective, there are 9 clearly attributive and verb-governed genitives (\ref{ex:006}) and one example with the preposition \textit{innerhalb} `within', where the same syncretic ambiguity applies as above.
+The equivalent concordance for \textit{einer} with an adjective contains 235 instances of unambiguous genitive articles -- in other words, substantially more.
+However, a restriction of the cliticised form to prepositionally governed genitives \citep[178]{Vogel2006} cannot be confirmed, see \ref{ex:005} and \ref{ex:006}.
+
+\begin{exe}
+\ex\label{ex:006}\gll Naja, ich denke mal er ist ner ähnlichen Meinung wie ich ;-)\\
+well I think PART he is {of a} similar meaning like I\\
+\trans Well, I think he has the same opinion as me ;-)
+\end{exe}
+
+Finally, we must clarify whether the form \textit{n} in the accusative masculine really represents the indefinite article \textit{einen} or the definite article \textit{den}, since both could be conceivable as the corresponding full form.
+To this end, we evaluated by hand the 227 relevant instances from the 1000-concordance sample of \textit{n} without an adjective.
+There was no doubt in 217 of the cases that an indefinite article was intended; see (\ref{ex:0012}).
+Two examples are clearly definite articles; see (\ref{ex:0013}) and (\ref{ex:0014}).
+The authors were unsure of how the remaining eight cases should be understood.
+Therefore, nine other linguists were asked for their perspectives and were given the entire context in which the instances in question appeared.\footnote{
+	Because this issue is not as important as our primary goal in this paper, no formal study was carried out.}
+For the examples in (\ref{ex:008}), we provide the results of the questionnaire in square brackets following the layout of [definite/indefinite/ambiguous].
+
+\begin{exe}
+\ex\label{ex:007}
+	\begin{xlist}
+	\ex\label{ex:0012}\gll kannst du mir nochmal n tipp geben?\\
+	can you me again a tip give?\\
+	\trans can you give me another tip?
+	\ex\label{ex:0013}\gll Ja, gut, aber die Kurse die dort angeboten werden, sind teilweise auch für 'n Hintern.\\
+	yes good but the courses that there offered are are partially also for the behind\\
+	\trans Yes, OK, but some of the courses that are offered there are also useless.
+	\ex\label{ex:0014}\gll Mittlerweile muss ich schon fast die Hälfte der Songs skippen, weil sie mir dermaßen auf n Sack gehen.\\
+	{in the meantime} must I already almost the half {of the} songs skip because they me {so much} on the bag go\\
+	By now, I have to skip almost half the songs, because they annoy me so much.
+	\end{xlist}
+\ex\label{ex:008}
+	\begin{xlist}
+	\ex\label{ex:0015}\gll ich bin dann mit dem auto von meiner mama auf n feldweg gefahren [...] [1/4/4]\\
+	I am them with the car from my mama on a/the {dirt road} driven {} {}\\
+	\trans Then I drove with my mother's car on a/the dirt road [...]
+	\ex\label{ex:0016}\gll Wenn Monkey Island 5 genauso werden würde wie Teil 4 (was ich nach dem Erfolg von Sam \& Max nicht hoffe), würde ich mir n Kauf zweimal überlegen. [5/0/4]\\
+	if Monkey Island 5 {exactly the same} become would as part 4 (which I after the success of Sam \& Max not hope) would I me a/the purchase twice consider\\
+	\trans If Monkey Island 5 turns out exactly the same as Part 4 (which I don't hope for, after the success of Sam \& Max), I'd think twice about a/the purchase.
+	\ex\label{ex:0017}\gll und hat n durchmesser eines {ess tellers} [8/0/1]\\
+	and has a/the diameter {of a} {dinner plate}\\
+	\trans and has a/the diameter of a dinner plate
+	\ex\label{ex:0018}\gll Und wenn gesagt wird WIN 2003 denke ich immer zuerst an Windows SERVER 2003 und das ist fuer n Desktop nur nervig/gefährlich. [4/3/2]\\
+	and when said is WIN 2003 think I always first of Windows SERVER 2003 and that is for a/the desktop only annoying/dangerous\\
+	\trans And when someone says WIN 2003, I always think first of Windows SERVER 2003, and that's annoying/dangerous for a/the desktop.
+	\ex\label{ex:0019}\gll Auf n kutter darf man die nicht anziehen weil man in einer warthose ertrinkt könnte wenn man über board geht ... [2/5/2]\\
+	on a/the cutter may one them not {put on} because one in a {wading pants} drown could when one over board goes\\
+	\trans You can't wear those on a/the cutter because you could drown in a pair of wading pants if you go overboard ...
+	\ex\label{ex:0020}\gll hab grad voll n Blackout ... [5/3/1]\\
+	have {right now} full a/the blackout\\
+	\trans I've totally got a/the blackout right now ...
+	\ex\label{ex:0021}\gll ich wollte zwar schon immer mal auf n prüfstand, aber habs bisher aus geldründen gelassen [6/0/3]\\
+	i wanted PART already always PART on a/the ???, but {have it} {so far} for {money reasons} left\\
+	\trans I've always wanted to ???, but for financial reasons I haven't done it so far.
+	\ex\label{ex:0022}\gll batze wird bejubelt wenn er rey auf n stuhl rammt xD? [4/2/3]\\
+	batze is celebrated when he ?? on a/the chair ??\\
+	Is Batze celebrated when he ?? ?? on a/the chair xD? % heißt rammeln = to bang? hehe.
+	\end{xlist}
+\end{exe}
+
+Obviously, there is no clear consensus.
+We will presume that the form \textit{n} almost always represents an indefinite article, and that only a few ambiguous cases and even fewer definite cases appear in our concordances.
+For the samples in Studies 3 and 4 (Sections \ref{subsec:25s3FullFormAbbrevForm} and \ref{subsec:26s4NormExtendedCliticForm}), only cliticised forms that clearly represent indefinite articles were included. 
+
+\subsection{Study 1: Abbreviated forms as alternation in semi-spontaneous written language}
+\label{subsec:23s1Alternation}
+
+In this study, we test our assumption that the written cliticised forms represent a partially unsystematic alternation in semi-spontaneous written language use.
+We took the sample of 2,499 cliticised forms that we use in Study 3 (Section \ref{subsec:25s3FullFormAbbrevForm}) and determined the types of documents from which these examples come.
+In total, 2,263 are from forums, 123 from blogs with comments, 47 from blogs without comments, 15 from amateur prose, nine from online guest books, five from transcribed interview, and two from online shops with a comment function.\footnote{
+	The document type of 35 instances could not be clearly determined, because the text alone (as it is saved in the corpus) is often not informative and the actual source website is no longer online.
+	The documents that are classified as blogs include team websites and other similar pages that contain text by non-professional writers about festivals, gatherings, etc.
+	There were no regional or superregional press documents in the sample.}
+It is thus safe to accept that the written versions of the cliticised form are connected to a particular register.
+
+The question of how consistently these forms are used in texts of the relevant register is the more relevant and interesting one.
+Coordination structures can be particularly informative about this point.
+If NPs with corresponding features are found in a coordination structure with a mixture of full articles and cliticised articles, that would be a good indicator that an alternation is in play, which is to say that multiple grammatical options are available in parallel and the selection is not completely motivated by contextual features.
+Precisely this is the case, as (\ref{ex:009}) and (\ref{ex:010}) illustrate.
+Alternation with the full form followed by the cliticised form (\ref{ex:0023}), (\ref{ex:0024}) and vice versa (\ref{ex:0025}), (\ref{ex:0026}) appear in coordination structures (\ref{ex:009}) as well as disjunction structures (\ref{ex:010}), dependent on the verb (\ref{ex:009}) and on the preposition (\ref{ex:010}).
+
+\begin{exe}
+\ex\label{ex:009}
+	\begin{xlist}
+	\ex\label{ex:0023}\gll Phyliss Jo, hatte ich ja auch, bei mir wars eher [ein Rauschen und n Vibrieren] oder so ...\\
+	Phyliss Jo had I PART also for me {was it} more [a rustling and a vibrating] or something\\
+	\trans I also had Phyliss Jo, for me it was more a rustling and a vibrating or something ...
+	\ex\label{ex:0024}\gll auf der hinfahrt gibts [n quiz und ein tippspiel] wo man geile sachen gewinnen kann ...\\
+	on the {drive there} {there is} [a quiz and a {betting game}] where one awesome things win can\\
+	\trans On the way out, there's a quiz and a betting game where you can win awesome things ...
+	\end{xlist}
+\ex\label{ex:010}
+	\begin{xlist}
+	\ex\label{ex:0025}\gll ich suche bei euch nach [einem Newsletter oder nem RSS-Fedd] für die Releas-List, gibt es so was?\\
+	I seek with you after [a newsletter or an RSS-feed] for the {release list}, gives it such something?\\
+	\trans I'm looking here for a newsletter or an RSS-feed for the release list, is there such a thing?
+	\ex\label{ex:0026}\gll sollte ich mir welche zulegen dann nur von [nem Züchter oder einem Händler] mit Züchternachweis.\\
+	should I REFL some acquire then only from [a breeder or a dealer] with {breeding certification}\\
+	\trans should I then get some only from a breeder or a dealer with breeding certification.
+	\end{xlist}
+\end{exe}
+
+We also calculated the frequencies in the entire DECOW2012 corpus all the permutations of full vs. cliticised forms in coordination structures with \textit{und} `and' or \textit{oder} `or' in the accusative singular masculine (including, when relevant, the \textit{nen}-neuter form) and in the dative singular masculine and neuter.
+The results are shown in Tables \ref{tab:0003} and \ref{tab:0004}.
+
+\begin{table}
+	\centering
+	\begin{tabular}{llll}
+		\toprule
+		\textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} \\
+		\midrule
+		a & b & c & d \\
+		e & f & g & h \\
+		\bottomrule
+	\end{tabular}
+	\caption{Placeholder for actual Table 3}
+	\label{tab:0003}
+\end{table}
+
+\begin{table}
+	\centering
+	\begin{tabular}{llll}
+		\toprule
+		\textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} \\
+		\midrule
+		a & b & c & d \\
+		e & f & g & h \\
+		\bottomrule
+	\end{tabular}
+	\caption{Placeholder for actual Table 4}
+	\label{tab:0004}
+\end{table}
+
+Although there is a clear preference for consistent usage of only full forms or only cliticised ones in coordination structures, as Tables \ref{tab:0003} and \ref{tab:0004} show, the number of mixed constructions is still considerable.
+A preference for a particular sequence of full form and cliticised form is not shown.
+The usage of short forms can thus be classified as inconsistent.
+
+\subsection{Study 2: Genitive loss}
+\label{subsec:24s2GenLoss}
+
+The genitive cannot be included in the multifactorial studies in Sections \ref{subsec:25s3FullFormAbbrevForm} and \ref{subsec:26s4NormExtendedCliticForm} because of its low frequency.
+In this section, we will examine whether the genitive loss in semi-spontaneous written language an acceptable and sufficient explanation ist for the complete lack of cliticised genitive articles, as e.g. \citet[5]{Burri2003} suggests, or whether the cause could be deeper structural reasons which have not yet been put forth or examined.
+
+In this auxiliary study, we will examine whether genitive loss is more advanced in documents that also contain cliticised forms of the indefinite articles. % what is the explicit goal, what will this tell us if genitive loss is or is not more advanced in this document set?
+To this end, we took two new samples, each with 5,000 documents spanning the entire DECOW2012 corpus.
+The first sample contains documents which contain at least three cliticised forms of the indefinite article, and the second sample contains documents without any cliticised indefinite articles.
+In both, we determined the frequency of full forms of the masculine/neuter genitive in the constellations \textit{eines} N `of a N' and \textit{eines} ADJ-\textit{en} N `of a ADJ N' as an estimation of the frequency of corresponding noun phrases. %what? do you mean the frequency of corresponding NPs in the whole corpus, maybe? I don't get the last part.
+We consider the quantity of genitive NPs with full forms of the indefinite article over the whole sample relative to the quantity of the numbre of tokens the sample contains. 
+Table \ref{tab:0005} shows that, in documents with cliticised articles, the genitive loss is stronger.
+
+\begin{table}
+	\centering
+	\begin{tabular}{llll}
+		\toprule
+		\textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} \\
+		\midrule
+		a & b & c & d \\
+		e & f & g & h \\
+		\bottomrule
+	\end{tabular}
+	\caption{Placeholder for actual Table 5}
+	\label{tab:0005}
+\end{table}
+
+In order to determine whether the frequency of the genitive cliticised forms is significantly below the expected number of genitive articles given the general genitive loss, we exported all 478,551 documents in DECOW2012 that contain at least three instances of the cliticised indefinite article into a subcorpus.
+Within these documents, we estimated using heuristic searches (not refined by hand) the frequency of masculine and neutral full forms and cliticised forms with or without an adjective.
+We know from our refinement of the complete DECOW2012 data set (discussed in Section \ref{subsec:22distribInCorpus}) that such queries, if anything, overestimate the number of genitive cliticised forms.
+This is because the typically contained amount of fuzzy matches is overweighted in the sample given the very small number of true matches (actual genitives), which does not occur with better-represented forms.\footnote{
+	When we say ``fuzzy matches'', we mean matches that the search request finds but that do not match the structure that was searched for. 
+	These false matches can stem from, for example, misspelled search terms or an imprecise or incorrect linguistic annotation of the corpus.
+	In the search querying \textit{eines} plus a noun (without an adjective), 91 of the 1,000 concordances were false matches.
+	However, in the search for \textit{nes}, where 662 hits were returned, 649 of those were false matches, mostly in the form of acronyms (e.g. the "Nintendo Entertainment System").
+	The very clear statistical result is thus not noticeably falsified (see also Footnote \ref{fn:22}).}%What does this sentence mean?
+Table \ref{tab:0006} shows the comparison of the frequencies of full form and cliticised form in the genitive and in all other cases.
+The expected frequencies for the single fields can be calculated from these results (cf. e.g. \citealt[170]{Gries2008}); the expected number of instances of the genitive cliticised form is 32,904, compared to the 107 observed instances.
+A Fisher exact test shows that this result is significant, with p < 0.001.
+The odds ratio of 347.86 very high.\footnote{
+	This still holds if one presumes five thousand occurrences of the \textit{nes}-genitive and keeps the values in the other fields the same (Fisher exact: p < 0.001 ***, odds ratio = 7.44).
+	Despite the fuzzy matches, this result (the overproportional lack of genitiv cliticised forms) is so strong that the sample is still robust, even without checking through it by hand.}
+The general genitive loss in the relevant documents thus does not explain the lack of the genitive cliticised indefinite article.\footnote{
+	\label{fn:22} Interestingly, the form \textit{sones}, written as a single word, is completely absent. 
+	Of the 137 instances of \textit{Sones} or \textit{sones} in all of DECOW2012, after removing personal names and misspellings (overwhelmingly for \textit{Sohnes} `of the son'), no instances of a genitive version of the emerging pronoun \textit{son} remained.}
+	
+\begin{table}
+	\centering
+	\begin{tabular}{llll}
+		\toprule
+		\textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} \\
+		\midrule
+		a & b & c & d \\
+		e & f & g & h \\
+		\bottomrule
+	\end{tabular}
+	\caption{Placeholder for actual Table 6}
+	\label{tab:0006}
+\end{table}
+
+\subsection{Study 3: Full form and abbreviated form}
+\label{subsec:25s3FullFormAbbrevForm}
+
+In order to determine what factors may positively or negatively influence the selection of the cliticised form (initially without considering the alternation of \textit{n} and \textit{nen}), we will use a multifactorial model, since no theoretical hypothesis exists that suggests that a single factor, such as the embedding within a PP or a vowel-final preceding word, alone decides whether the cliticised form occurs or not. 
+Rather, it appears that several factors that each exert a preference for or against the clitciised form apply together (cf. Section \ref{subsec:15researchQuestions}).
+
+For the sample, we extracted 2,499 cliticised forms and 2,500 full forms at random.
+The factors from Table \ref{tab:0007} were manually annotated for these exemplars.\footnote{
+	\label{fn:23} These features correspond to the hypotheses from Section \ref{subsec:15researchQuestions}. Only the presence or absence of an adjective in the NP was heuristically added as a variable.}
+The uniform distribution of the dependent variable (``Kurzform'') was necessary, because, as shown in Section \ref{subsec:22distribInCorpus}, cliticised forms would make up only 2.51\% of a random sample of all indefinite articles.
+This is an unsuitable situation for inferential statistics.\footnote{
+	This situation is one with so-called seldom events. For a discussion about regression with seldom events, see e.g. \citet{KingZeng2001}.}
+The examples of the full forms were also selected exclusively from documents that contain at least three cliticised forms, because the evaluation of full forms from a register where cliticised forms do not appear is not expedient for the analysis.
+Finally, as in Section \ref{subsec:22distribInCorpus}, we ensured that the 33 instances of \textit{n} in the accusative masculine doubtlessly represent indefinite articles.
+
+\begin{table}
+	\centering
+	\begin{tabular}{llll}
+		\toprule
+		\textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} \\
+		\midrule
+		a & b & c & d \\
+		e & f & g & h \\
+		\bottomrule
+	\end{tabular}
+	\caption{Placeholder for actual Table 7}
+	\label{tab:0007}
+\end{table}
+
+We examine the dependent variable ``Kurzform'' (1 or 0) in a binary logistical regression (a binomial generalised linear model).\footnote{
+	For more or less technical introductions, see e.g. \citet{BackhausEa2006}, \citet{FahrmeirEa2009} or \citet{ZuurEa2009}. A linguistically oriented but less extensive text than the others is \citet{Johnson2008}. \citet{BresnanEa2007} was a seminal article using a logistical regression in corpus linguistics.}
+This model will answer our question of whether (and if yes, how strongly) the occurrences of the manifestations of the independent variables correlate with the occurrence of the short forms. 
+The genitive is excluded, due to the low frequency of the cliticised form (in the random samples of the size we've taken here, the frequency is normally zero; see also Sections \ref{subsec:22distribInCorpus} and \ref{subsec:24s2GenLoss}).
+Of the independent variables, ``Linksvokal'' (when the word directly preceding the article is vowel-final) and ``Rechtsvokal'' (when the directly following word is vowel-initial) were shown to be insignifikant and were thus, as usual, removed from the model.
+The significant factors that remained are shown in Table \ref{tab:0008}.\footnote{
+	We use the normal notation from the statistics package in R \citep{RCoreTeam2014} for factor and manifestation with internal word-initial capital letters, meaning that ``GenMask'' should be read as ``Genus = Maskulinum'' and ``Adj1'' as ``Adjektiv = yes (present)''.
+	The colon marks an interaction (combined effect) between manifestations of two factors.}
+\textit{So} as context to the left of the article has no significant effect itself, but it remains in the model as a manifestation of an otherwise significant factor (namely left-side context).
+
+\begin{table}
+	\centering
+	\begin{tabular}{llll}
+		\toprule
+		\textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} \\
+		\midrule
+		a & b & c & d \\
+		e & f & g & h \\
+		\bottomrule
+	\end{tabular}
+	\caption{Placeholder for actual Table 8}
+	\label{tab:0008}
+\end{table}
+
+\begin{figure}[htpb!]    
+	\centering
+	\caption{Placeholder for actual Figure 1 (bar graph of data in Table 8)}
+	\label{fig:0001}
+\end{figure}
+
+The significant coefficients from Table \ref{tab:0008} are shown visually in Figure \ref{fig:0001}. 
+Positive values show a preference for the cliticised form, negative values a preference for the full form.
+When interpreting these results, one must first pay attention to the fact that the manifestations of GenFem, KasAkk, Adj0, and LinkskAnd are represented by the intercept, which shows a preference for the cliticised form with a coefficient of 0.862.
+This is, especially as concerns the feminine, consistent with the observations of Table \ref{tab:0002} in Section \ref{subsec:22distribInCorpus}, where it was shwon descriptively that the feminine cliticised indefinite article occurs overproportionally frequently compared to the full form of the article.
+In the same vein, the absence of an adjective and the accusative case are more frequent among occurrences of cliticised forms than one would expect from an equal distribution.
+
+The single factor that especially prefers the full form is sentence punctuation left of the article (interpreted as sentence-initial NP-position). 
+Embedding in a PP (LinksPraep) and the presence of an attributive adjective (Adj1) play a still significant but less strong role. 
+The interpretation concerning case and gender is complicated by the interaction between these factors.
+The tendencies are easier to understand if we add the coefficients for concrete combinations for gender and case.
+This allows us to observe the actual influence (ceteris paribus) from gender and case in the appropriate fields in the paradigm, as shown in Table \ref{tab:0009}.
+There is a tendency toward the full form in the positions of the paradigm with a monosyllabic full form.
+
+\begin{table}
+	\centering
+	\begin{tabular}{llll}
+		\toprule
+		\textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} \\
+		\midrule
+		a & b & c & d \\
+		e & f & g & h \\
+		\bottomrule
+	\end{tabular}
+	\caption{Placeholder for actual Table 9}
+	\label{tab:0009}
+\end{table}
+
+\subsection{Study 4: Normal and extended cliticised form}
+\label{subsec:26s4NormExtendedCliticForm}
+
+As shown in Section \ref{sec:1paradigmsAndAnalyses} (especially Section \ref{subsec:15researchQuestions}), \textit{n} and \textit{nen} compete as cliticised form in four fields of gender/case combinations, namely in the masculine and neuter gender and in the nominative and accusative cases.
+In the current study, a sample which contains 1,172 instances of \textit{n} and 1,151 instances of \textit{nen} will be used to determine the variables that correlate with the selection of each form.
+First, we can state descriptively that, in total, 22.69\% of instances of the neuter article appear as \textit{nen}.
+For the masculine article, this proportion is 60.95\%.
+This is substantially more, but the extended cliticised form in the neuter nevertheless cannot be considered marginal by any stretch of the imagination.
+Table \ref{tab:0010} shows the absolute distribution within the sample.
+
+\begin{table}
+	\centering
+	\begin{tabular}{llll}
+		\toprule
+		\textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} \\
+		\midrule
+		a & b & c & d \\
+		e & f & g & h \\
+		\bottomrule
+	\end{tabular}
+	\caption{Placeholder for actual Table 10}
+	\label{tab:0010}
+\end{table}
+
+As in Study 3 (Section \ref{subsec:25s3FullFormAbbrevForm}), we calculated a binary logistic regression with the independent variables from Table \ref{tab:0007}.
+Additionally, the variable ``Apostroph'' was included.
+This variable has the manifestation 1 exactly when the article is written with an apostrophe (otherwise 0). 
+The dependent variable, selection of one form over the other, has the manifestation 1 when the form is \textit{nen} and 0 when the form is \textit{n}.
+Most factors were eliminated as they did not turn out to be significant; the significant factors remain in Table \ref{tab:0011}.
+
+\begin{table}
+	\centering
+	\begin{tabular}{llll}
+		\toprule
+		\textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} \\
+		\midrule
+		a & b & c & d \\
+		e & f & g & h \\
+		\bottomrule
+	\end{tabular}
+	\caption{Placeholder for actual Table 11}
+	\label{tab:0011}
+\end{table}
+
+As expected, the neutera and the nominative prefer the form \textit{n}.
+It is noteworthy that the strong interaction of GenNeut:KasNom clearly weakens the single manifestations of GenNeut and KasNom for \textit{n} in the nominative neuter.
+Concretely, this means that the independent preferences for \textit{n} over \textit{nen} that come from the neuter gender and the nominative case do not accumulate in the nominative neuter.
+Thus, the appearance of the form \textit{nen} is very probably motivated by morphophonological and graphematic features (dispreference for \textit{n}) and not by morphosyntactic or functional factors (gender and case).
+The form \textit{nen} is thus in the non-feminine paradigm not a prototypical accusative.
+Table \ref{tab:0012} shows, like Table \ref{tab:0009}, the sums of the coefficients of case and gender. %fyi: in the German version, number was written instead of gender
+The difference between the nominative in both genders (--1.192 and --1.135) as well as the accusative neuter (--1.108) are extremely low and can be disregarded.
+
+\begin{table}
+	\centering
+	\begin{tabular}{llll}
+		\toprule
+		\textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} \\
+		\midrule
+		a & b & c & d \\
+		e & f & g & h \\
+		\bottomrule
+	\end{tabular}
+	\caption{Placeholder for actual Table 12}
+	\label{tab:0012}
+\end{table}
+
+In conclusion, we found that the written variant with apostrophe was significantly less frequent with \textit{nen} than with \textit{n}.
+The phonologically motivated variables Linksvokal (especially for the purpose of hiatus avoidance) and Rechtsvokal are, like in the first model, insignificant.
+The assumption from \citet{Vogel2006} that sentence initial articles prefer the \textit{nen}-form can also not be confirmed.
+
+\subsection{Study 5: Complete graphematic enclisis}
+\label{subsec:27s5GraphEnclisis}
+
+In this final study, we examine the distribution of the written variant where the cliticised indefinite article is written as one word together with the word to its left (complete graphematic enclesis).
+In all previous studies, these combined forms were not contained generally for technical reasons, since a search for for combined forms in the corpus is not possible.
+For example, forms like \textit{undne} (\textit{und} + \textit{ne} `and a') cannot be differentiated from other words that end with the character string \textit{ne}.
+
+For this study, therefore, we first took the ten words with the highest absolute frequency standing (separately written) to the left of the article \textit{ne} in the semi-spontaneous subcorpus introduced in Section \ref{subsec:24s2GenLoss}.
+We then searched for combined forms of these ten words and \textit{n}, \textit{ne}, and \textit{nen}, and compared their frequencies with the separately written variants across the entire DECOW2012 corpus.
+We also wanted to kontrast the graphematic strongly defective article \textit{n} with the less defective form of \textit{ne}. 
+Because this is a first auxiliary study, forms with an apostrophe were not considered.
+Certain cases with forms such as \textit{maln} (possibly \textit{mal} + \textit{n} `\textsc{PART} a', but generally a shortened form of the verb \textit{malen} `to paint') or \textit{wien} (possibly \textit{wie} + \textit{n} `like a', but in actual fact exclusively references to the city Vienna, in German \textit{Wien}), as well as combinations with prepositions were excluded from the automatic evaluation.
+Prepositions were excluded because, in a sample of 200 concordances with prepositions written together with \textit{n}, 120 of those were doubtlessly definite articles and 64 clearly indefinite articles. 
+Twelve were ambiguous and four were false hits.
+Thus, we presume that when an article is written together with a preposition, the article is typically a definite one, and we do not consider prepositions in the left-side context as a factor here.
+Table \ref{tab:0013} shows the results.
+
+\begin{table}
+	\centering
+	\begin{tabular}{llll}
+		\toprule
+		\textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} \\
+		\midrule
+		a & b & c & d \\
+		e & f & g & h \\
+		\bottomrule
+	\end{tabular}
+	\caption{Placeholder for actual Table 13}
+	\label{tab:0013}
+\end{table}
+
+The overall picture is clear even without inferential statistics.
+With the exception of the combination with \textit{so} `such', combined written forms only occur with considerable frequency with the cliticised article \textit{n}.
+Precisely this form constitutes neither a minimal graphematic word nor a minimal graphematic syllable of German (see \citealt{Jacobs2005, Fuhrhop2008}; cf. also Section \ref{subsec:13cliticsGraphematics}).
+Forms with <e> such as \textit{ne} do not contain a graphematic full syllable, but nevertheless a graphematic syllable, and they therefore generally do not participate in these combined written forms.
+This result is of fundamental importance.
+Non-graphematic explanations are, in our opinion, largely not worth considering for this phenomenon, since for example, there is no morphophonological hypothesis that enclisis is preferred for the combination \textit{nur n} `only a' as opposed to for \textit{nur ne}.
+Thus, there is clear evidence for autonomous principles of the written language independent both from representational relations between grammar and graphematics and from orthographic rules.
+
+\section{Conclusions}
+\label{sec:3conclusions}
+
+We will now relate the results of our corpus studies to the hypotheses concerning distributional factors and register-specific nature of cliticised forms of the indefinite articles discussed in the literature and put forward by us in Section \ref{subsec:15researchQuestions}.
+Additionally, we will interpret the results from a paradigmatic perspective.
+For this, we refer primarily to the nasal-initial cliticised forms.
+
+We showed in Section \ref{subsec:23s1Alternation} that cliticised forms only appear in our corpus in texts of a particular register, especially in forum discussions and blogs.
+The register of the texts is the most important factor determining the occurrence of written versions of cliticised articles.
+Not least because of the size of our corpus, we could also show that the use of cliticised forms is not consistent, which is to say that in the relevant register, a real alternation is partially at play.
+The cliticised forms of the indefinite articles, even among writers who use them, do not appear everywhere where they are possible or expected in spoken language.
+For this reason, an evaluation of the cliticised forms as purely phonographic written variants falls short.
+Simiarly, not all occurrences of the extended cliticised form \textit{nen} cannot be explained by phoneme-grapheme correspondence.
+Phonographic written variants of the cliticised indefinite articles in the nominative masculine and neuter as well as accusative neuter would be \textit{n} under the assumption of a ``regular'' reduction.
+Spoken instances such as \textit{Wir machen nen Foto} `we're taking a photo' indicate that an expansion process to create an autonomic word may also be taking place on the phonological level \citep{Vogel2006}.
+The mutual influence from the graphematic and phonological levels are, however, not describable with corpus linguistic studies.
+Our attention, therefore, is dedicated to the graphematical conditions under which written cliticised indefinite articles occur, which we relate to the form of the graphematical word and its surroundings.
+Concretely, these are spaces, graphematical enclisis, variants written with an apostrophe, and the prototype of the graphematical word as consisting of at least one well-formed graphematic syllable.
+
+We now turn to the hypotheses that we put forward in Section \ref{subsec:15researchQuestions} and discuss them with regard to the empirical examination carried out in Section \ref{sec:2corpusStudies} (numbering is parallel to that in Section \ref{subsec:15researchQuestions}).
+
+\begin{enumerate}
+	\item We have shown that there is a tendency toward monosyllabicity in the entire paradigm of the indefinite article. 
+	The full form is preferred in positions in the paradigm where it is already monosyllabic (Section \ref{subsec:25s3FullFormAbbrevForm}).
+	\item Excluded from the previous point is the genitive, because of the practical nonexistence of shortened genitive forms (\textit{nes} and \textit{ner}) that we were able to show (Section \ref{subsec:22distribInCorpus}), even though the genitive in its full form is bisyllabic.
+	We have also shown with highly significant results that this absence of cliticised forms cannot be attributed to the general genitive loss (Study 2 in Section \ref{subsec:24s2GenLoss}).
+	\item We have shown that hiatus avoidance as a trigger for clitciised forms and as a determinant of alternation between \textit{n} and \textit{nen} is insignificant in our data (Sections \ref{subsec:25s3FullFormAbbrevForm} and \ref{subsec:26s4NormExtendedCliticForm}).
+	Generally, it can be said that phonological factors do not play a very important role in the written variants of the cliticised forms.
+	\item A significant correlation between sentence-initiality and the non-occurrence of the cliticised form speaks for the preference toward enclisis (Section \ref{subsec:25s3FullFormAbbrevForm}).
+	Sentence-initial enclisis is generally not possible.
+	A preference for the extended form \textit{nen} in sentence-initial position also could not be found (Section \ref{subsec:26s4NormExtendedCliticForm}).
+	\item We showed in Section \ref{subsec:25s3FullFormAbbrevForm} that prepositions in the left-hand context significantly preferred full forms.
+	However, the particle \textit{so} `such' was not significantly preferred in the left-side context of cliticised forms.
+	This could be because Study 3 did not include data for completely synthetically written forms for technical reasons.
+	The data from Study 5 (Section \ref{subsec:27s5GraphEnclisis}) could indicate that, rather than than \textit{so} combined with the clitcised form of the article, the emerging pronoun with the stem \textit{son} (written together) is used.
+	\item We have shown that the expansion from \textit{n} to \textit{nen} takes place in all positions of the paradigm to the same extent (Section \ref{subsec:26s4NormExtendedCliticForm}).
+	The tendency toward expansion is thus not marginal, as the absolute count data in Table \ref{tab:0010} show.
+	\item As one would expect from a graphematic perspective, our corpus study shows that in situations where an alternation of \textit{n} and \textit{nen} is possible, the written variant with apostrophe is significantly more frequent (meaning \textit{'n} is more frequent than \textit{'nen}, but correspondingly \textit{nen} is more frequent than \textit{n}).
+\end{enumerate}
+
+\begin{table}
+	\centering
+	\begin{tabular}{llll}
+		\toprule
+		\textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} \\
+		\midrule
+		a & b & c & d \\
+		e & f & g & h \\
+		\bottomrule
+	\end{tabular}
+	\caption{Placeholder for actual Table 14}
+	\label{tab:0014}
+\end{table}
+
+Finally, we put forward some considerations about how cliticised forms and the additional alternation are positioned in the overall paradigm.
+Table \ref{tab:0014} can be created with reference to Table \ref{tab:0001}. %and?
+Given previous research and our own results, we presume that the formation of cliticised indefinite articles has a tendency toward monosyllabicity and a nasal onset.
+The preference for shortening, naturally, does not play as large a role in the forms that are already monosyllabic.
+Thus, the tendency toward monosyllabicity is stronger than that toward a nasal onset.
+
+The genitive of the feminine and the non-feminine have no morphophonologically or graphematically dispreferred features, and the genitive loss in the pertinent register is not complete. 
+Since these factors do not explain the the non-existence of the genitive, we suggest that a thorough examination of this phenomenon in spoken language is necessary.
+
+We have shown that the expansion of \textit{n} to \textit{nen} is equally preferred in all three relevant positions in the paradigm (nominative masculine, nominative neuter, accusative neuter).
+Thus, one can conclude that the expansion process is primarily morphological in nature, especially related to the graphematical form, and more or less independent of phonological regularities.
+
+\begin{table}
+	\centering
+	\begin{tabular}{llll}
+		\toprule
+		\textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} \\
+		\midrule
+		a & b & c & d \\
+		e & f & g & h \\
+		\bottomrule
+	\end{tabular}
+	\caption{Placeholder for actual Table 15}
+	\label{tab:0015}
+\end{table}
+
+From a paradigmatic perspective, the expanded \textit{nen}-forms and absence of genitives result in the especially preferred distribution of syncretisms shown in the paradigm in Table \ref{tab:0015}.
+The division between feminine and non-feminine as well as the syncretism between the nominative and accusative of all grammatical genders is ubiquitous in German's nominal inflectional system.
+Since one cannot say that the system shown in Table \ref{tab:0015} represents the end point of a language development in present-day German, this description is certainly speculative.
+However, it seems likely that this equalization within the system could encourage the expansion to \textit{nen}.
+
+From a corpus-linguistic perspective, the studies presented here show a clear picture of what remains yet to be attained.
+First, it would be desirable to clarify the correlation between graphic and phonological realizations of cliticised forms (to which we have taken an agnostic approach in this paper) through empirically founded examination of the shortened forms in spoken language.
+This task cannot be done with corpus linguistics, because sufficiently large spoken language corpora do not exist, and because one cannot expect a clear transcription of the cliticised forms without a phonetic analysis tailed to this research question.
+Such an analysis would be necessary, for example, to precisely determine the difference between [nən], [nn̩], and [n̩].
+
+On the other hand, a detailed examination of all of the cliticised articles written together with other words would be desirable and doable.
+In the current paper, we only explored this superficially, mainly because of the considerable technical problems that would come along with a complete investigation.
+These synthetic forms consisting of a preceding word plus the indefinite article are not indexed or searchable as tokens in the corpus, and a larger study would require a complicated search heuristic and a meticulous tidying of the results.
+However, the evidence from Study 5 (Section \ref{subsec:27s5GraphEnclisis}) for independent principles of the written vernacular that exist beyond orthographic rules  shows that this would be a fruitful endeavor, 
+
+
+

@@ -14,6 +14,7 @@
 \input{localcommands.tex} 
 
 \addbibresource{localbibliography.bib}
+\addbibresource{rs.bib}
 
 \begin{document}     
 
@@ -60,17 +61,21 @@ render_listings()
 <<child="chapters/measurenps.Rnw">>=
 @
 
-<<child="chapters/adjectives.Rnw">>=
-@
+%<<child="chapters/adjectives.Rnw">>=
+%@
 
-<<child="chapters/compounds.Rnw">>=
-@
+%<<child="chapters/compounds.Rnw">>=
+%@
 
 <<child="chapters/weaknouns.Rnw">>=
 @
 
 <<child="chapters/weil.Rnw">>=
 @
+
+\part{Directions}
+
+\input{chapters/directions}
 
 % \input{localseealso.tex} 
 \input{backmatter.tex} 

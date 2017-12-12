@@ -5,3 +5,6 @@ opts_knit$set(self.contained=FALSE)
 
 \chapter{Protoypical syntax and punctuation: (non-)embedded V2 clauses}
 \label{sec:prototypicalsyntaxandpunctuation}
+
+\tblsframebox{lsLightGray}{}{This chapter is based on \textcite{SchaeferSayatz2016}.}
+
