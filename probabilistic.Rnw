@@ -5,28 +5,28 @@
   , modfonts
   , colorlinks
   , showindex
-  , draftmode
+%  , draftmode
 ]{langsci/langscibook}
-  
+
 \input{localmetadata.tex}
 \input{localpackages.tex}
 \input{localhyphenation.tex}
-\input{localcommands.tex} 
+\input{localcommands.tex}
 
 \addbibresource{localbibliography.bib}
 \addbibresource{rs.bib}
 
-\begin{document}     
+\begin{document}
 
-\maketitle                
+\maketitle
 \frontmatter
 
-\currentpdfbookmark{Contents}{name} 
+\currentpdfbookmark{Contents}{name}
 \tableofcontents
 \include{chapters/preface}
 \include{chapters/acknowledgments}
-\include{chapters/abbreviations} 
-\mainmatter  
+\include{chapters/abbreviations}
+\mainmatter
 
 << setup, cache=FALSE, echo=FALSE, include=FALSE, results='asis'>>=
 opts_knit$set(self.contained=FALSE)
@@ -50,6 +50,9 @@ render_listings()
 <<child="chapters/introduction.Rnw">>=
 @
 
+<<child="chapters/webcorpora.Rnw">>=
+@
+
 <<child="chapters/statistics.Rnw">>=
 @
 
@@ -58,16 +61,10 @@ render_listings()
 <<child="chapters/clitics.Rnw">>=
 @
 
-<<child="chapters/measurenps.Rnw">>=
+<<child="chapters/weaknouns.Rnw">>=
 @
 
-%<<child="chapters/adjectives.Rnw">>=
-%@
-
-%<<child="chapters/compounds.Rnw">>=
-%@
-
-<<child="chapters/weaknouns.Rnw">>=
+<<child="chapters/measurenps.Rnw">>=
 @
 
 <<child="chapters/weil.Rnw">>=
@@ -77,7 +74,7 @@ render_listings()
 
 \input{chapters/directions}
 
-% \input{localseealso.tex} 
-\input{backmatter.tex} 
-\end{document} 
+% \input{localseealso.tex}
+\input{backmatter.tex}
+\end{document}
 

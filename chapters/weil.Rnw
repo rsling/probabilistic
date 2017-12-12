@@ -8,3 +8,58 @@ opts_knit$set(self.contained=FALSE)
 
 \tblsframebox{lsLightGray}{}{This chapter is based on \textcite{SchaeferSayatz2016}.}
 
+\section{Introduction}
+\label{sec:weil:introduction}
+
+\section{Theoretical background}
+\label{sec:weil:theoreticalbackground}
+
+\subsection{German clause types and sentential independence}
+\label{sec:germanclausetypes‚andsententialindependence}
+
+\subsubsection{Structural integration in previous approaches}
+\label{structuralintegrationinpreviousapproaches}
+
+\subsubsection{Views on \textit{obwohl}-V2 and \textit{weil}-V2}
+\label{sec:viewonobwohlv2andweilv2}
+
+\subsection[Graphemics and sentential independence]{Graphemics and graphemic markers of sentential independence}
+\label{sec:graphemicsandgraphemicmarkersofsententialindependence}
+
+\subsubsection{Usage-based graphemics}
+\label{sec:usagebasedgraphemics}
+
+\subsubsection{Independent sentences in syntax and graphemics}
+\label{sec:independentsentencesinsyntaxandgraphemics}
+
+\subsubsection{Punctuation after sentence-initial particles}
+\label{sec:punctuationaftersentenceinitialparticles}
+
+\subsection{Summary and hypotheses}
+\label{sec:summaryandhypotheses}
+
+\section{Corpus study}
+\label{sec:weil:corpusstudy}
+
+\subsection{Choice of corpus, sampling, and annotation}
+\label{sec:choiceofcorpussamplingandannotation}
+
+\subsection[Modeling the distributional differences]{Modeling the distributional differences between \textit{obwohl}, \textit{weil}, VL, and V2}
+\label{modelingthedistributionaldifferencesbetweenobwohlweilvlandv2}
+
+\subsubsection{\textit{Obwohl} clauses: VL versus V2}
+\label{sec:obwohlclausesvlversusv2}
+
+\subsubsection{\textit{Weil} clauses: VL versus V2}
+\label{sec:weilclausesvlversusv2}
+
+\subsubsection{VL clauses: \textit{obwohl} versus \textit{weil}}
+\label{sec:vlclausesobwohlversusweil}
+
+\subsection{V2 clauses: \textit{obwohl} versus \textit{weil}}
+\label{sec:v2clausesobwohlversusweil}
+
+\section{Linguistic interpretation and outlook}
+\label{sec:weil:linguisticinterpretationandoutlook}
+
+

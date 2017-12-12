@@ -230,7 +230,7 @@ Statements such as this require (as Nübling also said) a precise and statistica
 No such examination has been carried out thus far for any of these phenomena of non-standard written variants described above.
 However, it's fairly safe to assume that a sufficiently sophisticated corpus (especially a diachronic one) that would allow this kind of study does not exist.
 
-\subsection{Distributional factors: Cliticised form vs. full form, \textit{n} vs. \textit{nen}}
+\subsection[Distributional factors]{Distributional factors: Cliticised form vs. full form, \textit{n} vs. \textit{nen}}
 \label{subsec:14distributionalFactors}
 
 We already mentioned that the written forms of cliticised indefinite articles are restricted to certain positions and registers.
@@ -341,7 +341,7 @@ The category \textit{blogmix} is defined as a mixture of non-spontaneous and qua
 In total, an estimated 27\% of the corpus consists of documents that potentially contain grammatical and graphematic variation beyond the standard (ca. 1.95 million documents).
 The results in the following sections support our perspective that only a corpus like DECOW2012 should be used for the current investigation.
 
-\subsection{General distribution of abbreviated forms and full forms in the corpus}
+\subsection[General distribution of abbreviated forms and full forms]{General distribution of abbreviated forms and full forms in the corpus}
 \label{subsec:22distribInCorpus}
 
 First, we provide an estimation of the absolute frequency of the individual forms.
@@ -453,7 +453,7 @@ Obviously, there is no clear consensus.
 We will presume that the form \textit{n} almost always represents an indefinite article, and that only a few ambiguous cases and even fewer definite cases appear in our concordances.
 For the samples in Studies 3 and 4 (Sections \ref{subsec:25s3FullFormAbbrevForm} and \ref{subsec:26s4NormExtendedCliticForm}), only cliticised forms that clearly represent indefinite articles were included. 
 
-\subsection{Study 1: Abbreviated forms as alternation in semi-spontaneous written language}
+\subsection[Study 1: Abbreviated forms as an alternation]{Study 1: Abbreviated forms as an alternation in semi-spontaneous written language}
 \label{subsec:23s1Alternation}
 
 In this study, we test our assumption that the written cliticised forms represent a partially unsystematic alternation in semi-spontaneous written language use.

@@ -1,0 +1,9 @@
+% !Rnw root = ../smil.Rnw
+<<setupwebcorpora, cache=FALSE, echo=FALSE, include=FALSE, results='asis'>>=
+  opts_knit$set(self.contained=FALSE)
+@
+
+\chapter{Web corpora}
+\label{sec:webcorpora}
+
+\tblsframebox{lsLightGray}{}{This chapter is based on \textcite{SchaeferBildhauer2012a,SchaeferBildhauer2013,BiemannEa2013}.}
