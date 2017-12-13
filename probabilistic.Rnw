@@ -74,6 +74,9 @@ render_listings()
 
 \input{chapters/directions}
 
+\appendix
+\input{chapters/weaknounlist}
+
 % \input{localseealso.tex}
 \input{backmatter.tex}
 \end{document}

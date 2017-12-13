@@ -24,7 +24,7 @@ The article includes a comment from a fellow party member quoted in a headline a
   \end{xlist}
 \end{exe}
 
-\begin{table}
+\begin{table}[htbp!]
   \begin{tabular}{c}
   \toprule
   x \\
@@ -36,10 +36,10 @@ The article includes a comment from a fellow party member quoted in a headline a
   \label{tab:formoverview}
 \end{table}
 
-In (\ref{ex:planet1}), the so-called weak masculine noun Planet `planet' takes the inflectional marker -en in the dative singular, but it does not in (\ref{ex:planet2}).
-The form in (\ref{ex:planet2}) represents a nonstandard alternative because dative singular forms without a suffix are characteristic of the much more productive strong masculine declension class, to which Planet predominantly does not belong.
-While it is impossible to know (and irrelevant) which variant was originally uttered in this specific case, many native speakers would agree that dropping the -en does not lead to full unacceptability.
-Similar examples of an accusative singular and a genitive singular of a weak noun (Mensch `human') in strong forms (accusative Mensch instead of Menschen and genitive Mensches instead of Menschen) are shown in (\ref{ex:mensch1}) and (\ref{ex:mensch2}).%
+In (\ref{ex:planet1}), the so-called weak masculine noun \textit{Planet} `planet' takes the inflectional marker \textit{-en} in the dative singular, but it does not in (\ref{ex:planet2}).
+The form in (\ref{ex:planet2}) represents a nonstandard alternative because dative singular forms without a suffix are characteristic of the much more productive strong masculine declension class, to which \textit{Planet} predominantly does not belong.
+While it is impossible to know (and irrelevant) which variant was originally uttered in this specific case, many native speakers would agree that dropping the \textit{-en} does not lead to full unacceptability.
+Similar examples of an accusative singular and a genitive singular of a weak noun (\textit{Mensch} `human') in strong forms (accusative Mensch instead of \textit{Menschen} and genitive \textit{Mensches} instead of \textit{Menschen}) are shown in (\ref{ex:mensch1}) and (\ref{ex:mensch2}).%
 \footnote{\url{http://www.flegel-g.de/wachstum-wachstum.html}, \url{http://www.mumia.de/doc/aktuell/991201ai00.html}}
 The two paradigms (standard and alternative) are shown in Table~\ref{tab:formoverview}.
 Notice that the nominative singular and the whole plural are not affected.
@@ -54,7 +54,7 @@ The remainder of the paper deals exclusively with the three non-nominative singu
   \trans A person's life is put at risk for political reasons. \label{ex:mensch2}
 \end{exe}
 
-The (simplex) weak nouns form a small class of just over 450 masculine nouns.
+The (simplex) weak nouns form a small class of just over $450$ masculine nouns.
 Interestingly, many of them, according to \textcite{Koepcke1995}, have prototypical semantic and phonotactic properties such as human denotation or nonfinal accent (cf.\ Section~\ref{sec:thegermanweaknounprototypes}).
 This makes the alternative forms, as seen in the sentences (\ref{ex:planet}) to (\ref{ex:mensch2}), particularly interesting.
 Under classical Aristotelian theories of linguistic categorisation, we could only classify the alternate forms as the results of performance error, while otherwise adhering to a notion of fully discrete grammatical categories not affected by prototypicality, similarity effects, or fuzziness.
@@ -62,9 +62,11 @@ However, such an interpretation is revealed to be inappropriate if we can show t
 \footnote{By \textit{alternation strength}, I mean the probability that a specific weak noun occurs in a strong form, possibly in a specific context.}
 After all, the term error (as in performance error) can only refer to the unmodeled random component of an alternation phenomenon, which is essentially irrelevant from a theoretical perspective.
 To assume something like irrelevant effects which are not randomly distributed (or relevant effects which are randomly distributed) would be contradictory.
-However, such an interpretation is revealed to be inappropriate if we can show that the presence or the absence of the prototypical semantic and phonotactic features influences the alternation strength of weak nouns.4 After all, the term error (as in performance error) can only refer to the unmodeled random component of an alternation phenomenon, which is essentially irrelevant from a theoretical perspective.
+However, such an interpretation is revealed to be inappropriate if we can show that the presence or the absence of the prototypical semantic and phonotactic features influences the alternation strength of weak nouns.
+After all, the term \textit{error} (as in \textit{performance error}) can only refer to the unmodeled random component of an alternation phenomenon, which is essentially irrelevant from a theoretical perspective.
 To assume something like irrelevant effects which are not randomly distributed (or relevant effects which are randomly distributed) would be contradictory.
-The guiding hypothesis for this study is therefore clear: if there is a cognitively real prototype, then a weak noun's probability of occurring in a strong form should be inversely correlated with its degree of prototypicality.
+The guiding hypothesis for this study is therefore clear:
+if there is a cognitively real prototype, then a weak noun's probability of occurring in a strong form should be inversely correlated with its degree of prototypicality.
 In the spirit of similar corpus-linguistic approaches to alternations (\eg \citealt{Gries2003}; \citealt{BresnanEa2007}; \citealt{NessetJanda2010}; \citealt{DivjakArppe2013}), I assume that corpora are a valid source of data to test such hypotheses, at least as long as we can find enough occurrences of both alternatives to allow for an appropriate type of statistical inference.
 Despite its apparent relevance for cognitively oriented corpus-based linguistics, the alternation strength of weak nouns in German has not yet been examined in a large-scale, methodologically sound corpus study.
 This situation might be partially attributed to the lack of appropriate corpora, and the present paper aims to remedy it by using a very large web corpus of German and by applying fully automatic methods of data retrieval and analysis.
@@ -83,18 +85,19 @@ Finally, I summarise the findings in Section~\ref{sec:weaknouns:conclusions}.
 
 As mentioned in the previous section, the main hypotheses for this study have been previously formulated within prototype theory \parencite{Koepcke1995}.
 Therefore, I will briefly introduce the relevant ideas from prototype theory in this section.%
-\footnote{Convenient overviews can be found, \eg in \textcite{Taylor2003a,Taylor2008,Taylor2015}.}
+\footnote{Convenient overviews for linguists can be found, \eg in \textcite{Taylor2003a,Taylor2008,Taylor2015}.}
 According to formal approaches to linguistic categorisation inspired by Aristotelian logic, category membership is determined by rules and defining features, and it is consequently not viewed as a matter of degree (\citealt{Sutcliffe1993}, \citealt[11--16]{Murphy2002}).
 However, based on evidence suggesting that humans often categorise objects (standard examples include types of birds or furniture, or similar semantic categories) by similarity and often with varying degrees of fuzziness, cognitive theories like prototype theory \parencite{Rosch1973} and its direct rival exemplar theory \parencite{MedinSchaffer1978,Hintzman1986} were developed.
-Prototype theory assumes that categories are defined by the similarity of their members to a mentally stored abstraction: the most prototypical member or in later versions of prototype theory, weighted features defining the prototype in a non-discrete fashion.
+Prototype theory assumes that categories are defined by the similarity of their members to a mentally stored abstraction:
+the most prototypical member or in later versions of prototype theory, weighted features defining the prototype in a non-discrete fashion.
 Exemplar theory assumes that a category is simply a set of memory traces of previously encountered similar items, and that no abstraction takes place.%
 \footnote{It should be noticed that, technically, the popular schema-based approach in cognitive linguistics (\citealt{Langacker1987}; for an overview, see \citealt{Tuggy2007}) is close to the Aristotelian tradition \wrt discreteness of class membership (cf.\ also \citealt[225--226]{DivjakArppe2013}).
 However, it has been argued that under the appropriate interpretation, prototypes and schemas are compatible, albeit fulfilling different roles in the cognitive linguistic architecture (\citealt{Langacker1987}, summarised in \citealt[69--72]{Taylor2003a}.}
 Both theories can deal with certain members of categories being better or more central than others, as well as category membership being determined to varying degrees based on similarity rather than on a fixed set of necessary features defining strictly discrete categories (cf.\ also \citealt[224]{DivjakArppe2013}).%
-\footnote{Close relatives of exemplar models are so-called analogical approaches.
+\footnote{Close relatives of exemplar models are so-called \textit{analogical approaches}.
 Prominently, \textcite{Skousen1989} introduced a model which does without abstraction.
 \textcite{DaelemansVandenbosch2005} include feature and feature weights, and thus a certain level of abstraction.
-See \textcite[4--14,11--12]{Kapatsinski2014} for an overview, a comparison and an argumentation in favor of including weighted features in analogical models.}
+See \textcite[4--14,11--12]{Kapatsinski2014} for an overview, a comparison and an argumentation in favour of including weighted features in analogical models.}
 The major difference between them is how they model the cognitive representations of categories, as either abstractions (prototypes) or memory traces of concrete exemplars.
 The two theories are supported by different sets of experimental methods, such as similarity ratings, typicality ratings, and category naming.
 See \textcite{StormsEa2000} as an example of those methods applied to semantic categories in natural language, including a discussion of the relevance of the respective findings for the two theories.
@@ -103,7 +106,7 @@ In the same paper, \textcite[63]{Barsalou1990} argues that behavioral experiment
 Barsalou states that
 
 \begin{quote}
- [\ldots] we cannot say whether category knowledge is distributed in exemplars or centralised abstractions.
+ [\ldots] we cannot say whether category knowledge is distributed in exemplars or centralized abstractions.
  But we do know that any account of knowledge that excludes idiosyncratic information, cooccurrence information, or dynamic representation is inadequate.
  \parencite[84]{Barsalou1990}
 \end{quote}
@@ -114,7 +117,7 @@ With this argument in mind, which is even more applicable to corpus-based method
 While in her earlier work Rosch conceptualised the representation or the prototype as the most prototypical member of a category \parencite[42--44]{Taylor2008}, in her later work \parencite{RoschEa1976,Rosch1978} and in most of the subsequent literature (summarised in \citealt[44--46]{Taylor2008}, \citealt[564]{2015}), prototypicality is modeled in terms of weighted features.
 Under this view, an object belongs to a specific category to the extent that it has a sufficiently large number of diagnostic properties, each of which is (at least potentially) not strictly required for membership in that class.
 To account for effects of similarity and fuzziness of membership, the features are weighted as being more or less characteristic.
-This is formulated in terms of a high or low cue validity of a feature \parencite[384--385]{RoschEa1976}.
+This is formulated in terms of a high or low \textit{cue validity} of a feature \parencite[384--385]{RoschEa1976}.
 Ideally, the cue validity would specify the conditional probability $p(F|C)$ that an item which exhibits a feature $F$ is a member of category $C$.%
 \footnote{Mathematically, different formulations have been proposed within prototype theory and similar cognitive theories of categorisation and category learning (\eg \citealt{BusemeyerEa1993} or \citealt{KruschkeJohansen1999}, but the differences are of little importance for the present study.}
 Obviously, exact cue validities and exhaustive feature sets are hard to establish experimentally.
@@ -131,12 +134,12 @@ Given the relevant features and their weights, there might be multiple more or l
 \footnote{This is reminiscent of polysemy in lexical semantics, that is the association of multiple senses with one form.
 The difference to classical polysemy, which assumes clearly distinct senses, is that the weighted-feature approach to prototype theory allows for diverse equally prototypical manifestations with varying degrees of similarity.
 In other words, nothing forces us to assume clearly distinct and\slash or hierarchically ordered centers of the category, and polycentric categories do not pose a problem.
-Cf.\ especially \textcite{Taylor2003b,Taylor2006} for a discussion in favor of such a view, although not in the context of prototype theory.}
+Cf.\ especially \textcite{Taylor2003b,Taylor2006} for a discussion in favour of such a view, although not in the context of prototype theory.}
 
 As mentioned above, prototype theory was first developed with a focus on noun semantics.
 However, the present study stands in a long tradition of applying prototype theory to grammatical categories (\citealt[51--60]{Taylor2008}, \citealt[568--576]{Taylor2015}).
 If we regard it as a general model of the organisation of cognitive representations, it should be expected to be applicable to grammatical categories.
-To name just a few examples, prototype effects have been detected in the categorisation of strong verbs in English \parencite{BybeeModer1983}, in part-of-speech classification \parencite{Uehara2003}, and in the selection and/ or classification of syntactic constructions and the syntax–lexis interface \parencite{Winters1990,Gries2003,DivjakArppe2013,Dobric2015}.%
+To name just a few examples, prototype effects have been detected in the categorisation of strong verbs in English \textcite{BybeeModer1983}, in part-of-speech classification \textcite{Uehara2003}, and in the selection and\slash or classification of syntactic constructions and the syntax–lexis interface \textcite{Winters1990,Gries2003,DivjakArppe2013,Dobric2015}.%
 \footnote{There are also studies which, although they do not use prototype-theoretical terminology, can be seen as supporting the application of similarity-based theories to grammar, for example \textcite{Dabrowska2008}, an exemplar-based study of Polish-speakers' ability to classify novel nouns with regard to their inflectional class based on, among other things, phonological and morphological similarity to known nouns.}
 Especially in morphosyntax, large feature sets pertaining to all levels of linguistic description, including features referring to larger linguistic (and even extralinguistic) contexts can be taken into account, either defining prototypical constructions in which items appear (cf.\ especially \citealt[228]{DivjakArppe2013} on the importance of the contextual element) or defining prototypical choices of competing constructions which are prototypically instantiated in certain contexts and given certain lexical choices.
 Some of the aforementioned studies and the study presented here use corpus data, and I turn to the validity of corpus linguistic methods in prototype theory in Section~\ref{sec:prototypesalternationsandcorpusdata}.
@@ -152,10 +155,10 @@ I briefly discuss these two questions in this section.
 Methodologically, there are diverse approaches to corpus-based prototype research; I provide only an exemplary overview.
 For example, \textcite{Gilquin2006} examines raw and relative frequencies in order to determine how often prototypical properties of English periphrastic causative constructions described in the existing literature are instantiated in corpus exemplars.
 She sees this as a test of the idea that prototypicality implies salience, which in turn implies high frequency \parencite[169,178]{Gilquin2006}, and as a test of the existing theoretical models of prototypical causation \parencite[178--180]{Gilquin2006}.
-\textcite{Dobric2015} models the prototypicality of the different senses of the English verb look by, among other things, counting the number of corpus sentences in which they are instantiated (also under the hypothesis that prototypicality implies high frequency) and by determining how restricted the senses are with respect to the different contexts in which they appear.
-Another approach does not rely on assumptions about a direct correspondence between prototypicality and absolute frequency and focuses on situations where two or more lexical items or two or more constructions compete (i. e. where they alternate).
+\textcite{Dobric2015} models the prototypicality of the different senses of the English verb \textit{look} by, among other things, counting the number of corpus sentences in which they are instantiated (also under the hypothesis that prototypicality implies high frequency) and by determining how restricted the senses are with respect to the different contexts in which they appear.
+Another approach does not rely on assumptions about a direct correspondence between prototypicality and absolute frequency and focuses on situations where two or more lexical items or two or more constructions compete (\ie where they alternate).
 Some form of multifactorial modeling is then applied to determine how strongly the relevant features influence the choice of each of the competing elements.
-Under this approach, the features of the multifactorial model define the prototypicality of the competing items, and the calculated probabilities in favor of a specific choice can be seen as an approximation of the cue validity of the features.
+Under this approach, the features of the multifactorial model define the prototypicality of the competing items, and the calculated probabilities in favour of a specific choice can be seen as an approximation of the cue validity of the features.
 For example, \textcite{Gries2003} examines how a large number of features influence the choice between ditransitive and competing prepositional constructions in English.
 Similarly, \textcite{DivjakArppe2013} model the choice among larger sets of Finnish and Russian try verbs, determining prototypical properties for each verb \parencite[260--267]{DivjakArppe2013} by applying polytomous regression using a large set of grammatical, lexical, and contextual features extracted from corpus exemplars.%
 \footnote{There is more work along these lines which does not necessarily use prototype-theoretical terminology.
@@ -168,7 +171,7 @@ Finally, I turn to the important question of the validity of corpus-based findin
 Some general objections against corpus data, which could be seen as applicable here, have been dealt with in \textcite{BresnanEa2007} on the dative alternation in English.%
 \footnote{Of course, the argumentation in \textcite{BresnanEa2007} is specific to their research question and the corpus data they used. There is no reason, however, to doubt that the findings generalise to other corpora and research questions.}
 First of all, \textcite[82--84]{BresnanEa2007} show that the factors which influence the choice between two alternative constructions are stable across individual speakers represented in the corpus.
-Corpus data, which pool a large number of individual speakers, can thus still be used to infer regularities of individual speakers' mental grammars (contra \citealt{Newmeyer2003}, especially p.696).
+Corpus data, which pool a large number of individual speakers, can thus still be used to infer regularities of individual speakers' mental grammars (contra \citealt{Newmeyer2003}, especially p.~696).
 Similarly, \textcite[87--90]{BresnanEa2007} show that cross-corpus differences (which might, at least partially, be attributed to different distributions of register or genre) do not per se invalidate grammatical inferences from corpus data.
 Furthermore, the contributions in \textcite{GlynFischer2010} (especially \citealt{GriesDivjak2010}), all argue implicitly or explicitly for the applicability of corpus-based methods in cognitive linguistics, including references to work where corpus-based and experimental work (which offers more direct access to cognitive representations and processes) have been successfully correlated.
 Thus, there clearly exists a successful research paradigm for corpus linguistics as ``psychologically informed (cognitively inspired) usage-based linguistics'' \parencite[334]{Gries2010}.
@@ -179,59 +182,69 @@ In prototype theory in the narrow sense, the construct is a cognitive representa
 \textcite{Gries2003} comments:
 
 \begin{quote}
-  Frequently, Rosch's results were [\ldots] interpreted as if they were statements on the structure of mental representations as such; cf.\ the effects=structure fallacy and the prototype = representation fallacy. I do not wish to support such interpretations. [\ldots] Still, even if the form of analysis does not translate into statements on mental representations, the high predictive power [\ldots] shows that the cognitive factors underlying the choice of construction have been identified properly and weighted in accordance with their importance for actual usage.
+  Frequently, Rosch's results were [\ldots] interpreted as if they were statements on the structure of mental representations as such;
+  cf.\ the effects=structure fallacy and the prototype=representation fallacy.
+  I do not wish to support such interpretations.
+  [\ldots] Still, even if the form of analysis does not translate into statements on mental representations, the high predictive power [\ldots] shows that the cognitive factors underlying the choice of construction have been identified properly and weighted in accordance with their importance for actual usage.
   \parencite[22]{Gries2003}
 \end{quote}
 
 Making a significantly stronger claim, \textcite{DivjakArppe2013} state:
 
 \begin{quote}
-  The objectives of this study are, first, to explore how the prototype and exemplar models of categorisation manifest themselves in corpus data [\ldots]. Although corpus data do not reflect the characteristics of mental grammars directly, we do consider corpus data a legitimate source of data about mental grammars.
+  The objectives of this study are, first, to explore how the prototype and exemplar models of categorisation manifest themselves in corpus data [\ldots].
+  Although corpus data do not reflect the characteristics of mental grammars directly, we do consider corpus data a legitimate source of data about mental grammars.
   \parencite[229--230]{DivjakArppe2013}
 \end{quote}
 
 However, as \textcite[224]{DivjakArppe2013} themselves point out (citing \citealt{Barsalou1990}), prototype and exemplar models can be seen as informationally equivalent (cf.\ also Section~\ref{sec:prototypetheory}), and the relevant difference between them is the level of abstraction assumed in mental representations.%
 \footnote{\textcite[15]{Kapatsinksi2014} takes this even further with his hypothetical statement that ``[i]n the extreme, some speakers’ heads could host exemplar models, and some could contain fairly abstract grammars, and the produced output would be essentially identical.''}
-I therefore follow \textcite{Gries2003}, taking the safe route and suggesting that if corpus data show the result of similarity-based categorisation and fuzziness of categories, they provide support for cognitive linguistic theories of categorisation and against traditional linguistic theories. Thus, a lot is achieved if we make sure ``that the cognitive factors underlying the choice of construction have been identified properly and weighted in accordance with their importance for actual usage'' \parencite[22]{Gries2003}.
+I therefore follow \textcite{Gries2003}, taking the safe route and suggesting that if corpus data show the result of similarity-based categorisation and fuzziness of categories, they provide support for cognitive linguistic theories of categorisation and against traditional linguistic theories.
+Thus, a lot is achieved if we make sure ``that the cognitive factors underlying the choice of construction have been identified properly and weighted in accordance with their importance for actual usage'' \parencite[22]{Gries2003}.
 
-To sum up, corpus data have been established as a reliable testing ground for cognitive linguistic theory. Prototype theory is well suited to model cases where forms or constructions alternate if we regard the features which control the choice of alternative forms and their weights as defining prototypes or prototypical contexts for their use. The notion of cue validity from prototype theory correlates with the contribution made by single feature values to the probability of a specific alternate being chosen in multifactorial analyses.
+To sum up, corpus data have been established as a reliable testing ground for cognitive linguistic theory.
+Prototype theory is well suited to model cases where forms or constructions alternate if we regard the features which control the choice of alternative forms and their weights as defining prototypes or prototypical contexts for their use.
+The notion of cue validity from prototype theory correlates with the contribution made by single feature values to the probability of a specific alternate being chosen in multifactorial analyses.
 
 \subsection{Prototypes, paradigms, and probabilistic morphology}
 \label{sec:prototypesparadigmsandprobabilisticmorphology}
 
-As stated above, the focus of this paper is on alternation between two inflectional classes. In this section, I propose to treat this alternation under a prototype view of inflectional morphology, based on Sections 2.1 and 2.2.
+As stated above, the focus of this paper is on alternation between two inflectional classes. In this section, I propose to treat this alternation under a prototype view of inflectional morphology, based on Sections~\ref{sec:prototypetheory} and~\ref{sec:prototypesalternationsandcorpusdata}.
 I also relate the present study to a larger body of work which suggests that a probabilistic usage-based approach to inflectional morphology is appropriate.
 
 The prototype approach to paradigm structure has been followed, for example, by \textcite{NessetJanda2010}.
-They argue that paradigms have a theoretical status (which in cognitive linguistics means a cognitive reality), which is denied in traditional Item-and-Arrangement or Item-and-Process approaches to morphology (see the discussion in \citealt{Bybee1985}).
+They argue that paradigms have a theoretical status (which in cognitive linguistics means a cognitive reality), which is denied in traditional item-and-arrangement or item-and-process approaches to morphology (see the discussion in \citealt{Bybee1985}).
 Even more importantly, \textcite[705--707]{NessetJanda2010} argue that paradigms are structured as radial categories, with highly central and prototypical, but also marginal exponents. Within verbal paradigms, for example, singular exponents are assumed to be more prototypical than plural exponents, finite exponents more prototypical than infinite ones, etc.
-\textcite[172--173]{NessetJanda2010} formulate this as the Paradigm Structure Hypothesis and argue that prototypical (and thereby unmarked) exponents within a paradigm are ``more resistant to [\ldots] change''.
-They show that this assumption is supported by examining ongoing changes in Russian verbal inflection. I will return to this in Sections 2.4 and 3 when looking at differences in case forms of weak nouns in German.
+\textcite[172--173]{NessetJanda2010} formulate this as the \textit{paradigm structure hypothesis} and argue that prototypical (and thereby unmarked) exponents within a paradigm are ``more resistant to [\ldots] change''.
+They show that this assumption is supported by examining ongoing changes in Russian verbal inflection.
+I will return to this in Sections~\ref{sec:thegermanweaknounprototypes} and~\ref{sec:corpusstudy} when looking at differences in case forms of weak nouns in German.
 
-\textcite{NessetJanda2010} use prototype theory as their specific background, but the general cognitive framework detailed in Sections 2.1 and 2.2 extends to a more general probabilistic view of morphology supported by the data presented here.
+\textcite{NessetJanda2010} use prototype theory as their specific background, but the general cognitive framework detailed in Sections~\ref{sec:prototypetheory} and~\ref{sec:prototypesalternationsandcorpusdata} extends to a more general probabilistic view of morphology supported by the data presented here.
 I do not go into detail on the concrete theoretical or computational implementations of probabilistic, gradient morphology, following \textcite{HayBaayen2005}:
 
 \begin{quote}
-  [\ldots W]e separate the questions of subsymbolic versus symbolic implementation on the one hand, from discrete versus gradient structure on the other. The results [\ldots] could potentially be modelled both by symbolic and non-symbolic approaches.
+  [\ldots W]e separate the questions of subsymbolic versus symbolic implementation on the one hand, from discrete versus gradient structure on the other.
+  The results [\ldots] could potentially be modelled both by symbolic and non-symbolic approaches.
   However, they resist modelling by strictly deterministic, non-probabilistic approaches.
   \parencite[342--343]{HayBaayen2005}
 \end{quote}
 
-There is ample support for the view that grammar is inherently probabilistic (overviews in \citealt{HayBaayen2005} or \citealt{Kapatsinski2014}), and it is not necessary to review that evidence extensively here. The one aspect I want to point out is that probabilistic analogical effects in inflectional morphology have been diagnosed not just for irregular forms (like strong verbs in English), but also in the formation of completely regular forms \parencite{ErnestusBaayen2004,TabakEa2010;RamscarEa2013}.
+There is ample support for the view that grammar is inherently probabilistic (overviews in \citealt{HayBaayen2005} or \citealt{Kapatsinski2014}), and it is not necessary to review that evidence extensively here.
+The one aspect I want to point out is that probabilistic analogical effects in inflectional morphology have been diagnosed not just for irregular forms (like strong verbs in English), but also in the formation of completely regular forms \parencite{ErnestusBaayen2004,TabakEa2010;RamscarEa2013}.
 The emerging picture shows that phonology, semantics, frequency, and similarity to other items drive analogical processes in both irregular and regular inflection.
 This is relevant for the present study because weak nouns in German cannot be called irregular, but their inflection is nonetheless affected by probabilistic effects.
 
 Finally, the token frequency of specific items and the type and token frequencies of a pattern (such as an inflectional class) are assumed to play a role under cognitively oriented usage-based theories, although modeling exact effects and interactions is complex (cf.\ \eg \citealt{Bybee1985}; \citealt{Langacker1987}; \citealt{Schmid2010a}; \citealt{DivjakCaldwellharris2015}; a discussion with a focus on corpus data are provided in \citealt{Schmid2010b}).
 In general, it is assumed that high token frequency of an individual item leads to entrenchment of that item \parencite[59--60]{Langacker1987}.
 In other words, what is frequently repeated individually gradually becomes stored individually and is easier to access and less susceptible to analogy \parencite{BybeeHopper2001}.
-On the other hand, high type frequency (i. e. the frequent occurrence of different items in a certain structure) favors the storage of an abstract and productive pattern of that structure \parencite{BybeeThompson2000}.
+On the other hand, high type frequency (\ie the frequent occurrence of different items in a certain structure) favours the storage of an abstract and productive pattern of that structure \parencite{BybeeThompson2000}.
 \textcite{DivjakCaldwellharris2015} summarise further developments and the experimental techniques being used to examine frequency effects, as well as the ongoing discussion about the problems involved in the interpretation of results.
 I include only simple lemma token frequencies in the statistics in Section~\ref{sec:weaknouns:corpusstudy} (cf.\ especially Section~\ref{sec:astatisticalmodeloftheprototype}), and therefore do not go into further detail here.
 
 \subsection{The German weak-noun prototype}
 \label{sec:thegermanweaknounprototypes}
 
-\begin{table}
+\begin{table}[htbp!]
   \begin{tabular}{c}
   \toprule
   x \\
@@ -244,7 +257,7 @@ I include only simple lemma token frequencies in the statistics in Section~\ref{
 \end{table}
 
 In this section, I provide an analysis of the relevant aspects of the German weak-noun inflection.
-The aim is to derive testable hypotheses for the corpus study presented in Section~\ref{sec:weaknouns:corpusstudy} considering the theoretical background specified in Sections 2.1--2.3.
+The aim is to derive testable hypotheses for the corpus study presented in Section~\ref{sec:weaknouns:corpusstudy} considering the theoretical background specified in Sections~\ref{sec:onptototypescognitivecorpusbasedmorphologyandweaknouns}--\ref{sec:prototypesparadigmsandprobabilisticmorphology}.
 Some of the details discussed by \textcite{Koepcke1995} -- especially diachronic aspects -- are not dealt with prominently here.
 
 \textcite{Koepcke1995} establishes two major prototypes for weak nouns, thus effectively defining a polycentric (bifocal) category (cf.\ Section~\ref{sec:prototypetheory}).
@@ -269,8 +282,10 @@ However, while some individual weak nouns have become strong, Köpcke does not c
 
 \begin{quote}
   Mit zunehmender Entfernung von den Prototypen nehmen Übergangsprozesse von schwacher zu starker Deklination zu.
-  Abbautendenzen für die schwachen Maskulina finden aber ausschließlich in der Peripherie des Kontinuums statt; der prototypische Bereich ist hiervon nicht betroffen.
-  Im Gegenteil: Hier lassen sich Aufbautendenzen beobachten.%
+  Abbautendenzen für die schwachen Maskulina finden aber ausschließlich in der Peripherie des Kontinuums statt;
+  der prototypische Bereich ist hiervon nicht betroffen.
+  Im Gegenteil:
+  Hier lassen sich Aufbautendenzen beobachten.%
   \footnote{With a larger distance from the prototype, it is more likely that a weak noun shows transitional phenomena toward the strong declension.
     However, full transition of weak nouns to the strong declension only occurs in the periphery of the continuum, and prototypical members are not affected.
     On the contrary: here we even find the opposite, \ie strong nouns becoming weak.}
@@ -278,7 +293,7 @@ However, while some individual weak nouns have become strong, Köpcke does not c
 \end{quote}
 
 In Section~\ref{sec:weaknouns:corpusstudy}, I will therefore seek first of all to determine how stable is the class of weak nouns in a corpus of contemporary German and argue that a purely synchronic view on the phenomenon is justified.
-If morphology is inherently probabilistic (Section~\ref{sec:prototypesparadigmsandprobabilisticmorphology}) and similarity-based (Section~\ref{sec:prototypetheory} and 2.2), and if the weak-noun prototype does have a cognitive reality, then we should expect to find a certain number of strong forms of weak nouns.
+If morphology is inherently probabilistic (Section~\ref{sec:prototypesparadigmsandprobabilisticmorphology}) and similarity-based (Section~\ref{sec:prototypetheory} and~\ref{sec:prototypesalternationsandcorpusdata}), and if the weak-noun prototype does have a cognitive reality, then we should expect to find a certain number of strong forms of weak nouns.
 It has already been demonstrated in Section~\ref{sec:weaknouns:overview} that this is the case.
 If the class is stable, however, the strong forms should be rare.
 Furthermore, the more prototypical a weak noun, the lower should be its probability of occurring in a strong form.
@@ -290,20 +305,21 @@ An additional factor is contextual in the sense of Section~\ref{sec:prototypesal
 He derives this conclusion from the fact that weak nouns violate very productive generalisations of case inflection of German nouns in general and masculine nouns in particular.
 First of all, the accusative and dative singular of all other nouns (masculine or otherwise) are never suffixed and are thus formally identical to the nominative singular base form.%
 \footnote{The dative singular marker \textit{-e} is now virtually extinct in contemporary German.}
-This is the most productive generalisation because it concerns all German nouns, except for the roughly 450 weak nouns.
+This is the most productive generalisation because it concerns all German nouns, except for the roughly $450$ weak nouns.
 Second, the genitive singular of masculine nouns is otherwise always distinguishable from the accusative and the dative because the genitive is marked (\ie not identical to the nominative base form), and the accusative and dative are not.
-Third, the genitive marker (if there is one) is otherwise always -es.%
+Third, the genitive marker (if there is one) is otherwise always \textit{-es}.%
 \footnote{These generalisations are implicitly or explicitly accepted by most German grammarians, \eg \textcite[Ch.~5]{Eisenberg2013} or \textcite[Ch.~8]{Schäfer2015}.}
 These generalisations are relevant to this study because I assume that paradigms have an internal structure and a cognitive reality (cf.\ Section~\ref{sec:prototypesparadigmsandprobabilisticmorphology} and the detailed overview in \citealt[704--705]{NessetJanda2010}), and that it consequently matters which formal oppositions within the paradigm are salient.
 Clearly, the most productive and therefore most salient of the relevant generalisations about nominal paradigms in German (\ie the identity of all accusative and dative singular forms in relation to the respective nominative singular base form) as well as the second (the formal distinguishability of the masculine genitive singular from the accusative and dative singular) are satisfied by making only the accusative and the dative strong and leaving the genitive weak.
-Only the third generalisation (masculine genitive singular forms have -es) requires even the genitive of weak nouns to become strong.
+Only the third generalisation (masculine genitive singular forms have \textit{-es}) requires even the genitive of weak nouns to become strong.
 I therefore expect that the probability of finding strong forms of weak nouns is lower in the genitive than in the accusative and dative.
 
 To summarise the hypotheses for the corpus study in Section~\ref{sec:weaknouns:corpusstudy}:
+
 \begin{enumerate}
   \item I expect to find a low-frequency alternation effect in the sense that weak nouns occur in strong inflectional forms, but with low frequency.
   In other words, there is no general erosion of the weak nouns, and the class is stable, especially because it is associated with a strong prototype.
-  \item Furthermore, I expect the probability of the alternation to be higher in the absence of the prototypical lexical features of weak nouns, namely semantics (human -- animate -- inanimate) and phonotactics.
+  \item Furthermore, I expect the probability of the alternation to be higher in the absence of the prototypical lexical features of weak nouns, namely semantics (human $gg$ animate $\gg$ inanimate) and phonotactics.
   \item The grammatical case of the noun is also expected to affect the alternation strength because the analogical attraction exerted by the more productive strong paradigms is stronger in the accusative and dative than in the genitive.
   \item In accordance with what was said about frequency in Section~\ref{sec:prototypesparadigmsandprobabilisticmorphology}, a higher token frequency is expected to gradually help prevent the alternation.
 \end{enumerate}
@@ -331,20 +347,26 @@ This means that only co-occurrences of weak nouns with the singular indefinite d
 
 Consider the forms whose frequencies are to be compared, shown in Table~\ref{tab:formoverview}.
 German masculine determiners have unambiguous case forms in the singular, so it appears that we could just search for sequences of an appropriately inflected determiner, optionally followed by zero, or more appropriately inflected adjectives followed by a weak-noun lemma.
-However, noun phrases (NPs) containing the canonical accusative singular are (as a whole phrase) homonymous with those containing the accusative or dative plural, as can be seen in Table 1.
+However, noun phrases (NPs) containing the canonical accusative singular are (as a whole phrase) homonymous with those containing the accusative or dative plural, as can be seen in Table~\ref{tab:formoverview}.
 This makes it impossible to search for canonical forms with determiners that have a plural without having to fall back on the manual inspection of huge concordances.
-The only determiner without a plural is ein `a' because indefinite plural NPs are determinerless in German.
-As a quantifier, ein `one' is semantically blocked from occurring in the plural.
+The only determiner without a plural is \textit{ein} `a' because indefinite plural NPs are determinerless in German.
+As a quantifier, \textit{ein} `one' is semantically blocked from occurring in the plural.
 This reduces the unambiguous NP configurations to those with the determiner ein.
 
-Because of the problems of data sparseness, the DECOW12A web corpus was chosen.22 It is part of the COW collection of web corpora and contains 9.1 billion tokens, making it the largest linguistically annotated corpus of German available at the time this study was conducted.23 Furthermore, it can be downloaded in sentence-shuffled form for local processing.
+Because of the problems of data sparseness, the DECOW12A web corpus was chosen.%
+\footnote{The corpus was built and is hosted by Freie Universität Berlin.
+Information can be found at \url{http://corporafromtheweb.org/decow14/}.}
+It is part of the COW collection of web corpora and contains $9.1$ billion tokens, making it the largest linguistically annotated corpus of German available at the time this study was conducted.%
+\footnote{In the meantime, it has been superseded by the 20.5-billion-token DECOW14A, which is a superset of DECOW12A.
+There are other COW corpora available in Dutch, English, French, Spanish, and Swedish.}
+Furthermore, it can be downloaded in sentence-shuffled form for local processing.
 Since not much is known about the properties of large web corpora from a linguistic perspective, I briefly argue for the use of this resource here.
 The DECOW corpus was described by its creators in \textcite{SchaeferBildhauer2012} and \textcite{SchaeferBildhauer2013}.
-\textcite[492--493]{SchaeferBildhauer2012} and \textcite[48]{BiemannEa2013} present an assessment of the text types and registers contained in the corpus based on manually annotated samples, showing that the corpus contains an estimated 22.5\% of documents written in a quasi-spontaneous mode, that is mostly forum discussions.
+\textcite[492--493]{SchaeferBildhauer2012} and \textcite[48]{BiemannEa2013} present an assessment of the text types and registers contained in the corpus based on manually annotated samples, showing that the corpus contains an estimated $22.5\%$ of documents written in a quasi-spontaneous mode, that is mostly forum discussions.
 This is the kind of text where we can hope to find most nonstandard strong forms of weak nouns.
-\textcite[37--46]{BiemannEa2013} also show that the COW corpora compare favorably to traditional and web corpora in extrinsic evaluations (such as collocation extraction tasks).
+\textcite[37--46]{BiemannEa2013} also show that the COW corpora compare favourably to traditional and web corpora in extrinsic evaluations (such as collocation extraction tasks).
 In \textcite{SchaeferSayatz2014}, DECOW12A was used for similar reasons as in this study, and Van \textcite{GoethemHiligsmann2014} base part of their corpus study on the Dutch COW corpus (NLCOW12A) for comparable reasons, too.
-The use of similar, earlier web corpora like the WaCky corpora (Baroni et al., 2009) has been argued for convincingly by, among others, Zeldes (2012: 96--98).
+The use of similar, earlier web corpora like the WaCky corpora \parencite{BaroniEa2009} has been argued for convincingly by, among others, \textcite[96--98]{Zeldes2012}.
 The corpus I have chosen here can therefore be considered a recent but adequately tested source of data.
 
 In the next section, I describe my method of obtaining reliable counts from these data sources by formulating precise queries in a spirit comparable to that of Zeldes, who states (writing about his work with the WaCky corpora) that
@@ -361,21 +383,20 @@ Considering that corpora like DECOW allow us to take very large samples, the err
 \label{sec:samplinganddescriptivestatistics}
 
 To derive a sample for the analysis of the counts of weak and noncanonical strong uses of weak nouns, I proceeded as follows.
-First, a list of weak nouns was bootstrapped from DECOW12A by searching for word forms ending in en and preceded by a determiner in the genitive (such as des Planeten `of a planet').
+First, a list of weak nouns was bootstrapped from DECOW12A by searching for word forms ending in en and preceded by a determiner in the genitive (such as \textit{des Planeten} `of a planet').
 Using this bootstrapping method requires each selected noun to occur at least once in a canonically inflected genitive form with a determiner and without an adjective.
 This is a desirable by-effect because it ensures that no extremely infrequent nouns make it into the final sample.
 The list was sifted by hand in order to eliminate erroneous matches, including strong nouns in weak forms (however, see the discussion in Section~\ref{sec:weaknounsasaproductivepatternstrongnounsinweakforms}).
-In total, 451 noun lemmas were found, which is highly consistent with Bittner (2003: 98), who states that 40 native and more than 400 non-native lemmas fall into the class of weak nouns.
+In total, $451$ noun lemmas were found, which is highly consistent with \textcite[98]{Bittner2003}, who states that $40$ native and more than $400$ non-native lemmas fall into the class of weak nouns.
 
 Then, the final sample was taken by querying inflected non-nominative singular forms of ein (accusative einen, dative einem, genitive eines), optionally followed by properly inflected adjectives, followed by either the weak or the strong form of each of the bootstrapped lemmas.
-In total 451 lemmas · 3 cases · 2 alternative forms = 2706 queries were executed.%
-\footnote{A sample query as performed in the IMS OCWB \parencite{EvertHardie2011}:
-\texttt{\footnotesize[word="einen"\%c] [pos="ADJA" \& word=".+en"]* [word="Abiturient"\%c]}.}
-In the resulting sample (n=953,117), there were 26,667 token occurrences of the strong inflectional pattern and 926,450 token occurrences of the weak inflectional pattern.
-Accounting for a mere 2.8\% of all occurrences, the use of strong inflection can thus be considered a rare event.
+In total $451\ \text{lemmas}\cdot 3\ \text{cases}\cdot 2\ \text{alternative\ forms}=2,706\ \text{queries}$\ were executed.%
+\footnote{A sample query as performed in the IMS OCWB \parencite{EvertHardie2011}:\\
+\texttt{\scriptsize[word="einen"\%c] [pos="ADJA" \& word=".+en"]* [word="Abiturient"\%c]}.}
+In the resulting sample ($n=953,117$), there were $26,667$ token occurrences of the strong inflectional pattern and $926,450$ token occurrences of the weak inflectional pattern.
+Accounting for a mere $2.8\%$ of all occurrences, the use of strong inflection can thus be considered a rare event.
 A list of the noun lemmas and their frequencies in the final sample can be found in the appendix.
-The confidence intervals for the proportion of strong forms specified there (per lemma) are large, which indicates that analyzing the alternation strengths of single lemmas is not a good idea from a statistical point of view.%
-\footnote{Unfortunately,this also stands in the way of using the lemma as a random effect (cf.\ Section~\ref{sec:astatisticalmodeloftheprototype}).}
+The confidence intervals for the proportion of strong forms specified there (per lemma) are large, which indicates that analyzing the alternation strengths of single lemmas is not a good idea from a statistical point of view.
 
 Some of the lemmas turned out to be problematic and were removed as follows.
 Some have homonyms which are frequent proper names, which always inflect according to the strong pattern.
@@ -388,24 +409,34 @@ German proper person names also occur with determiners, not just in dialects, bu
   \trans I would rather finish second with a guy like Götze than first with a diva like Amoroso! \label{ex:goetze}
 \end{exe}
 
-Other problematic nouns are those few for which it is known that they have been alternating strongly between weak and strong variant for a long time, some even having reanalysed alternative stems ending in -en (\eg strong Frieden `peace' with the genitive Friedens vs.\ the older but coexisting weak Friede with the genitive Frieden). In some cases, the differentiation of stems correlates with a semantic differentiation (\citealt[173]{Koepcke1995}, also \citealt{Wurzel1985}, \citealt{Joeres1996}).
-For the corpus study, this means that these nouns introduce an ambiguity between accusatives and datives of the reanalysed stem without a suffix (\eg dem Frieden) and accusatives and datives of the older stem with a suffix (\eg dem Friede-n).
+Other problematic nouns are those few for which it is known that they have been alternating strongly between weak and strong variant for a long time, some even having reanalysed alternative stems ending in \textit{-en} (\eg strong \textit{Frieden} `peace' with the genitive \textit{Friedens} vs.\ the older but coexisting weak \textit{Friede} with the genitive \textit{Frieden}).
+In some cases, the differentiation of stems correlates with a semantic differentiation (\citealt[173]{Koepcke1995}, also \citealt{Wurzel1985}, \citealt{Joeres1996}).
+For the corpus study, this means that these nouns introduce an ambiguity between accusatives and datives of the reanalysed stem without a suffix (\eg \textit{dem Frieden}) and accusatives and datives of the older stem with a suffix (\eg \textit{dem Friede-n}).
 This ambiguity cannot be resolved automatically.
-They also have a highly increased alternation strength compared to the other weak nouns, for example 13\% strong forms for Friede.
+They also have a highly increased alternation strength compared to the other weak nouns, for example $13\%$ strong forms for \textit{Friede}.
 These facts indicate that they do not belong to the otherwise homogeneous group of weak nouns without reanalysed stems and but with low alternation strength.
 Therefore, I decided to remove them from the sample.%
 \footnote{Recall from Section~\ref{sec:thegermanweaknounprototypes} that I do not attempt a diachronic interpretation.
 Excluding the very few nouns which might actually be undergoing diachronic change is in line with this decision.}
-A small class of nouns was removed because the sample was contaminated with very recent English loans (always strong) such as Artist `artiste' (old loan, weak) vs. `artist' (recent loan, strong).
-The noun Steinmetz `mason' was also removed because it has almost completed a development into a strong noun already (without stem reanalysis).
-The noun Mensch `human' with 221,210 occurrences is extremely frequent and occurs over eight times more often than the next most frequent weak noun Kunde `customer', with 26,576 occurrences.
+A small class of nouns was removed because the sample was contaminated with very recent English loans (always strong) such as \textit{Artist} `artiste' (old loan, weak) vs. `artist' (recent loan, strong).
+The noun \textit{Steinmetz} `mason' was also removed because it has almost completed a development into a strong noun already (without stem reanalysis).
+The noun \textit{Mensch} `human' with $221,210$ occurrences is extremely frequent and occurs over eight times more often than the next most frequent weak noun \textit{Kunde} `customer', with $26,576$ occurrences.
 I removed it because otherwise the sample would have contained an extremely large proportion of token occurrences of this single noun.
 The nouns which were removed are still included in the list in the appendix.
 
-The reduced sample contains 433 lemmas and 466,922 token occurrences, of which 10,488 are strong and 456,434 weak.
-The proportion of strong forms drops by 0.6\% to 2.2\%, which is mostly due to the removal of the nouns with two stems.
+\begin{figure}
+\begin{center}
+  X
+  %\includegraphics[width=\textwidth]{}
+\end{center}
+\caption{ Bagplot of the distribution of the weak and the strong forms. Each dot represents one lemma. Seven outliers are not shown}
+\label{fig:weaknounbagplot}
+\end{figure}
+
+The reduced sample contains $433$ lemmas and $466,922$ token occurrences, of which $10,488$ are strong and $456,434$ weak.
+The proportion of strong forms drops by $0.6\%$ to $2.2\%$, which is mostly due to the removal of the nouns with two stems.
 However, there remains a very large sample of nouns showing the low-frequency alternation effect.
-Figure 1 shows a bagplot of the reduced sample, where each dot represents a weak noun, and the coordinates correspond to the total number of occurrences in the corpus (x-axis for strong, y-axis for weak occurrences).
+Figure~\ref{type:weaknounbagplot} shows a bagplot of the reduced sample, where each dot represents a weak noun, and the coordinates correspond to the total number of occurrences in the corpus (x-axis for strong, y-axis for weak occurrences).
 Bagplots \parencite{RousseeuwEa1999} are bivariate boxplots.
 The inner polygon (bag) contains half of the points.
 The outer polygon (fence) is the bag grown by a factor of three.
@@ -414,9 +445,21 @@ This bagplot shows that there are many infrequent and few frequent nouns in the 
 However, we can also tell from the scales of the axes that the strong forms (x-axis) are very rare compared to the weak forms (y-axis).
 Outliers are few, and I decided against further removal of them.
 
+\begin{table}[htbp!]
+  \begin{tabular}{c}
+  \toprule
+  x \\
+  \midrule
+  x \\
+  \bottomrule
+  \end{tabular}
+  \caption{Proportions of strong occurrences of weak nouns by grammatical case with $99\%$ confidence intervals and sample size}
+  \label{tab:weakstrongdistribution}
+\end{table}
+
 Because the influence of grammatical case was introduced as an additional factor on top of the features established by Köpcke (Section~\ref{sec:thegermanweaknounprototypes}), a monofactorial descriptive analysis was performed to confirm that case was at least likely to have an effect.
 It was quite obvious that in the three grammatical cases, there were remarkable distributional differences between strong and weak forms.
-See Table 3 for an overview of the proportions in the three cases.
+See Table~\ref{tab:weakstrongdistribution} for an overview of the proportions in the three cases.
 In the accusative and dative, the strong inflection is much more frequent.%
 \footnote{Notice how the large sample sizes allow estimation of the population proportions with very high accuracy.}
 
@@ -424,26 +467,55 @@ In the accusative and dative, the strong inflection is much more frequent.%
 \label{sec:astatisticalmodeloftheprototype}
 
 In this section, I present inferential statistics which show that the strength of the alternation of weak nouns toward the strong inflection is both influenced by prototypical features of weak nouns and by preferences for case marking in the three grammatical cases.
-I estimate a GLM in order to test for the significance of factors and quantify the strength of the significant factors.%
+I set up a GLM and estimate its parameters, also testing for the significance of factors and quantifying the strength of the significant factors.%
 \footnote{All calculations were performed using the \texttt{R} statistics software \parencite{R}, specifically the \texttt{glm()} function to fit the GLM.
 My approach to regression is guided by \textcite{FahrmeirEa2013} and \textcite{ZuurEa2009}.}
 Following the argumentation from Section~\ref{sec:thegermanweaknounprototypes}, the odds associated with the different features can be interpreted as related to their cue validity, and the prototypicality of concrete nouns can be specified by calculating their cumulated odds.
-Multifactorial modeling is required since the factors which play a role by hypothesis (cf.\ Section~\ref{sec:thegermanweaknounprototypes}) are, at least, as follows: (i) the semantic class of the noun (human, animate nonhuman, inanimate), (ii) final schwa (yes, no), (iii) accent (final, nonfinal), (iv) case (accusative, dative, genitive), and (v) token frequency.
-A binomial GLM based on token occurrences of weak nouns with the aforementioned factors as regressors and weak/strong as the response variable is a reasonable choice.
+Multifactorial modeling is required since the factors which play a role by hypothesis (cf.\ Section~\ref{sec:thegermanweaknounprototypes}) are, at least, as follows:
+(i) the semantic class of the noun (human, animate nonhuman, inanimate),
+(ii) final schwa (yes, no),
+(iii) accent (final, nonfinal),
+(iv) case (accusative, dative, genitive), and
+(v) token frequency.
+A binomial GLM based on token occurrences of weak nouns with the aforementioned factors as regressors and weak\slash strong as the response variable is a reasonable choice.
 With regard to the coding of the phonotactic variables, it should be noticed (cf.\ Section~\ref{sec:thegermanweaknounprototypes}) that schwa syllables never take the accent that monosyllabic words never contain schwa syllables, and that monosyllabic words offer no choice as to where the accent is placed.
 Consequently, atomic phonotactic variables are not independent.
-I therefore coded the nouns for a single phonotactic regressor variable (Pt) with the levels PolyUlt for polysyllabic words with final accent, PolyNult for polysyllabic words with nonfinal accent, PolySchwa for polysyllabic words ending in schwa (and consequently with nonfinal accent), and Mono for monosyllabic words.
-Table 4 summarises the response variable, the regressors and their levels, including the simple (log-transformed) token frequency of the lemma (Sections~\ref{sec:prototypesparadigmsandprobabilisticmorphology} and~\ref{sec:thegermanweaknounprototypes}).
+I therefore coded the nouns for a single phonotactic regressor variable (\textit{Pt}) with the levels \textit{PolyUlt} for polysyllabic words with final accent, \textit{PolyNult} for polysyllabic words with nonfinal accent, PolySchwa for polysyllabic words ending in schwa (and consequently with nonfinal accent), and Mono for monosyllabic words.
+Table~\ref{tab:weaknounvariables} summarises the response variable, the regressors and their levels, including the simple (log-transformed) token frequency of the lemma (Sections~\ref{sec:prototypesparadigmsandprobabilisticmorphology} and~\ref{sec:thegermanweaknounprototypes}).
+
+\begin{table}[htbp!]
+  \begin{tabular}{c}
+  \toprule
+  c \\
+  \midrule
+  c \\
+  \bottomrule
+  \end{tabular}
+  \caption{Variables used in the GLM reported in Section~\ref{sec:astatisticalmodeloftheprototype}}
+  \label{tab:weaknounvariables}
+\end{table}
 
 As was shown in Section~\ref{sec:samplinganddescriptivestatistics}, strong forms of weak nouns are rare ($2.2\%$ of all remaining forms).
-This makes logistic regression problematic, and special procedures exist for so-called rare-events regression.
+This makes logistic regression problematic, and special procedures exist for so-called \textit{rare-events regression}.
 I opted for a straightforward approach to this, taking a stratified sample where both outcomes are represented in equal proportions.
 Models estimated based on such artificially stratified samples are not useful for making predictions about the actual occurrence of events.
 This means that the coefficients and odds of the GLM can be interpreted only as indicators of the relative cue validities of the different features, and not directly as cue validities.
 The final sample used to estimate the GLM parameters contained $10,000$ data points: $5,000$ weak-noun exemplars in weak form and $5,000$ exemplars in the strong form.
 
-I ran standard model diagnostics (analysis of deviance, pseudo-R2), and ensured that there was no severe collinearity by calculating the generalised variance inflation factors according to \textcite{FoxMonette1992}.
-Table 5 summarises the model.
+\begin{table}[htbp!]
+  \begin{tabular}{c}
+  \toprule
+  x \\
+  \midrule
+  x \\
+  \bottomrule
+  \end{tabular}
+  \caption{Summary of the coefficient estimates binomial GLM reported in Section~\ref{sec:astatisticalmodeloftheprototype}}
+  \label{tab:weaknounestimates}
+\end{table}
+
+I ran standard model diagnostics (analysis of deviance, pseudo-$R^2$), and ensured that there was no severe collinearity by calculating the generalised variance inflation factors according to \textcite{FoxMonette1992}.
+Table~\ref{tab:weaknounestimates} summarises the model parameter estimates.
 All regressors remained in the model after running a step-down procedure based on the akaike information criterion (AIC).%
 \footnote{A word on model selection is in order at this point.
 Consider the facts that collinearity is low, that the number of regressors is low, and that the regressors are selected based on strong theoretical assumptions.
@@ -451,29 +523,41 @@ More advanced methods of model selection, in particular multimodel inference (in
 Notice that \textcite[4]{BurnhamAnderson2002} state that ``[s]imple models with only 1--2 parameters are not the central focus of this book; rather, we focus on models of more complex systems.''}
 The proportion of variance explained by the model is fairly substantial with $R^2_N=0.21$, but not very high.
 Readers might speculate that a mixed model (GLMM) could attribute some of this unexplained variance to lemma-, writer-, or even genre-specific random effects (cf.\ \citealt[594]{KupermannBresnan2012}; \citealt{Gries2015}).
-First of all, it should be noticed that Sem, Pt, and LogFreq are lemma-level regressors anyway.
-I tried passing lemma as a random effect using the \texttt{glmer()} function from the \texttt{lme4} package in \texttt{R} \parencite{BatesEa2015}, which would effectively turn the model into a true multilevel model \parencite[266]{GelmanHill2006}, but the high number of different lemmas and the low counts for strong occurrences per lemma made it impossible to achieve convergence.
+First of all, it should be noticed that Sem, \textit{Pt}, and \textit{LogFreq} are lemma-level regressors anyway.
+I tried passing the lemma as a random effect using the \texttt{glmer()} function from the \texttt{lme4} package in \texttt{R} \parencite{BatesEa2015}, which would effectively turn the model into a true multilevel model \parencite[266]{GelmanHill2006}, but the high number of different lemmas and the low counts for strong occurrences per lemma made it impossible to achieve convergence.
 Speaker or rather writer as a random effect are not available because authorship is usually unknown in web corpora.
 Furthermore, the high number of writers in very large samples from corpora as huge and diverse as DECOW makes it very likely that writer-specific random effects cannot be calculated due to extreme numbers of levels.
 In other words, virtually each sentence is written by a different person.
 
-The intercept models those factor levels which most strongly favor the weak forms by hypothesis over the noncanonical strong forms by hypothesis (SemHum, PtPolySchwa, CaseGen).
+The intercept models those factor levels which most strongly favour the weak forms by hypothesis over the noncanonical strong forms by hypothesis (\textit{SemHum}, \textit{PtPolySchwa}, \textit{CaseGen}).
 The accusative ($O=1.738$) and the dative ($O=2.237$) both cause a significant tendency toward the strong inflection compared to the genitive, which is modeled by the intercept.
 The same is true if the noun denotes inanimate ($O=1.795$) or nonhuman animate objects ($O=1.943$), compared to humans.
 There is no interpretable difference between animal-denoting nouns and nouns denoting inanimate objects, however.
 The phonotactic effects are more extreme than the effects of case and semantics.
-Nonfinal accent in polysyllabic words ($O=16.963$) favors the strong pattern most clearly, followed by monosyllabicity ($O=7.891$) and final accent in polysyllabic words ($O=2.925$).
+Nonfinal accent in polysyllabic words ($O=16.963$) favours the strong pattern most clearly, followed by monosyllabicity ($O=7.891$) and final accent in polysyllabic words ($O=2.925$).
 The stronger contrasts between the levels of the phonotactic variable are expected because the phonotactic prototypical features are much closer to being exclusive of weak nouns compared to humanness of denotation.
 In other words, the hypotheses from Section~\ref{sec:thegermanweaknounprototypes} are fully supported by the data.%
-\footnote{I also tried to estimate a GLM with an interaction between Pt and Sem.
+\footnote{I also tried to estimate a GLM with an interaction between \textit{Pt} and \textit{Sem}.
 However, while animateness and non-ultimate accent showed a significant interaction, Nagelkerke’s pseudo-$R^2$ did not increase, while the standard errors and variance inflation factors increased dramatically.
 I therefore decided to work with the simpler model as reported above.}
-We can now use the coefficients or odds to amend Table~\ref{tab:prototypes}.
-Specifically, for the sample nouns ordered according to their assumed prototypicality by \textcite[178]{Koepcke1995}, we can specify the overall alternation strength as an inverse indicator of their prototypicality by calculating summed odds (cf.\ Table 6).%
-\footnote{Since a coefficient $P$ for dummy-coded binary variables can be interpreted ceteris paribus, we can calculate the effect of two coefficients $P_1$ and $P_2$ simply as $P_{1+2}=P_1+P_2$, or in terms of odds as $O_{1+2}=exp(P_1+P_2)$.}
-With one negligible deviation (Gedanke), the predictions derived from \textcite{Koepcke1995} are confirmed, and the alternation strength increases toward the bottom of the table.
+We can now use the coefficients or odd ratios to amend Table~\ref{tab:prototypes}.
+Specifically, for the sample nouns ordered according to their assumed prototypicality by \textcite[178]{Koepcke1995}, we can specify the overall alternation strength as an inverse indicator of their prototypicality by calculating summed odds (cf.\ Table~\ref{tab:cuevalidities}).%
+\footnote{Since a coefficient $P$ for dummy-coded binary variables can be interpreted ceteris paribus, we can calculate the effect of two coefficients $P_1$ and $P_2$ simply as $P_{1+2}=P_1+P_2$, or in terms of odd ratios as $O_{1+2}=exp(P_1+P_2)$.}
+With one negligible deviation (\textit{Gedanke}), the predictions derived from \textcite{Koepcke1995} are confirmed, and the alternation strength increases toward the bottom of the table.
 
-Finally, a higher token frequency of a weak noun (measured as log-transformed token frequency per million tokens, moved into the positive range) disfavors its occurrence in strong forms (O = 0.683).
+\begin{table}[htbp!]
+  \begin{tabular}{c}
+  \toprule
+  x \\
+  \midrule
+  x \\
+  \bottomrule
+  \end{tabular}
+  \caption{The nouns from Table~\ref{tab:prototypes} with the estimates of summed odds from the GLM reported in Table~\ref{tab:weaknounestimates} as indicators of their prototypicality}
+  \label{tab:cuevalidities}
+\end{table}
+
+Finally, a higher token frequency of a weak noun (measured as log-transformed token frequency per million tokens, moved into the positive range) disfavours its occurrence in strong forms ($O=0.683$).
 Again, this is in line with the predictions because frequent individual items are expected to be more resistant to analogy through entrenchment (Section~\ref{sec:prototypesparadigmsandprobabilisticmorphology}).
 The high relative type frequency of the strong nouns compared to the weak nouns, on the other hand, makes it plausible that an otherwise stable class (Section~\ref{sec:thegermanweaknounprototypes}) shows a consistently measurable alternation effect in the first place.
 While being less productive than the strong pattern, the weak pattern should still be marginally productive when it is associated with an underlying prototype.
@@ -483,37 +567,66 @@ In Section~\ref{sec:weaknounsasaproductivepatternstrongnounsinweakforms}, I show
 \label{sec:weaknounsasaproductivepatternstrongnounsinweakforms}
 
 If predominantly strong nouns with the prototypical properties of weak nouns could be found in weak forms, this would lend further support to the conceptualisation of weak nouns as a prototypically structured category.
-To show that such noun forms are indeed extant, I now look at a subclass of strong loan nouns which occurred very often in weak forms in the bootstrap sample described in Section~\ref{sec:samplinganddescriptivestatistics}, namely masculine Latin loans ending in -or.
-In line with the findings from Section~\ref{sec:astatisticalmodeloftheprototype}, all these words qualify as good weak nouns because they have prototypical phonotactic features (polysyllabicity and penultimate accent), and we do in fact find nonstandard weak dative forms like dem Autoren `the author' instead of dem Autor (strong, standard).
+To show that such noun forms are indeed extant, I now look at a subclass of strong loan nouns which occurred very often in weak forms in the bootstrap sample described in Section~\ref{sec:samplinganddescriptivestatistics}, namely masculine Latin loans ending in \textit{-or}.
+In line with the findings from Section~\ref{sec:astatisticalmodeloftheprototype}, all these words qualify as good weak nouns because they have prototypical phonotactic features (polysyllabicity and penultimate accent), and we do in fact find nonstandard weak dative forms like \textit{dem Autoren} `the author' instead of \textit{dem Autor} (strong, standard).
 Interestingly, the corollary that prototype theory with weighted features allows single features to be so highly weighted that they become a de-facto requirement for class membership (discussed in Section~\ref{sec:prototypetheory}) is supported because strong nouns which do not fulfil the phonotactic requirements simply cannot occur in weak forms.
-Native speakers will very likely agree that accusatives such as den Wegen `the path' instead of den Weg are beyond even peripheral acceptability.
+Native speakers will very likely agree that accusatives such as \textit{*den Wegen} `the path' instead of den Weg are beyond even peripheral acceptability.
 
-Interestingly, some of these nouns, such as Autor `author', denote humans, while others, such as Transistor `transistor', do not.
-I therefore counted the occurrences of 32 human-denoting and 30 nonhuman-denoting nouns in strong and weak forms.
-Table 7 sums up the results.
-Clearly, the results from the earlier sections are confirmed, as human-denoting -or nouns have a much stronger tendency to occur in weak forms.
-The odds ratio reveals that the chance of seeing a weak form of a human-denoting noun is 18.868 times higher than the chance of seeing a weak form of a nonhuman-denoting noun.
-The results for strong and weak forms in the three grammatical cases also confirm the results from earlier sections (cf.\ Table 8).
-The genitive slightly favors the weak pattern compared to the accusative (O = 1.557) and the dative (O = 1.511).
+\begin{table}[htbp!]
+  \begin{tabular}{c}
+  \toprule
+  x \\
+  \midrule
+  x \\
+  \bottomrule
+  \end{tabular}
+  \caption{Counts of strong and weak occurrences of $62$ strong nouns ending in \textit{-or} by humanness of denotation}
+  \label{tab:weakstronghuman}
+\end{table}
+
+\begin{table}[htbp!]
+  \begin{tabular}{c}
+  \toprule
+  x \\
+  \midrule
+  x \\
+  \bottomrule
+  \end{tabular}
+  \caption{Counts of strong and weak occurrences of $62$ strong nouns ending in \textit{-or} by case}
+  \label{tab:weakstrongcase}
+\end{table}
+
+Interestingly, some of these nouns, such as \textit{Autor} `author', denote humans, while others, such as \textit{Transistor} `transistor', do not.
+I therefore counted the occurrences of $32$ human-denoting and $30$ nonhuman-denoting nouns in strong and weak forms.
+Table~\ref{tab:weakstronghumans} sums up the results.
+Clearly, the results from the earlier sections are confirmed, as human-denoting \textit{-or} nouns have a much stronger tendency to occur in weak forms.
+The odds ratio reveals that the chance of seeing a weak form of a human-denoting noun is $18.868$ times higher than the chance of seeing a weak form of a nonhuman-denoting noun.
+The results for strong and weak forms in the three grammatical cases also confirm the results from earlier sections (cf.\ Table~\ref{tab:weakstrongcase}).
+The genitive slightly favours the weak pattern compared to the accusative ($O=1.557$) and the dative ($O=1.511$).
 A higher alternation strength of originally strong nouns toward the weak pattern corresponds with a stronger resistance against the alternation toward the strong pattern for weak nouns.
 
 \section{Conclusions}
 \label{sec:weaknouns:conclusions}
 
 In Section~\ref{sec:onptototypescognitivecorpusbasedmorphologyandweaknouns}, I made it clear that I do not wish to argue for specific models of mental representation of linguistic categories, but merely for a class of theories which can account for effects of similarity and fuzziness in linguistic categorisation.
-The hypotheses and the predictions for the corpus study developed in Section~\ref{sec:thegermanweaknounprototypes} were nevertheless very specific and could easily have been refuted if (i) cognitive theories of categorisation were incorrect, (ii) corpus data were not an appropriate testing ground for such theories, or (iii) the chosen corpus were inappropriate.
+The hypotheses and the predictions for the corpus study developed in Section~\ref{sec:thegermanweaknounprototypes} were nevertheless very specific and could easily have been refuted if
+(i) cognitive theories of categorisation were incorrect,
+(ii) corpus data were not an appropriate testing ground for such theories, or
+(iii) the chosen corpus were inappropriate.
 Since the predicted effects could all be demonstrated, all these scenarios are unlikely.
-Specifically, I have shown that the prototypical semantic and phonotactic properties of weak nouns as described by \textcite{Koepcke1995} influence the alternation strength of those nouns in exactly the direction suggested by the theory: the more prototypical a weak noun is, the lower its probability of occurring in a strong form is.
+Specifically, I have shown that the prototypical semantic and phonotactic properties of weak nouns as described by \textcite{Koepcke1995} influence the alternation strength of those nouns in exactly the direction suggested by the theory:
+the more prototypical a weak noun is, the lower its probability of occurring in a strong form is.
 The phonotactic properties, which are more exclusive to weak nouns than the semantic properties, have proven to have a higher cue validity than the semantic properties.
 Furthermore, the demonstrated significant influence of grammatical case on the alternation strength was expected under a theory which assigns a cognitive status to paradigms and their structure, because the alternation is stronger in those forms of the weak nouns (accusative and dative) which violate most clearly the most productive generalisations about paradigms of German nouns.
 Finally, the fact that higher lemma token frequencies tend to prevent the alternation from occurring strengthens a usage-based interpretation of the phenomenon.
 The effects of the noun's semantics and grammatical case were cross-examined by showing that strong nouns with properties prototypical of weak nouns do in fact occur in weak forms.
 
 From a corpus linguistic perspective, the challenge lay in the fact that the alternative forms occur mostly in nonstandard language and are rare, such that a corpus was needed which contained at least some nonstandard language, and which was very large.
-The DECOW12A web corpus was demonstrated to have those properties; in Section~\ref{sec:samplinganddescriptivestatistics} I showed how the size of the corpus allows researchers to use high-precision but low-recall techniques of automatic non-manual querying and data processing, while still retrieving large-enough samples.
+The DECOW12A web corpus was demonstrated to have those properties.
+In Section~\ref{sec:samplinganddescriptivestatistics} I showed how the size of the corpus allows researchers to use high-precision but low-recall techniques of automatic non-manual querying and data processing, while still retrieving large-enough samples.
 In line with Section~\ref{sec:challengesandcorpuschoice}, I strongly suggest that this proves the necessity of further development and exploration of freely available web corpora as an invaluable source of insight for quantitative corpus linguistics.
 
-While further work specifically on the weak nouns might include a more systematic look at the productivity of the class in terms of its power to attract strong nouns like the -or subclass described in Section~\ref{sec:weaknounsasaproductivepatternstrongnounsinweakforms}, a more general look at similar alternations in the morphosyntax of German under a cognitive perspective should also be highly fruitful.
-German is famous for its grammatical Zweifelsfälle `cases of doubt', including many instances of coexisting, alternating forms in nominal and verbal morphology and blurred boundaries between standard and nonstandard language.
+While further work specifically on the weak nouns might include a more systematic look at the productivity of the class in terms of its power to attract strong nouns like the \textit{-or} subclass described in Section~\ref{sec:weaknounsasaproductivepatternstrongnounsinweakforms}, a more general look at similar alternations in the morphosyntax of German under a cognitive perspective should also be highly fruitful.
+German is famous for its grammatical \textit{Zweifelsfälle} `cases of doubt', including many instances of coexisting, alternating forms in nominal and verbal morphology and blurred boundaries between standard and nonstandard language.
 While the rich and insightful existing literature is largely descriptive, diachronic, structuralist, or even normative (cf.\ \citealt{Klein2009}), the phenomena are ideal for cognitive explorations such as that undertaken in this paper, and they have great potential for strengthening the usage-based linguistics paradigm in general, but also the position of corpus linguistics within it.
 

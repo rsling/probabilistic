@@ -11,11 +11,48 @@ opts_knit$set(self.contained=FALSE)
 \section{Introduction}
 \label{sec:weil:introduction}
 
+In the existing literature on German nonstandard verb-second clauses headed by subordinating and/or coordinating particles (e.g., Antomo and Steinbach 2010, 2013; Reis 2013), graphemic evidence (especially punctuation) plays next to no role.
+Most prominently discussed are the particles obwohl (“although”) and weil (“because”).
+In standard written language, these typically embed a clause in verb-last constituent order (VL), which is the typical order in embedded sentences.
+Additionally, these particles have nonstandard variants that embed clauses in verb-second constituent order (V2).%
+\footnote{In syntactically subordinated clauses, obwohl and weil are usually called subjunctors. In the non-subordinated cases, they are o en classi ed as connectors or discourse markers. We mostly call them particles, taking an agnostic stance with regard to a precise classi cation.}
+Although V2 is otherwise strongly (but not exclusively) characteristic of independent sentences, a major question is to what degree the V2 variants syntactically form completely independent sentences.
+In this paper, we present graphemic evidence -- most prominently spontaneous use of the comma in nonstandard writing -- showing that the V2 variants have a stronger tendency to form independent sentences than the VL sentences, and this tendency is much stronger for obwohl in V2 clauses than for weil in V2 clauses.
+
+We now begin by demonstrating that the V2 variants are not, as is often assumed, exclusive to spoken language (cf.\ references in Section 2.1.2), and certain nonstandard patterns of punctuation can be found in the written V2 variants.
+We introduce examples of the relevant structures taken from the DECOW12Q web corpus (see Section 3 for details about the corpus and the Appendix for a list of the original URLs from which the examples were taken) for obwohl (1) and weil (2) in VL (a) and V2 (b).%
+\footnote{When inspecting the examples, notice that theprimary use of the comma is very different in German compared to English in that there is a well-defined mapping from syntactic constructions to commas.
+Relative clauses (both restrictive and nonrestrictive), adverbial clauses, and complement clauses are obligatorily separated from their matrix clause by commas.
+The same is true for certain control infnitives that have a clausal status.
+On the other hand, integrated sentence-initial sentence adverbial phrases are usually not separated by commas (in contrast to adverbials like \textit{on the other hand} in English).
+However, in nonstandard language, extraposed non-integrated adverbials and particles are separated from the rest of the sentence by a comma (cf. especially Section 2.2.3).}
+
+\begin{exe}
+  \ex\label{ex:obwohl}\begin{xlist}
+    \ex\gll Also ich bleib bei meinen George , obwohl Arashi auch ziemlich lustig ist ! \\
+    well I stay with my George , although Arashi also rather funny is !\\
+    \trans I still prefer George although Arashi is also rather funny!\\ \label(ex:obwohlvl)
+    \ex\gll Ich habs mir gegeben , obwohl am Sonntag kamen manchmal wiederholungen vom Samstag \ldots\\
+    I {have it} me given , although {on the} Sunday came sometimes repeats {from the} Saturday \ldots\\
+    \trans I watched [all of] it, even though on Sunday they also showed some repeats from Saturday.\\ \label(ex:obwohlv2)
+  \end{xlist}
+  \ex\label{ex:weil}\begin{xlist}
+    \ex\gll Verschenken geht nur bedingt , weil das ja nicht jedem gefällt ;-) \\
+    {make present} goes just limited , because that yes not everybody pleases ;-)\\
+    \trans It doesn’t make a good present either because many people don’t like it.\\ \label(ex:weilvl)
+    \ex\gll Ich dachte nur ich komm an den DSLAM da beim alten Kino , weil sonst steht hier näher keiner .\\
+    I thought only I come to the DSLAM there {at the} old cinema , because else stands here closer none .\\
+    \trans I just thought I could get reception from the DSLAM by the old cinema. After all, there is no other access point in the vicinity.\\ \label(ex:weilv2)
+  \end{xlist}
+\end{exe}
+
+The examples in (1) and (2) show that both particles occur with both VL and V2.3 In (1) and (2), the obwohl and weil clauses follow their matrix clauses. However, the VL variants can also precede their matrix clause, as in (3a). Preposed V2 clauses, on the other hand, are ruled out. In (3a), for example, using the V2 alternative for the weil clause (weil der Hang ist so steil) would lead to a sentence with extremely low acceptability. We did not  nd a single sentence like this in our corpus sample (cf. Section 3) and consequently do not discuss this type of structure further.  us, if a sentence begins with an obwohl or weil V2 clause, it always forms a fully inde- pendent sentence, as in (3b).
+
 \section{Theoretical background}
 \label{sec:weil:theoreticalbackground}
 
 \subsection{German clause types and sentential independence}
-\label{sec:germanclausetypes‚andsententialindependence}
+\label{sec:germanclausetypesandsententialindependence}
 
 \subsubsection{Structural integration in previous approaches}
 \label{structuralintegrationinpreviousapproaches}
