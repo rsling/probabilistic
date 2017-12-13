@@ -1,7 +1,7 @@
 % !Rnw root = ../smil.Rnw
 <<setupweil, cache=FALSE, echo=FALSE, include=FALSE, results='asis'>>=
-opts_knit$set(self.contained=FALSE)
 @
+%opts_knit$set(self.contained=FALSE)
 
 \chapter{Protoypical syntax and punctuation: (non-)embedded V2 clauses}
 \label{sec:prototypicalsyntaxandpunctuation}
@@ -15,41 +15,95 @@ In the existing literature on German nonstandard verb-second clauses headed by s
 Most prominently discussed are the particles obwohl (“although”) and weil (“because”).
 In standard written language, these typically embed a clause in verb-last constituent order (VL), which is the typical order in embedded sentences.
 Additionally, these particles have nonstandard variants that embed clauses in verb-second constituent order (V2).%
-\footnote{In syntactically subordinated clauses, obwohl and weil are usually called subjunctors. In the non-subordinated cases, they are o en classi ed as connectors or discourse markers. We mostly call them particles, taking an agnostic stance with regard to a precise classi cation.}
+\footnote{In syntactically subordinated clauses, obwohl and weil are usually called subjunctors. In the non-subordinated cases, they are o en classified as connectors or discourse markers. We mostly call them particles, taking an agnostic stance with regard to a precise classification.}
 Although V2 is otherwise strongly (but not exclusively) characteristic of independent sentences, a major question is to what degree the V2 variants syntactically form completely independent sentences.
 In this paper, we present graphemic evidence -- most prominently spontaneous use of the comma in nonstandard writing -- showing that the V2 variants have a stronger tendency to form independent sentences than the VL sentences, and this tendency is much stronger for obwohl in V2 clauses than for weil in V2 clauses.
 
 We now begin by demonstrating that the V2 variants are not, as is often assumed, exclusive to spoken language (cf.\ references in Section 2.1.2), and certain nonstandard patterns of punctuation can be found in the written V2 variants.
-We introduce examples of the relevant structures taken from the DECOW12Q web corpus (see Section 3 for details about the corpus and the Appendix for a list of the original URLs from which the examples were taken) for obwohl (1) and weil (2) in VL (a) and V2 (b).%
-\footnote{When inspecting the examples, notice that theprimary use of the comma is very different in German compared to English in that there is a well-defined mapping from syntactic constructions to commas.
+We introduce examples of the relevant structures taken from the DECOW12Q web corpus (see Section 3 for details about the corpus and the Appendix for a list of the original URLs from which the examples were taken) for obwohl (\ref{ex:obwohl}) and weil (\ref{ex:weil}) in VL (a) and V2 (b).%
+\footnote{When inspecting the examples, notice that the primary use of the comma is very different in German compared to English in that there is a well-defined mapping from syntactic constructions to commas.
 Relative clauses (both restrictive and nonrestrictive), adverbial clauses, and complement clauses are obligatorily separated from their matrix clause by commas.
-The same is true for certain control infnitives that have a clausal status.
+The same is true for certain control infinitives that have a clausal status.
 On the other hand, integrated sentence-initial sentence adverbial phrases are usually not separated by commas (in contrast to adverbials like \textit{on the other hand} in English).
-However, in nonstandard language, extraposed non-integrated adverbials and particles are separated from the rest of the sentence by a comma (cf. especially Section 2.2.3).}
+However, in nonstandard language, extraposed non-integrated adverbials and particles are separated from the rest of the sentence by a comma (cf.\ especially Section 2.2.3).}
 
 \begin{exe}
   \ex\label{ex:obwohl}\begin{xlist}
     \ex\gll Also ich bleib bei meinen George , obwohl Arashi auch ziemlich lustig ist ! \\
     well I stay with my George , although Arashi also rather funny is !\\
-    \trans I still prefer George although Arashi is also rather funny!\\ \label(ex:obwohlvl)
+    \trans I still prefer George although Arashi is also rather funny!\\ \label{ex:obwohlvl)}
     \ex\gll Ich habs mir gegeben , obwohl am Sonntag kamen manchmal wiederholungen vom Samstag \ldots\\
     I {have it} me given , although {on the} Sunday came sometimes repeats {from the} Saturday \ldots\\
-    \trans I watched [all of] it, even though on Sunday they also showed some repeats from Saturday.\\ \label(ex:obwohlv2)
+    \trans I watched [all of] it, even though on Sunday they also showed some repeats from Saturday.\\ \label{ex:obwohlv2}
   \end{xlist}
   \ex\label{ex:weil}\begin{xlist}
     \ex\gll Verschenken geht nur bedingt , weil das ja nicht jedem gefällt ;-) \\
     {make present} goes just limited , because that yes not everybody pleases ;-)\\
-    \trans It doesn’t make a good present either because many people don’t like it.\\ \label(ex:weilvl)
+    \trans It doesn’t make a good present either because many people don’t like it.\\ \label{ex:weilvl}
     \ex\gll Ich dachte nur ich komm an den DSLAM da beim alten Kino , weil sonst steht hier näher keiner .\\
     I thought only I come to the DSLAM there {at the} old cinema , because else stands here closer none .\\
-    \trans I just thought I could get reception from the DSLAM by the old cinema. After all, there is no other access point in the vicinity.\\ \label(ex:weilv2)
+    \trans I just thought I could get reception from the DSLAM by the old cinema. After all, there is no other access point in the vicinity.\\ \label{ex:weilv2}
   \end{xlist}
 \end{exe}
 
-The examples in (1) and (2) show that both particles occur with both VL and V2.3 In (1) and (2), the obwohl and weil clauses follow their matrix clauses. However, the VL variants can also precede their matrix clause, as in (3a). Preposed V2 clauses, on the other hand, are ruled out. In (3a), for example, using the V2 alternative for the weil clause (weil der Hang ist so steil) would lead to a sentence with extremely low acceptability. We did not  nd a single sentence like this in our corpus sample (cf. Section 3) and consequently do not discuss this type of structure further.  us, if a sentence begins with an obwohl or weil V2 clause, it always forms a fully inde- pendent sentence, as in (3b).
+The examples in (\ref{ex:obwohl}) and (\ref{ex:weil})i show that both particles occur with both VL and V2.%
+\footnote{In the remainder of the paper, we use \textit{weil-VL} for ‘weil’ clauses with verb-last constituent order, and in a similar fashion \textit{weil-V2}, \textit{obwohl-VL}, and \textit{obwohl-V2}.}
+In (\ref{ex:obwohl}) and (\ref{ex:weil}), the obwohl and weil clauses follow their matrix clauses.
+However, the VL variants can also precede their matrix clause, as in (\ref{ex:weilinitial}).
+Preposed V2 clauses, on the other hand, are ruled out.
+In (\ref{ex:weilinitial}), for example, using the V2 alternative for the weil clause (\textit{weil der Hang ist so steil}) would lead to a sentence with extremely low acceptability.
+We did not  nd a single sentence like this in our corpus sample (cf. Section 3) and consequently do not discuss this type of structure further.
+Thus, if a sentence begins with an obwohl or weil V2 clause, it always forms a fully independent sentence, as in (\ref{ex:weilalone}).
+
+\begin{exe}
+  \ex\label{ex:weilindep} 
+  \begin{xlist}
+    \ex\gll Weil der Hang so steil ist , sind überall lauter Trockenmauern im Hang .\\
+    because the slope so steep is , are everywhere many {dry stone walls} {in the} slope .\\
+    \trans Because the slope is so steep, they have built many dry stone walls into it.\\\label{ex:weilinitial}
+    \ex\gll Weil das kann ich so wirklich nicht sehen .\\
+    because that can I so really not see .\\
+    \trans Because[, honestly,] I don’t see that.\\\label{ex:weilalone}
+  \end{xlist}
+\end{exe}
+
+It is an accepted fact that the V2 variants have a wider range of interpretations than the VL variants.
+In (\ref{ex:weilv2}), for example, a propositional causal interpretation for weil is excluded.
+The speaker’s thinking that he might get connected to the access point is surely not caused by the fact that there are no other access points in the area.
+There are alternative epistemic and speech act-related readings of weil and obwohl in addition to their older propositional readings.%
+\footnote{As for \textit{weil} (as a discourse marker), Günthner (1996) calls it a marker of an epistemic reason or a change of the discourse topic (our translations).
+Günthner (2000) attributes to the discourse marker \textit{obwohl} the function of a disagreement marker (our translation).}
+We do not go deeply into the complicated details of the interpretation of the V2 variants here because the semantics and pragmatics do not play a major role in our corpus study (see Section 2.1 for the corresponding argument).
+
+Finally, in (\ref{ex:puncafter}), we show examples with punctuation marks (henceforth PMs) a er the particle – in this case, the ellipsis in (\ref{ex:ellipsis}) and the colon in (\ref{ex:colon}). As we demonstrate in Section 3, this use of PMs is typical of the V2 variants, and obwohl- V2 favors such PMs much more strongly than weil-V2.
+
+\begin{exe}
+  \ex\label{ex:puncafter}
+  \begin{xlist}
+    \ex\gll Oder ich könnte das Altmetall verwerten , obwohl ... viel Metall ist da nicht dran . \\
+    or I could the {scrap metal} use , although ... much metal is there not at .\\
+    \trans Or I could recycle it as scrap metal. But then again, it doesn’t contain much metal.\\\label{ex:ellipsis}
+    \ex\gll wohin , das sag ich nicht , weil : das weiß ich noch nicht .\\
+    where , that say I not , because : that know I yet not .\\
+    \trans I’m not going to say where, [simply] because I don’t know yet.\\\label{ex:colon}
+  \end{xlist}
+\end{exe}
+
+In the larger picture, the goal of our paper is to show how very large corpora containing billions of tokens of nonstandard writing provide strong empirical support for usage-based inferences about the syntax-graphemics interface.
+The question of the degree of sentential independence of obwohl-V2 and weil-V2 is used as an example, mostly because it has been discussed extensively in the theoretical literature – but so far without looking at usage data.
+The remainder of this paper is structured as follows.
+In Section 2, we briefly summarize some of the theoretical work on embedded V2 clauses in German.
+We also introduce our method of corpus-driven usage-based graphemics, and we develop our main hypotheses for the corpus study.
+In Section 3, we present the corpus study, examining the systematic syntactico-graphemic differences between obwohl and weil on the one hand and VL and V2 on the other hand.
+Finally, we summarize and interpret the findings in Section 4.
 
 \section{Theoretical background}
 \label{sec:weil:theoreticalbackground}
+
+In this section, we introduce the theoretical background for our corpus study.
+We first review nongraphemic approaches to sentential independence and previous analyses of obwohl and weil clauses in Section 2.1.
+We then turn to graphemics in Section 2.2, focusing on the German punctuation system, our corpus-driven empirical approach, and the notion of independent graphemic sentences.
+In Section 2.3, we summarize the hypotheses for our corpus study.
 
 \subsection{German clause types and sentential independence}
 \label{sec:germanclausetypesandsententialindependence}
@@ -57,8 +111,112 @@ The examples in (1) and (2) show that both particles occur with both VL and V2.3
 \subsubsection{Structural integration in previous approaches}
 \label{structuralintegrationinpreviousapproaches}
 
+As pointed out in Section 1, we are interested in measuring the degree of sentential independence of obwohl-V2 and weil-V2 clauses.
+In the German theoretical literature on obwohl-V2, weil-V2, and similar phenomena, this is o en discussed under the labels of structural integration versus structural nonintegration.
+In this section, we argue that the operationalization of the distinction between integrated and nonintegrated clauses as used in the theoretical literature (and the corresponding tests) does not apply in large-scale corpus studies such as ours.
+In Section 2.2.3, we therefore propose a different approach to sentential independence that is rooted in cognitive linguistics (specifically, prototype theory) and rests upon a graphemic operationalization.
+
+Prominently, Reich and Reis (2012) define and illustrate subordination and coordination based on their de nition of structural integration (strukturelle Integration, p. 537).
+One problem with approaches rooted in syntactic and semantic theory, as the authors state themselves (Reich and Reis 2012: 542), is that reasonably definitive categorizations can only be given within specific theories.
+For example, Reich and Reis (2012: 551) state as the major property of nonintegrated clauses (such as coordinated clauses) that they are neither selected by the matrix as a complement clause nor related to it through a modi cation relation (such as adverbial or attributive clauses).
+Clearly, such definitions depend on assumptions about a specific version of phrase structure -- based grammar and some theory of compositional semantics and the syntax-semantics interface.%
+\footnote{Even in their introduction, Reich and Reis (2012: 536–543) refer to notions from such diverse areas as the topological model of German sentence structure (p. 536), from Government and Binding Theory (c-command, p. 537), and semantic type theory (pp. 539–540) as if they were all perfectly integrated and formed a coherent single framework.}
+Consequently, some of the tests that come with these theoretical notions are purely syntactic (e.g., across-the-board movement, p. 549), but many are also related to the syntax-semantics interface, such as pronoun binding (p. 537) or compatibility with modal particles (p. 551).
+
+Per se, the dependence on specific theoretical frameworks would not stand in the way of an operationalization of the crucial notions.
+Also, we do not wish to dispute the value of the aforementioned tests for linguistic theorizing.
+However, their nature makes them fundamentally incompatible with corpus linguistic methods because they usually involve some modi cation of the attested sentence and a potentially difficult and problematic subjective judgment of the result of the modification.
+Standardly, one has to decide whether the modi ed sentence is still grammatical or whether it is semantically equivalent to the original sentence.
+Therefore, we clearly cannot rely on the established operationalizations of integration and nonintegration from theoretical linguistics in a corpus-driven study.
+On the conceptual side, Reich and Reis (2012: 559–560) argue that syntactic integration is not a gradient notion but rather a categorical distinction connected to clearly distinguishable clause types.
+As is more appropriate for corpus-driven work, we approach the problem differently based on the rich support (gathered in cognitively oriented linguistics over the past decades) for the fact that grammar is inherently graded and probabilistic (Manning 2003; Hay and Baayen 2005; Bresnan 2007; Kapatsinski 2014, just to name a few publications).
+Apart from our general cognitive focus, usage data from corpora simply leave us no choice but to adopt a probabilistic interpretation.
+The data shown in Section 3 form clearly interpretable patterns.
+However, these patterns are not distributed categorically, and they always involve a random component.
+Therefore, although we will refer back to the notion of syntactic integration in the form of our discussion of independent sentences in Section 2.2.2, we will do so from a cognitive linguistic perspective.
+
 \subsubsection{Views on \textit{obwohl}-V2 and \textit{weil}-V2}
 \label{sec:viewonobwohlv2andweilv2}
+
+In our study, we focus on graphemic evidence for sentential independence.
+The degree of sentential independence of obwohl-V2 and weil-V2 clauses is, however, deeply related to their semantic, pragmatic, and prosodic properties.
+There is no reason to assume that graphemic evidence is of lesser value than, for example, prosodic evidence, which features prominently in the existing literature.
+To illustrate the relevance of our study in the context of the research on obwohl-V2 and weil-V2, we now brie y sketch some of this research.
+
+In general, the V2 variants are treated as noncanonical clausal constructions (nicht-kanonische Satzkonstruktionen, Holler 2009: 135) restricted to spoken German (cf. Gaumann 1983; Günthner 1993; Wegener 2000; Pasch 1997; Uhmann 1998; Antomo and Steinbach 2010, 2013; Reis 2013).
+There are some empirical accounts of the phenomenon that exclusively use sparse data from corpora of spoken language (cf. Gohl and Günthner 1999; Freywald 2010: 60).
+However, we are not aware of existing larger studies of obwohl-V2 or weil-V2 in spoken German, except for that by Volodina (2011), which is discussed later in the paper.
+Obwohl is sometimes assumed to have a well-established secondary function as a discourse marker already (e.g., Günthner 2000), whereas for weil, the development is said to be still ongoing (e.g., Gohl and Günthner 1999; Günthner 2003).%
+\footnote{For further discussion of diachronic data, see Freywald (2008, 2010).}
+
+With regard to the syntactic status (in the sense of the discussion in Section 2.1.1), Reich and Reis (2012: 557–558) analyze the VL variants as subordinate and thus integrated, and they describe V2 variants as nonintegrated.
+A related question is how strongly VL and V2 order are mapped onto the different readings, and it appears that constituent order alone is not a reliable indicator.
+Holler (2009: 136) and Blühdorn (2008: 217) show convincing examples of weil-V2 with causal interpretations.
+Also, noncausal readings for weil-VL have been demonstrated (Wegener 2000: 69; Volodina 2011: 82–83).
+Reis (2013: 228) concludes that syntactically nonintegrated weil clauses show V2 order by default, but not exclusively.%
+\footnote{For a discussion of nonintegrated VL clauses headed by obwohl, see Antomo and Steinbach (2013: 446).}
+
+With regard to prosody, Antomo and Steinbach (2010: 9) argue that nonintegrated clauses form their own intonational unit.
+Similarly, and with reference to empirical findings from Volodina (2011), Reis (2013: 229) attests that it is characteristic of nonintegrated clauses to be intonationally separate.%
+\footnote{In this context, nonintegrated and thus possibly noncausal weil VL clauses can behave similarly.
+Pasch (1983: 332–333) assumes that in order for weil VL to be interpreted as noncausal, an intonation boundary between the weil clause and the matrix is obligatory (cf. Volodina 2011: 83).}
+Blühdorn (2008: 5) finds that syntactic nonintegration is o en (but not always) accompanied by a separate prosodic phrasing of the connected sentences.
+Gohl and Günthner (1999: 46–47) make a slightly different claim, stating that even the particle weil itself can form an intonational unit of its own.
+Auer and Günthner (2005: 341–342, 336) argue that the obwohl and weil in V2 are discourse markers that are syntactically and semantically distant from the rest of the sentence compared with their use as subjunctors in VLs.
+This distance can (but does not have to) be marked prosodically by pauses.
+Breindl (2009: 277) assumes that prosodic nonintegration is marked by pauses before and a er obwohl in V2 but that weil in V2 is not marked by a following pause.
+Because native speakers will readily confirm that the pause a er weil is quite admissible, this claim might be too strong, however.
+In an empirical study, Volodina (2011: 159) concludes, on the basis of prosodic cues, that weil-V2 has a low degree of syntactic integration.
+As she diagnoses, however, there is no perfect mapping from syntactic integration to prosodic integration (Volodina 2011: 223).
+
+To summarize, it seems to be an accepted fact that V2 is neither necessary nor suffcient in order to make the nonpropositional readings available.
+Specifically, the discussions of nonintegrated VL clauses with weil in Reis (2013) and of those with obwohl in Antomo and Steinbach (2013) make it clear that prosodic factors and certain speech act-related particles support the functional reinterpretation of the subjunctor and the subsequent shift in reading.
+Prosodic nonintegration, especially, is o en treated as a de facto requirement (Reis 2013: 243; Antomo and Steinbach 2013: 446–447).
+
+Finally, we turn to some scattered remarks on punctuation in nonintegrated clauses.
+Fahrländer (2013: 9) interprets colons and dashes – but not ellipses, as in the previous example (\ref{ex:ellipsis}) – after obwohl as indicators of intonational pauses.
+A similar interpretation is advocated by Pasch et al. (2003: 406) for commas, colons, and dashes a er weil in V2 clauses, as in (\ref{ex:weilalone}).
+Antomo and Steinbach (2013: 427– 428) illustrate formal and functional differences between types of obwohl clauses by marking them with different PMs, implicitly interpreting them as indicators of prosodic integration or nonintegration.
+This becomes most evident in their discussion of their example (12), repeated here as example (\ref{ex:antomo1}).
+
+\begin{exe}
+  \ex\gll Ich nehme das Auto . Obwohl : Es gibt an der Uni keine Parkplätze .\\
+  I take the car . Although : It gives at the university no parking.spaces .\\
+  \trans I’ll take the car. But then again, there are no parking spaces near the university.\\\label{ex:antomo1} 
+\end{exe}
+
+Regarding (\ref{ex:antomo1}), Antomo and Steinbach (2013: 435) give the following comment, alluding to the possibility of seeing an intonational unit:
+
+\begin{quote}
+  As can be seen in example 12, the two clauses before and after obwohl form two separate intonational units, and there is an intonation pause after obwohl [...].%
+  \footnote{Wie in Beispiel 12 zu sehen ist, bilden die beiden Sätze vor und nach obwohl jeweils eine separate Intonationseinheit und auf obwohl folgt eine intonatorische Pause [...].}
+\end{quote}
+
+In Antomo and Steinbach’s (2013) study about interpretations of written variants of obwohl clauses, participants were exposed to different patterns of punctuation.
+There is no discussion of those patterns from a graphemic perspective.
+We repeat Antomo and Steinbach’s (2013: 427–428) examples (1) and (2) here as (\ref{ex:antomo2}) and (\ref{ex:antomo3}).
+The glosses are ours.
+
+\begin{exe}
+  \ex\gll Ich komme mit ins Kino , obwohl ich noch lernen muss . \\
+  I come with {to the} cinema , although I still study must .\\
+  \trans I will come to the cinema although I still have to study.\\\label{ex:antomo2}
+  \ex\label{ex:antomo3}
+  \begin{xlist}
+    \ex\gll Ich komme mit ins Kino . Obwohl : Ich muss noch lernen\\
+    I come with {to the} cinema . although : I must still study .\\
+    \trans I will come to the cinema. But then again, I still have to study.\\\label{ex:antomo3a} 
+    \ex\gll Ich komme mit ins Kino . Obwohl ich noch lernen muss ...\\
+    I come with {to the} cinema . although I still study must ...\\
+    \trans I will come to the cinema. Although/But then again, I still have to study. \\\label{ex:antomo3b} 
+  \end{xlist}
+\end{exe}
+
+The difference between the canonical subordinate clause in (\ref{ex:antomo2}) and the nonintegrated clause in (\ref{ex:antomo3b}) is exclusively graphemic.
+However, Antomo and Steinbach (2013: 437) only discuss constituent order as a factor distinguishing the different structures.
+We do not deny a connection between prosody and punctuation, but we consider it problematic that – without taking the graphemic research into consideration – participants of studies using written stimuli are confronted with similar material, and graphemic aspects are not taken into account in the design of the study.
+With that in mind, we proceed to a discussion of punctuation in German in the next section.
+
 
 \subsection[Graphemics and sentential independence]{Graphemics and graphemic markers of sentential independence}
 \label{sec:graphemicsandgraphemicmarkersofsententialindependence}
@@ -66,14 +224,152 @@ The examples in (1) and (2) show that both particles occur with both VL and V2.3
 \subsubsection{Usage-based graphemics}
 \label{sec:usagebasedgraphemics}
 
+We see two major positions in the theoretical analysis of punctuation in German, and both seem to agree inasmuch as they regard periods and commas – and to a lesser degree the colon, the dash, and other PMs – as being primarily related to syntactic structure rather than prosodic structure.%
+\footnote{For more details on the relationship between prosody and punctuation(also from a historic perspective), see Kirchhoff and Primus (2014: 196–198). On the diachronic shift from a prosodically motivated to a syntactically motivated punctuation system, see Nerius (2007: 236–241).}
+Established accounts (Mentrup 1983; Behrens 1989; Baudusch 1997; Gallmann 1996) as well as normative approaches (Augst et al. 1997) follow a construction-based interpretation, analyzing punctuation as a conventionalized mapping from syntactic constructions to PMs.
+Bredel (2008, 2011) calls this an offline analysis and contrasts it with an alternative online view.
+Based on an interpretation of some experimental research (Frazier and Rayner 1988; Mazuka and Lust 1990 and other references in Bredel 2008: Ch. 3), Bredel analyzes PMs in German as reading aids from a reader-centric perspective.
+It is not a matter of debate that PMs are important cues to linguistic structure for readers.
+Bredel’s approach, however, does not readily explain the effects that we see in production data, simply because it lacks a writer’s perspective.%
+\footnote{This was indirectly pointed out by Paschke (2010: 148).}
+In corpus data, we exclusively observe the results of the productive use of punctuation by writers.
+Any variation in nonstandard corpus data is, in our view, best modeled with reference to cognitive processes pertaining to the writer.
+Therefore, we adhere to the construction-based view and propose that writers’ use of punctuation in syntactic constructions that are conventionally not used in writing (such as obwohl-V2 and weil-V2) is guided to a large extent by constructional similarity and a prototypicality mapping from syntax to graphemics.
+We label this approach \textit{usage-based graphemics} and elaborate on it in the remainder of this section.
+
+It is the common opinion that the two highly frequent PMs in German (period and comma) primarily correlate with syntactic structures.
+Therefore, we started out looking for cues to the degree of sentential independence of noncanonical obwohl and weil clauses by looking at the use of PMs before and after them (e.g., the examples in Section 1) and comparing them to similar uses of PMs in more conventional constructions.
+We base this method on widely supported concepts from cognitively oriented linguistics and usage-based grammar.
+In usage-based frameworks (see Bybee and Beckner 2009 for an overview), “language is seen as an inventory of dynamic symbolic conventions (constructions) whose organization is constantly updated by (and hence adapting to) language use” (Zeschel 2008: 1, referring to Langacker 2000).
+We assume that writers who spontaneously produce patterns of punctuation do so because they have repeatedly been exposed to such patterns co-occurring with morphological, syntactic, and even semantic and pragmatic patterns in written language.
+In usage-based theory, it is expected that the knowledge of language resulting from such repeated exposures consists of a complex network between such patterns and their parts.
+The network encodes both highly specific idiosyncratic pairings as well as very general productive schemas.
+The degree of productivity or idiosyncrasy is a function of the token and type frequencies encountered in usage data (Bybee and Beckner 2009: 832–842).
+
+Some theories within the usage-based paradigm focus on the fact that speakers and writers make use of such networks and the similarity of new items to already known items when faced with the task of categorizing the new items.
+Technical details aside, such mechanisms are assumed and experimentally supported both in prototype theory (e.g., Rosch 1973; Rosch et al. 1976; Rosch 1978) and exemplar theory (e.g., Medin and Schaffer 1978; Hintzman 1986).
+Thus, we can expect that when a writer needs to  nd a way to put into writing a construction that he or she has never or rarely put into writing before, the simplest strategy is to apply the conventions (i.e., schemas learned through repeated exposure) from the most similar syntactic construction – that is, to map prototypical syntax onto prototypical punctuation (or graphemics in general).
+
+After a first inspection of the data, we found that there are two aspects in particular that relate the use of PMs to sentential independence.
+The first one is, of course, the dedicated marking of sentential independence with appropriate PMs, which we discus in Section 2.2.2.
+The other one is a characteristic use of sentence-initial particles followed by PMs typical of independent sentences, which we discuss in Section 2.2.3.
+
+
 \subsubsection{Independent sentences in syntax and graphemics}
 \label{sec:independentsentencesinsyntaxandgraphemics}
+
+Any discussion of graphemic evidence of sentential independence requires at least a minimal discussion of what constitutes an independent sentence.
+Morphosyntactic, semantic, and pragmatic definitions of sentencehood are usually thought of as being riddled with problems (see, e.g., summary in Panther and Köpcke 2008: 85–88).
+However, it has been argued convincingly by Panther and Köpcke (2008) that the essence of sentencehood can be specified clearly if one accepts that the sentence is a nondiscrete and fuzzy prototypical category.%
+\footnote{It would in fact be surprising if the sentence as a category were more discrete than the numerous other categories that have been demonstrated to show prototypicality effects, such as parts of speech (Uehara 2003), inflectional classes (Schäfer 2016), and syntactic constructions (Gries 2003; Divjak and Arppe 2013; Dobrić 2015).}
+Prototypical properties of independent sentences in English according to Panther and Köpcke (2008: 94–96) include morphosyntactic and prosodic ones (such as a subject in the nominative and falling intonation) as well as semantic and pragmatic properties (such as assertive illocutionary potential).
+A similar list for German should obviously include V2 constituent order as a prototypical property of independent sentences, among others properties (cf. also Fabricius-Hansen 2011).
+We thus assume that the sentence as a syntactic unit does indeed have a cognitive reality in terms of prototype theory, and that speakers classify linguistic entities as syntactically independent sentences or not, be it more prototypical exemplars such as the one in (\ref{ex:sentences1}) or less prototypical ones as in (\ref{ex:sentences2})--(\ref{ex:sentences4}).
+
+\begin{exe}
+  \ex\label{ex:sentences}
+  \begin{xlist}
+    \ex The cat sat on the mat.\label{ex:sentences1}
+    \ex Me a spy?\label{ex:sentences2}
+    \ex Nice weather.\label{ex:sentences3}
+    \ex Hello!\label{ex:sentences4}
+  \end{xlist}
+\end{exe}
+
+Furthermore, we consider it obvious that the sentence is also the domain in which a large class of constructions (usually called syntactic constructions) is instantiated.
+As such, it must have some cognitive reality, something that is not always taken for granted in the cognitively oriented literature.
+Grammatical frameworks -- including cognitively oriented ones -- often operate with a merely implicit notion of the sentence.
+Croft (2001), for example, refers to sentences throughout his book.
+However, there is no definition or even discussion of what a sentence is.
+In Croft (2004: 651), the author states that “[p]articular sentences instantiate constructions, usually multiple constructions.”
+This is, in principle, compatible with our view, but it does not make a definition of sentencehood.
+Langacker (2008: 481–483), being more specific, speculates that clauses map more or less well to what he calls attentional frames in spoken language but that
+
+\begin{quote}
+  [t]here is some truth to the view that segmentation into sentences is merely a convention of writing;
+  a sentence is then definable (roughly) as a sequence bounded by spaces that begins with a capital letter and ends with a period.
+  But segmentation is often arbitrary, [footnote omitted] and many sequences written in this fashion are not traditionally considered sentences.
+\end{quote}
+
+The fact that segmentation of sentences in writing is not fully deterministic does not necessarily mean that it is arbitrary.
+Denying the sentence as a linguistic category is also formally inadequate because many syntactic phenomena are evidently not clause-bound and can only be explained if we assume an additional syntactic unit that is potentially larger than clauses.
+A very obvious such phenomenon is unbounded dependencies.
+Whereas simple long-distance dependencies (such as rightward extraposition) are by definition nonlocal but clause-bound, unbounded can span across many clause boundaries, but they are still sentence-bound dependencies (e.g., Pollard and Sag 1994: Ch. 4; Levine and Hukari 2006).
+Based on a prototypical definition of sentences, we propose that there is a mapping from prototypical fully independent syntactic sentences to independent graphemic sentences, wherein full syntactic independence is for all of our purposes the same as maximal nonintegration.
+If a specific syntactic structure as produced by a writer has (in the mind of that writer) more of the prototypical properties of sentencehood, then he or she will be more likely to mark it as an independent sentence by graphemic means.
+Graphemically, full sentential independence is marked by specific sentence-ending PMs (combined with initial capitalization).
+We agree with a large number of researchers that sentence-ending PMs in German are the period, the question mark, and the exclamation mark (Dürscheid 2006: 153–154).
+Within a fully independent graphemic sentence, the comma is a weaker marker of independence.
+According to Primus (1993, 2010: 35–36), one of the two primary functions of German commas is to mark clause boundaries (subordination) and sentence boundaries (sentential coordination).
+Subordinated clauses intrinsically have a partially independent status.
+Sentence-coordinating commas, on the other hand, allow writers to explicitly mark two syntactically independent sentences as less independent, probably for semantic and pragmatic reasons.
+Thus, we even expect a paradigmatic continuum of the prototypical use of PMs between two words in German:
+
+\begin{enumerate}
+  \item No PM = full integration (subclausal constituent boundary)
+  \item Clausal comma = partial independence (clause boundary or boundary between independent sentences marked explicitly for reduced independence)
+  \item Period, exclamation, question mark = full independence (sentence boundary)
+\end{enumerate}
+
+What stands out as obvious is that the in-between status of clausal commas is connected in a very specific way to the morphosyntactic, semantic, and pragmatic prototypical properties of sentences as discussed previously.
+Dependent clauses often have the morphosyntactic properties of prototypical sentences (such as having a subject).
+However, they virtually never have their pragmatic properties (such as illocutionary force).
+In German, V2 and VL order prototypically map to independent and subordinated sentences, respectively, in the syntax, but the embedded V2 phenomena introduced in the previous sections blur the boundaries and result in exemplars with difficult to assess prototypicality status.
+However, we can now make an obvious prediction, given our view of the syntax-graphemics interface: to the degree that obwohl-V2 and weil-V2 constitute nonintegrated independent sentences, they should occur more o en as graphemically independent sentences, typically being preceded by sentence-ending PMs and not being preceded by a comma.
 
 \subsubsection{Punctuation after sentence-initial particles}
 \label{sec:punctuationaftersentenceinitialparticles}
 
+In Section 1 – especially example (4) – we showed V2 examples with punctuation a er obwohl and weil.
+As it turns out (see following discussion, esp. Table 1), the comma is by far the most frequent PM in this position.
+Primus (1993: 253, 2010: 35) subsumes these commas under the second primary function of commas, namely, extraposition in the broad sense.
+We propose that these commas, too, are a sign of sentential independence.
+As it turns out, there is a larger class of words used in such a way.
+The examples in (9) show a selection of German sentence-initial particles used with commas.%
+\footnote{In their discussion of a super cially similar class of discourse particles, Pasch et al. (2003: 439–450) focus on those that embed an additional clause and form a hidden conditional clause that is itself embedded under a matrix clause (Pasch et al. 2003: 439), such as angenommen (“[if it is] assumed [that]”) or unterstellt (“[if it is] presumed [that]”).
+Freywald (2016: 327), with reference to Pasch et al. (2003), puts these particles close to obwohl and weil.
+We propose that the conditional reading brought about by angenommen, unterstellt, and similar words and the propositional embedding relation set them apart from ah, ach, and naja, as well as obwohl and weil.}
+
+exe
+
+\begin{table}
+  \centering
+  \begin{tabular}{c}
+    \toprule
+    x \\
+    \midrule
+    x \\
+    \bottomrule
+  \end{tabular}
+  \caption{The ten most frequent sentence-initial words separated from the rest of the sentence by a PM in DECOW12Q; the total count and the percentage among all sentences that begin with such a word are given; the total counts do not include hapaxes, and percentages are calculated relative to the given total counts}
+  \label{tab:initialwords}
+\end{table}
+
+Table 1 provides an overview of the ten most frequent words occurring sentence-initially in DECOW12Q (Section 3.1) with the four most frequent PMs (colon, comma, dash, ellipsis) a er them.14  e PM that does not really  t in is the colon.
+It has a performative character and classi es the type of information encoded in the following sentence.
+The other three PMs have an overlap in terms of the sentence-initial words a er which they occur.
+But the comma is the only one occurring with considerable frequency.
+When we compare the three PMs in this construction with their overall distribution in the corpus, it is not very unusual, however.
+The comma is slightly more frequent here than we would expect given its overall frequency, but the e ect is small.
+A $\chi^2$ test produces a Monte Carlo-simulated $p=0.001$ ($n=102,163,089$ with $1,000$ replicates) but with a mere $v_{\text{Cramér}}=0.037$.
+In other words, the comma is the prominent PM here, but no more prominent than it is everywhere else.
+
+This type of comma (as a marker of extraposition in the sense of Primus 1993, 2010) corresponds to the strong syntactic and semantic disconnectedness of discourse markers from the rest of the sentence (Section 2.1.2; Auer and Günthner 2005; Breindl 2009) and to the prosodic boundary that was reported in the previous literature.15 Interestingly, Breindl (2009) argues that intonational pauses occur only a er obwohl and not a er weil, which we expect to manifest itself in the frequency of the use of PMs (cf. Section 3).
+Such sentence-initial particles followed by a comma usually require an independent root clause to attach to.
+Thus, if obwohl and weil should turn out to be systematically assimilated to this class graphemically (constructional similarity leading to graphemic assimilation as proposed in Section 2.2.2), it would be strong graphemic evidence for the nonintegration of these clauses.
+Although this use of PMs is related to intonation boundaries (cf. Section 2.1.2), it is syntactically motivated and cannot be reduced to a simple mapping from prosody to graphemics, especially because intonation boundaries are optional.
+
+
 \subsection{Summary and hypotheses}
 \label{sec:summaryandhypotheses}
+
+In summary, we follow two main hypotheses.
+The first one is that obwohl-V2 and weil-V2 behave more like discourse markers than their VL counterparts, enforcing greater sentential independence (nonintegration).
+The second one is that obwohl has more prototypical properties of discourse markers in comparison with weil.
+Graphemically, we expect these hypotheses to be reflected in two ways.
+First, the V2 clauses should be marked more frequently as independent graphemic sentences with sentence-ending PMs.
+Second, the particles should be followed by sentence-internal PMs in V2 to the extent that they are construed as discourse markers.
+We expect both of these graphemic effects to be stronger in obwohl-V2 than in weil-V2.
 
 \section{Corpus study}
 \label{sec:weil:corpusstudy}
