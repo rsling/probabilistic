@@ -77,7 +77,7 @@ I also argue for the validity of using corpora in prototype research, and recapi
 The corpus study is reported in Section~\ref{sec:weaknouns:corpusstudy}, including a detailed description of the corpus resources and the methods applied to extract the data, as well as a report of an appropriate Generalised Linear Model (GLM) and an interpretation of the results.
 Finally, I summarise the findings in Section~\ref{sec:weaknouns:conclusions}.
 
-\section{On prototypes, cognitive corpus-based morphology, and weak nouns}
+\section[Prototypes, cognitive corpus-based morphology, weak nouns]{Prototypes, cognitive corpus-based morphology, and weak nouns}
 \label{sec:onptototypescognitivecorpusbasedmorphologyandweaknouns}
 
 \subsection{Prototype theory}
