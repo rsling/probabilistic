@@ -45,34 +45,10 @@ render_listings()
 
 @
 
-\part{Framework}
+\part{Probabilistic morphosyntax}
 
-<<child="chapters/introduction.Rnw">>=
-@
 
-<<child="chapters/webcorpora.Rnw">>=
-@
-
-<<child="chapters/statistics.Rnw">>=
-@
-
-\part{Case studies}
-
-<<child="chapters/clitics.Rnw">>=
-@
-
-<<child="chapters/weaknouns.Rnw">>=
-@
-
-<<child="chapters/measurenps.Rnw">>=
-@
-
-<<child="chapters/weil.Rnw">>=
-@
-
-\part{Directions}
-
-\input{chapters/directions}
+\part{Studies in probabilistic German morphosyntax}
 
 \appendix
 \input{chapters/weaknounlist}
