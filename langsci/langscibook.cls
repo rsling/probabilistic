@@ -133,6 +133,7 @@
 \newif\iflsModfonts \lsModfontsfalse
 \newif\iflsNoBabel \lsNoBabelfalse
 \newif\iflsMultiauthors \lsMultiauthorsfalse
+\newif\iflsWiddowandorphancontrol \lsWiddowandorphancontrolfalse
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -201,6 +202,7 @@
 \DeclareVoidOption{collectiontoclong}{  			
 	\lsCollectiontrue%
 	\lsCollectionTOCLongtrue} 
+\DeclareVoidOption{widdowandorphancontrol}{\lsWiddowandorphancontroltrue}
 \ProcessKeyvalOptions{langscibook}
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -340,11 +342,11 @@
         ] {\color{\lsCoverFontColour}\lsBackBodyFont{\parindent=15pt\lsBackBody}};
  \node [  below right = 192.5mm and 97.5mm of CoverColouredRectangleBack.north west, 
           text width=4cm] {%
-    \colorbox{white}{
-      \begin{pspicture}(0,0)(4.1,1in)
-        \psbarcode[transx=.4,transy=.3]{\lsISBNcover}{includetext height=.7}{isbn}%
-      \end{pspicture}
-      }
+% RS    \colorbox{white}{
+% RS     \begin{pspicture}(0,0)(4.1,1in)
+% RS       \psbarcode[transx=.4,transy=.3]{\lsISBNcover}{includetext height=.7}{isbn}%
+% RS     \end{pspicture}
+% RS     }
     };
 }
 
@@ -799,7 +801,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage{pst-barcode}          % for generating bar codes 
+% RS \usepackage{pst-barcode}          % for generating bar codes 
 \newcommand{\lsCoverFontColor}{white}
 \newcommand{\lsCoverBlockColor}{\lsSeriesColor} 
    
@@ -939,9 +941,9 @@
   \begin{textblock}{40}(105,200)
     \lsBackBodyFont\sffamily
     \colorbox{white}{%
-    \begin{pspicture}(0,0)(4.1,1in)
-    \psbarcode[transx=0.4,transy=0.3]{\lsISBNdigital}{includetext height=0.7}{isbn}
-    \end{pspicture}
+% RS    \begin{pspicture}(0,0)(4.1,1in)
+% RS    \psbarcode[transx=0.4,transy=0.3]{\lsISBNdigital}{includetext height=0.7}{isbn}
+% RS    \end{pspicture}
     }%  
   \end{textblock}}
 
@@ -1053,7 +1055,7 @@ ISBN: &
 \\
 %       & \lsISBNhardcover~(Hardcover)\\
 %       & \lsISBNsoftcover~(Softcover)\\
-%       & \lsISBNsoftcoverus~(Softcover US)\\
+% RS       & \lsISBNsoftcoverus~(Softcover US)\\
 \end{tabular}
 
 \IfStrEq{\lsISSN}{??}   % \IfStrEq from xstring
@@ -1103,7 +1105,7 @@ Unter den Linden 6\\
 
 Storage and cataloguing done by FU Berlin \\[3ex]   
 
-\IfFileExists{\logopath logo.pdf}{\includegraphics[width=5cm]{\logopath langscibook-logo.pdf}}{\logotext} \\[3ex]
+\IfFileExists{\logopath FULogo_sw_Greyscale.pdf}{\includegraphics[width=5cm]{\logopath FULogo_sw_Greyscale.pdf}}{\logotext} \\[3ex]
 
 
 \vfill
