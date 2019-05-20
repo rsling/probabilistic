@@ -1,7 +1,0 @@
-% !Rnw root = ../smil.Rnw
-<<setupstats, cache=FALSE, echo=FALSE, include=FALSE, results='asis'>>=
-opts_knit$set(self.contained=FALSE)
-@
-
-\chapter{Statistical models}
-\label{sec:statisticalmodels}

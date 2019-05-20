@@ -1,0 +1,113 @@
+\documentclass[UKenglish]{article}
+
+\RequirePackage[no-math]{fontspec}
+
+\usepackage[small]{dgruyter}
+\usepackage{microtype}
+\usepackage{enumerate}
+\usepackage{eqnarray}
+\usepackage{colortbl}
+\usepackage{soul}
+
+\newcommand{\eg}{e.\,g.,}
+\newcommand{\Eg}{E.\,g.,}
+\newcommand{\ie}{i.\,e.,}
+\newcommand{\Ie}{I.\,e.,}
+\newcommand{\Sub}[1]{\ensuremath{\mathrm{_{#1}}}}
+\newcommand{\Sup}[1]{\ensuremath{\mathrm{^{#1}}}}
+\newcommand{\Subsf}[1]{\ensuremath{\mathsf{_{#1}}}}
+\newcommand{\Supsf}[1]{\ensuremath{\mathsf{^{#1}}}}
+\newcommand{\pPB}{p\Subsf{PB}}
+\newcommand{\mpPB}{\ensuremath{p_{\text{PB}}}}
+
+\newcommand{\NACb}{NAC\Sub{bare}}
+\newcommand{\NACa}{NAC\Sub{adj}}
+\newcommand{\PGCd}{PGC\Sub{det}}
+\newcommand{\PGCa}{PGC\Sub{adj}}
+
+\newcommand*\Rot{\rotatebox{75}}
+
+\definecolor{lg}{rgb}{.8,.8,.8}
+\newcommand{\Dim}{\cellcolor{lg}}
+
+\usepackage{langsci-gb4e}
+
+\usepackage{bbding}
+\newcommand{\CheckIt}{\CheckmarkBold}
+\newcommand{\CrossIt}{\XSolidBold}
+
+
+
+% \usepackage{natbib}
+% \bibliographystyle{./unified}
+
+% This will most likely be changed by the typesetters.
+% I put it in to get through LaTeX-unaware copy-editing.
+\usepackage[maxbibnames=99,
+  maxcitenames=2,
+  uniquelist=false,
+  backend=biber,
+  bibstyle=biblatex-sp-unified,
+  citestyle=sp-authoryear-comp]{biblatex}
+\newcommand{\citealp}[2][]{\citealt[#1]{#2}}
+\addbibresource{article.bib}
+\DefineBibliographyStrings{english}{%
+  volume  = {Vol.},
+}
+\renewcommand*\finalnamedelim{\addspace and\space}
+\renewcommand*{\multicitedelim}{\addsemicolon\space}
+
+
+\begin{document}
+
+
+  \author*[1]{Roland Schäfer}
+  \runningauthor{Roland Schäfer}
+  \affil[1]{Deutsche und niederländische Philologie, Freie Universität Berlin, Germany, E-mail: roland.schaefer@fu-berlin.de}
+
+  \title{Abstractions and exemplars: The measure noun phrase alternation in German}
+  \runningtitle{Abstraction and exemplars: The measure noun phrase alternation German}
+
+  \abstract{In this paper, an alternation in German measure noun phrases is examined under a varying-abstraction perspective.
+    In a specific measure NP construction, the embedded kind-denoting noun either agrees in case with the measure noun (\textit{eine Tasse guter Kaffee} `a cup of good coffee') or it stands in the genitive (\textit{eine Tasse guten Kaffees}).
+    Each of the two alternants is syntactically similar to a non-alternating construction.
+    I propose a prototype model which assigns a common prototypical meaning to each of the alternants and its corresponding non-alternating construction.
+    Based on this, I argue that lexical, morphosyntactic, and stylistic features help to predict the choice of the alternant.
+    A large corpus study is presented which supports this analysis.
+    However, in addition to the prototype effects, an exemplar effect is also shown to influence the choice, namely the relative frequencies with which lemmas occur in the non-alternating constructions.
+    I argue that allowing both prototype and exemplar effects is more adequate than following radical prototype or exemplar approaches.
+    It is also verified in two experiments that the corpus-derived model corresponds to the behaviour of native speakers.
+    The weak effect size of the experimental validation is discussed in the context of corpus-based cognitive linguistics and the validation of corpus-derived models.}
+  \keywords{prototypes vs.\ exemplars, corpus methods and experimental validation, morphosyntactic alternations, multilevel modeling, pseudo-partitives, German}
+
+  \received{April 18, 2017}
+  \revised{January 8, 2018}
+  \accepted{May 30, 2018}
+
+  
+\maketitle
+
+
+\include{sections/1intro}
+\include{sections/2descriptive}
+\include{sections/3corpus}
+\include{sections/4experiments}
+\include{sections/5conclusions}
+
+
+\begin{acknowledgement}
+  I thank (in alphabetical order) Felix Bildhauer, Susanne Flach, Elizabeth Pankratz, Samuel Reichert, Ulrike Sayatz, and Christian Zimmer for valuable discussions and comments.
+  Also, I would like to thank the three reviewers for Cognitive Linguistics as well as associate editor Dagmar \mbox{Divjak} for insightful comments which helped to improve the quality of this paper significantly.
+  Furthermore, I thank Ulrike Sayatz for helping me to recruit the participants for the experiments.
+  I am grateful to Sonya Faber and Elizabeth Pankratz (in alphabetical order) for fixing my English.
+  Finally, I am grateful to my student assistants Kim Maser for her work on the annotation of the concordances and Luise Rißmann for supervising most of the experiments.
+  The research presented here was made possible in part through funding from the \textit{Deutsche Forschungsgemeinschaft} (DFG, personal grant SCHA1916/1-1).
+\end{acknowledgement}
+
+
+\renewcommand*\finalnamedelim{\addspace\&\space}
+%\bibliography{article}
+\printbibliography
+
+\end{document}
+

@@ -1,0 +1,98 @@
+\section{Case studies}
+\label{sec:casestudies}
+
+In this section, I introduce the four case studies presented in detail in the published papers.
+I briefly describe the phenomenon under investigation in each paper, the assumed theoretical models, the methods used, and the paper's contribution to the research in probabilistic modelling and\slash or alternation modelling.
+In addition to these contributions, all papers represent innovation and advancement for the grammatical description of German, especially with a focus on non-standard written language and so-called \textit{Zweifelsfälle} `cases of doubt'.
+Should a large corpus-based descriptive grammar of German (which should obviously include alternations in its descriptions) ever be written, the studies presented here could serve as a blueprint for such a product.
+The details of the painstaking work (data collection, annotation, and fine-grained statistical analysis) reported in each individual paper demonstrate, however, that such an undertaking would be a monumental one lasting decades and requiring substantial manpower.
+
+All studies used the DECOW web corpus \citep{SchaeferBildhauer2012,Schaefer2015b}, which contains a mix of standard and non-standard written German as its main source of data (see Section~\ref{sec:webcorpora}).
+The statistics in each paper were programmed in the R programming language \citep{R}.
+
+\paragraph[Graphemic words and new paradigms]{Graphemic words and new paradigms: the cliticised indefinite article}
+\mbox{}\\[0.5\baselineskip]\noindent
+In \RODefArt, we show how the emerging short forms of the German indefinite article create a new alternative paradigm, thus representing an independent alternative to the full forms.
+While the full standard forms use the stem \textit{ein}, the stem is reduced to \textit{n} in the short forms.
+The picture is complicated by forms like \textit{nen}, which look like short forms of \textit{einen} (accusative masculine singular), but which are also used as short forms corresponding to \textit{ein} (nominative masculine\slash neuter singular).
+We argue that such forms have undergone a reconstruction process to fulfill both phonological and graphemic constraints on independent words.
+The paper reports five independent corpus studies.
+Study 1 shows that there is some amount of free variation, substantiated by the occurrence of a significant number of exemplars with one short form and one full form in NP conjunction structures with \textit{und} `and' or \textit{oder} `or' (regardless of the case of the NP and the order of the two conjuncts).
+Study 2 shows that the overall tendency of not using the genitive in non-standard documents alone does not account for the fact that the paradigm of the short forms does not have a genitive at all.%
+\footnote{The expected genitive forms \textit{nes} and \textit{ner} virtually do not occur.}
+Study 3 presents a GLM which predicts the alternation between full and short forms using a number of theoretically motivated regressors, the main result being that the masculine and neuter nominative as well as the neuter accusative have the strongest tendency to preserve the full form, which was among the theoretically motivated predictions.
+Study 4 shows (using another, much simpler GLM) that the form \textit{nen} is most likely preferred under certain morphophonological and graphemic conditions and not specifically marked for a morphosyntactic function.
+Finally, Study 5 shows that independent graphemic principles guide writers' behaviour, as full graphemic enclisis (contraction of the reduced indefinite article with the preceding word without space or apostrophe) occurs predominantly with the form \textit{n}.
+This, we argue, can only be explained by the fact that \textit{n} is not at all a prototypical independent graphemic word.
+
+This paper is written in a descriptive tone, not making claims about cognitive representations.
+However, since general principles (such as universal and language-specific conditions on enclisis) are referred to, a cognitive interpretation and an experimental cross-validation would be possible.
+The paper fits well into the alternation research paradigm, as other studies have been presented within it which also model choices between full forms and contracted (or cliticised) forms, \eeg\ \citet{BarthKapatsinski2014}.
+We explicitly argue for the benefits of using web corpora (DECOW12 in this case), because the short forms are entirely absent from standard written language.
+
+\paragraph[Prototypes and paradigms]{Prototypes and paradigms: the strength of weak nouns}
+\mbox{}\\[0.5\baselineskip]\noindent
+In \ROWeakN, I demonstrate how robust corpus-based models can be constructed and verified based on previous substantive prototype-theoretical research.
+The approximately five hundred masculine weak nouns in German like \textit{Mensch} `human, man' follow a remarkably odd inflectional paradigm compared to all other nouns.
+They mark all forms except for the nominative singular with \textit{-en}.
+While there is another paradigm of masculine\slash neuter nouns which mark the plural with \textit{-en}, the weak singular forms in the accusative, dative, and genitive are truly exceptional.
+Furthermore, there is a non-standard alternation inasmuch as weak nouns sometimes occur in strong forms.
+If that happens, they simply drop the \textit{-en} in the accusative and dative, and they take on the typical strong ending \textit{-es} instead of \textit{-en} in the genitive.
+From \citet{Thieroff2003} -- an analysis of the relevant paradigm structure -- I predict that the strong forms of weak nouns should be more frequent in the accusative and dative than in the genitive.
+Base on the prototype-theoretical analysis in \citet{Koepcke1995}, I also predict that the strong forms should be less frequent when the nouns denote humans and when certain phonotactic conditions are met.%
+\footnote{Koepcke shows (among other things, based on diachronic data) that the weak nouns predominantly represent a semantically and phonotactically well-defined prototype.
+The features enumerated in his paper and used in my model are slightly more fine-grained than this short introduction makes them sound.}
+The predictions are borne out in a large-scale corpus analysis using a GLM to predict the alternants.
+
+Obviously, the paper fits well into the alternation modelling approach.
+It uses a cognitively motivated model (based on prototype theory) and all the standard tools described in Section~\ref{sec:theoriesmethodsanddata}.
+In the future, a re-analysis using a per-lemma random effect will be attempted.
+As it stands, lemma-specific effects are not modelled because the estimator did not converge with random effects in the model.
+Since new algorithms and statistical packages are constantly being made available, a more realistic statistical model might be possible in the future.
+
+\paragraph[Prototypes and grammaticalisation]{Prototypes and grammaticalisation: the measure NP alternation}
+\mbox{}\\[0.5\baselineskip]\noindent
+In \ROMeasure, I model a case alternation in German measure noun phrases such as \textit{ein Fass reines Öl} (both nouns have identical case) or \textit{ein Fass reinen Öls} (the kind-denoting noun has genitive case), both `a barrel of pure oil'.
+I describe the prototypical meanings of both alternants in terms of the grammaticalisation paths leading to partitive and pseudo-partitive \citep{Koptjevskaja2001} constructions.
+Basically, the genitive construction is assumed to prototypically allow both a referent of the measure noun and of the kind-denoting noun to be accessible.
+The same is possible but less prototypical for the case identity construction.
+From the definition of the prototypes, a number of predictions are derived regarding the preferences of measure nouns from different semantic classes to occur in one alternant or the other.
+Also, a prediction regarding cardinal or non-cardinal determiners is derived from the prototypical meanings.
+
+Furthermore, an exemplar effect is modelled.
+For the alternating construction, there exist two neighbouring construction which always require the genitive (`ein Fass des reinen Öls' with a determiner on the kind-denoting noun) or never allow the genitive (`ein Fass Öl' with no determiner and no adjective).
+The occurrence frequencies of measure and kind lemmas in these two constructions is shown to influence the alternation in the expected direction.
+
+The study is a prime example of corpus-based alternation research based on substantive theory.
+Not only is each predictor in the multilevel model independently motivated, but there is also experimental cross-validation in two experimental paradigms (forced choice and self-paced reading).
+The paper makes significant contributions to the prototype vs.\ exemplar debate, and it discusses the question of how well corpus-derived models and experimental validations can be expected to converge.
+
+\paragraph[Prototypical syntax and punctuation]{Prototypical syntax and punctuation: (non-)embedded V2 clauses}
+\mbox{}\\[0.5\baselineskip]\noindent
+Finally, in \ROWeil, Ulrike Sayatz and I use graphemic data from non-standard written German to substantiate conclusions about sentential structure in embedded and non-embedded clauses introduced by the particles \textit{obwohl} `although, then again' and \textit{weil} `because'.
+Both particles are subordinators in standard written German and as such embed clauses with verb-last constituent order.
+It has been known for quite a while that with some semantic and pragmatic changes they can also embed verb-second clauses, which is the constituent order otherwise typical of independent clauses.
+
+We perform an in-depth analysis of the punctuation occurring before and after the two particles, also using GLMs.
+The results are very strong and could even have been detected with descriptive statistics alone.
+It turns out that \textit{obwohl} with verb-second order occurs proportionally more often at the beginning of sentences after full stops.
+Also, \textit{obwohl} is separated more often from the clause it embeds by punctuation marks which are otherwise used with sentence-initial, verb-second-embedding discourse particles such as \textit{natürlich} `naturally' of \textit{klar} `of course'.
+In line with previous research, we argue that the distribution of the punctuation marks provides solid evidence that the two particles (with verb-second order) have different syntactic and pragmatic functions and that \textit{obwohl} is essentially a discourse particle used in independent sentences.
+
+The paper does not straightforwardly belong into the alternation research category, but it clearly models a probabilistic phenomenon, as the syntactic structures, the pragmatic functions, and the graphemic markers are subject to stochastic variation.
+The major contribution of the paper is the first-ever proposal of \textit{usage-based graphemics} (UBG).
+We understand UBG neither as a theory nor as a framework.
+Rather, we see it as a method of analysing graphemic variation as a cue to grammatical structure.
+It is a method of analysis which has the potential to develop into a framework concerned with the syntax-graphemics interface.
+
+We assume that writers learn to associate phonological, morphological, and syntactic patterns with graphemic patterns through repeated exposure to the graphemic patterns in conjunction with the grammatical ones.%
+\footnote{Despite some construction terminology used in our paper, UBG is not necessarily tied to construction grammar or any other grammatical framework.
+Any system of units of grammar and their combinatorics can be mapped onto graphemic patterns.}
+Thus, they learn to associate grammatical prototypes (such as sentence type prototypes) probabilistically with graphemic units and patterns such as punctuation marks.
+This is clearly in line with assumption of usage-based theories \citep{BybeeBeckner2009}.
+Especially when the normative pressure is low (as is the case when, for example, German writers start using the completely non-standard \textit{obwohl} and \textit{weil} clauses with verb-second order in writing) and writers have to encode syntactic structures which are novel or usually not encoded at all in writing, the prototypical mapping becomes visible through emerging regularities where no normative rules exist.
+
+What is promising about this approach is that -- once it is fully developed -- it can be used to reconstruct evidence for grammatical structure from corpora containing non-standard writing.
+For this to work reliably, the correspondences and mechanisms have to be fleshed out, and experimental validation is required.
+Therefore, it was vital that the results converged with previous analyses of the two particles, thus substantiating the assumption that UBG is a valid method of analysis.
+UBG will be described in more detail in \citet{SchaeferSayatz2019} and several other publications by Ulrike Sayatz and me which include experimental work.

@@ -1,9 +1,0 @@
-% !Rnw root = ../smil.Rnw
-<<setupmnps, cache=FALSE, echo=FALSE, include=FALSE, results='asis'>>=
-opts_knit$set(self.contained=FALSE)
-@
-
-\chapter{Prototypes and grammaticalisation: the measure NP alternation}
-\label{sec:prototypesanddegreesofgrammaticalisation}
-
-\tblsframebox{lsLightGray}{}{This chapter is based on \textcite{Schaefer2017a}.}

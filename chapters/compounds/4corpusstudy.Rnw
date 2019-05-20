@@ -1,0 +1,328 @@
+% !Rnw root = ../leglossa.Rnw
+<<setupcorpus, cache=FALSE, include=FALSE, results='asis'>>=
+opts_knit$set(self.contained=FALSE)
+@
+
+\section{Corpus study}
+\label{sec:corpusstudy}
+
+\subsection{Queries}
+\label{sec:queries}
+
+As explained in Section~\ref{sec:linkingelementsingerman}, we will determine whether two distinct factors increase the probability that N1 in N1+N2 compounds occurs with a PL, given that N1 alternates between a PL and a NPL.
+The first potential factor is a plural on the whole compound (formally on N2, which is the head).
+The second factor is whether a semantic relation between N1 and N2 holds which forces N1 to have plural semantics.
+To this end, we manually annotated corpus exemplars containing N1+N2 compounds for whether they are plurals and whether a plural-enforcing semantic relation holds between N1 and N2.
+Before turning to this annotation process in Section~\ref{sec:annotation}, the current section describes how we extracted and prepared a concordance for the manual annotation.
+
+First, as explained at the beginning of Section~\ref{sec:databaseandproductivityassessment}, a selection of N1s was chosen which represents the population of N1s well with regard to their productivity scores with PL and NPL.
+Furthermore, it was explained that the productivity measures can be misleading in the case of low type frequencies.
+Therefore, only N1s which had a minimal type frequency of $\Sexpr{n1asn1.typfreq.lim}$ as N1 with PL and NPL were used.
+In order to exclude nouns which occur with reasonable type frequency in compounds but infrequently as standalone nouns, only N1s with a minimal token frequency outside of compounds were included.
+To implement this restriction, we used the notion of the \textit{frequency class} (or \textit{frequency band}) of a word \parencite[80]{PerkuhnEa2012}.
+The frequency class $c(w)$ of a word $w$ increases with the word's token frequency $f(w)$.
+Calculation of the frequency class additionally relates the token frequency of the word in question to the number of tokens of the most frequent word in the corpus ($f^{max}$) and accounts for the power law distribution of word frequencies.%
+\footnote{See \textcite{Piantadosi2014} for a recent overview, including the many problems with actual word frequency distributions.}
+It is given by (\ref{eq:frequencyclass}), where $\lfloor~\rfloor$ denotes the function that rounds down to the next integer.
+
+\begin{equation}
+  \label{eq:frequencyclass}
+  c(w) = \left\lfloor{0.5 - log_2\left({\frac{f(w)}{f^{max}}}\right)}\right\rfloor
+\end{equation}
+
+The most frequent word in DECOW16A, according to the official frequency lists, is \textit{und} `and' with $f(und)=\Sexpr{nice.int(decow16a.highest.f)}$.
+Relative to this $f^{max}$ value, we only considered words with a frequency class up to and including $\Sexpr{n1itself.tokfreq.lim}$, a class where, for example, \textit{Lid} `eyelid' ($f=\Sexpr{nice.int(analyses.full$er[which(analyses.full$er$N1 == "Lid"),"N1alone_Ftoken"])}$), \textit{Seilschaft} `rope team' ($f=\Sexpr{nice.int(analyses.full$en[which(analyses.full$en$N1 == "Seilschaft"),"N1alone_Ftoken"])}$), and \textit{Verlies} `oubliette' ($f=\Sexpr{nice.int(analyses.full$e[which(analyses.full$e$N1 == "Verlies"),"N1alone_Ftoken"])}$) are found.
+
+From the set of N1s which fulfilled the given criteria, we sampled between five and ten nouns per PL.
+Ideally, we would have had ten per PL, but since some of the PLs occurred with relatively few N1s, there were not always ten nouns available which met our criteria.
+At the end, we were left with a set of 48 nouns that were countable (\ie no mass nouns), not collectives, and distributed approximately uniformly across the productivity spectrum as it was visualised in Figure~\ref{fig:proddots}.
+In Figure~\ref{fig:corpusselection}, each of the dots represents one N1 which fulfils the frequency-based selection criteria.
+The triangles mark those which were chosen for the corpus study based on the additional criteria.
+Overall, the sample represents the spectrum of productivity quite well.
+
+<<corpusselection, fig.pos="htbp", fig.height=8, fig.cap="Selection of the N1s for the corpus study (triangles) in the context of all possible N1 candidates meeting the minimal criteria (dots); the x-axis and y-axis plot the potential productivity of N1 with PL and NPL, respectively (see Figure~\\ref{fig:proddots} for abbreviations); axes are on a logarithmic scale">>=
+par(mfrow=c(3,3))
+for (le in prod.plot.order) {
+
+  # Make blank space in plot.
+  if (le == "EMPTY_PLOT") {
+    plot.new()
+    next
+  }
+
+  .le.name <- le.name(le)
+  plot(corpus.candidates[[le]]$Without_Ppot ~ corpus.candidates[[le]]$With_Ppot,
+       log="xy",
+       pch = 20,
+       cex = 1,
+       col = "gray",
+       xlim = c(0.001, 1),
+       ylim = c(0.001, 1),
+       # main = paste0("Cand. for corpus study: ", .le.name),
+       main = .le.name,
+       xlab = paste0("Productivity with ", .le.name),
+       ylab = paste0("Productivity without ", .le.name)
+  )
+  .orig <- which(corpus.candidates[[le]]$N1 %in% corpus.items[[le]]$N1)
+  points(corpus.candidates[[le]][.orig,]$Without_Ppot ~ corpus.candidates[[le]][.orig,]$With_Ppot,
+         pch = 17,
+         cex = 1.5,
+         col = "darkred"
+  )
+}
+par(mfrow=c(1,1))
+@
+
+The queries we used to retrieve the compound exemplars containing the 48 chosen N1s were made in DECOW16A.
+For each N1, we made one query searching for compounds containing it with PL and one otherwise identical query searching for compounds containing it with NPL.
+We performed deduplication on the compounds inasmuch as we only allowed one instance of each identical compound word form to pass.
+Otherwise, highly frequent and typically lexicalised compounds would have accounted for the best part of the concordances.
+However, we did allow different word forms of the same compound in the concordances, in order to get both singular and plural forms.
+We extracted all exemplars matching the query, making random sub-samples for annotation.
+
+\subsection{Annotation}
+\label{sec:annotation}
+
+From each of the query results of the 48 N1s described in Section~\ref{sec:queries}, we annotated one hundred randomly chosen cases with PL and approximately one hundred with NPL.
+Due to some minor clean-ups in the quality control process, the final sample size is not exactly $n=\Sexpr{nice.int(200*nrow(t.plot))}$ but $n=\Sexpr{nice.int(sum(t.plot$n))}$.
+Annotating singular and plural was unproblematic, except where singular and plural forms were homographic \textit{and} the context did not help to disambiguate the two.
+Such cases were discarded and not used for the study.
+
+Determining whether the semantics of N2 and the semantic relation between N1 and N2 forces N1 to have plural semantics was more intricate, and we found several classes of N2s characteristic of this relation.
+A clear case of plural-inducing N2s are collectives such as \textit{Gruppe} `group' as in \textit{Kind-er+gruppe} or \textit{Kind+gruppe} `group of children' or \textit{Haufen} `heap\slash pile' as in \textit{Brett-er+haufen} or \textit{Brett+haufen} `pile of boards'.
+Even metaphorical collectives are usually unproblematic, for example \textit{Regen} `rain' in compounds like \textit{Zitat-e+regen} or \textit{Zitat+regen} `rain of quotations'.
+Another clearly discernible group are reciprocals such as \textit{Wechsel} `swap\slash exchange' as in \textit{Räd=er+wechsel} or \textit{Rad+wechsel}, `swapping of tyres'.
+Furthermore, there are N2s such as \textit{Distanz} `distance' as in \textit{Löch=er+distanz} or \textit{Loch+distanz} `distance between (the) holes', which were annotated as plural-inducing N2s if it became clear from the context that a distance \textit{between} several objects was referenced.
+Also, compounds with N2s like \textit{System} `system' as in \textit{Element-e+system} or \textit{Element+system} `system of elements\slash periodic system' were annotated as containing an N1 with a forced plural interpretation if the reading was clearly that of a `system of (several) elements'.
+
+In addition to these fairly clear-cut cases, there is a second group of compounds in which the plural-inducing quality of the N2 is strongly dependent on context and world knowledge.
+Most prominent among these are N2s which denote a container of some sort.
+Examples include \textit{Äpfel=+lager} or \textit{Apfel+lager} `storage for apples', \textit{Brief-e+katalog} or \textit{Brief+katalog} `catalogue of letters', and \textit{Lied-er+buch} or \textit{Lied+buch} `book of songs\slash songbook'.
+In theory, the N2s in these compounds \textit{could} denote some sort of container which holds only one object (for instance, it is conceivable -- if unlikely -- that the storage space for apples could have only one apple in it), but both world knowledge and the particular context in which the compound appears render this sort of interpretation impossible.
+However, since the interpretation of this kind of containment compound is context- and world-knowledge-dependent, we will analyse them separately from the clear-cut cases shown above.
+The presentation of the final sample will show the results for only the first, clear-cut cases under the label of \textit{strict annotation} and the combined results for both the clear-cut and the extended cases under the label of \textit{lax annotation}.%
+\footnote{We think it is encouraging that \textcite{BangaEa2013b} found the stable and expected results even using a more cavalier operationalisation of what they call conceptual plurals.
+``These form types could be divided into two conceptual types: the modifier of the compound was either conceptually singular (\egg \textit{bananenschil} `banana skin' and \textit{ballonvaart} `balloon ride') or conceptually plural (\egg \textit{aardbeienjam} ‘strawberry jam’ and \textit{appeltaart} ‘apple pie’)''.
+The problem with \textit{strawberry jam} is that \textit{strawberry} could address the generic meaning (`strawberry type') or a mass noun version (`strawberry substance'), in which case the numerosity of referents of N1 would be much weaker conceptually.
+We had to assume that there would be more confounding factors in the corpus study than in a controlled experiment.
+Therefore, to be on the safe side, we did not consider hazy cases like these to be internal plurals.
+}
+
+
+\subsection{Results}
+\label{sec:results}
+
+As mentioned in Section~\ref{sec:annotation}, the size of the manually annotated sample of $\Sexpr{nice.int(nrow(t.plot))}$ N1s was $n=\Sexpr{nice.int(sum(t.plot$n))}$.
+All exemplars were annotated for internal and external plural, and we treat the two annotations as two sub-studies, starting with the external plural sub-study.
+
+There are $\Sexpr{nice.int(length(which(conc$N2Num=="Sg")))}$ singular compounds and $\Sexpr{nice.int(length(which(conc$N2Num=="Pl")))}$ plural compounds in the sample.
+Also, there are $\Sexpr{nice.int(length(which(conc$LE==1)))}$ cases with PL and $\Sexpr{nice.int(length(which(conc$LE==0)))}$ with NPL.
+The question is whether there is a high enough number of exemplars with PL in a plural compound that we might conclude that there is an external plural effect.
+The contingency table showing the two variables' bivariate distribution is given in Table~\ref{tab:ctextplural}.
+
+<<results="asis">>=
+extpl.chisq <- chisq.test(table(conc$LE, conc$N2Num))
+extpl.obs <- extpl.chisq$observed
+rownames(extpl.obs) <- c("NPL", "PL")
+colnames(extpl.obs) <- c("Pl.\ compound", "Sg.\ Compound")
+extpl.obs.xt <- xtable(nice.int(extpl.obs), booktabs = T,
+                         caption = "Contingency table for external plural sub-study",
+                         label = "tab:ctextplural")
+align(extpl.obs.xt) <- c("l", "r", "r")
+print(extpl.obs.xt,
+      floating = T,
+      table.placement = 'htbp',
+      booktabs = T,
+      rotate.colnames = F
+      )
+@
+
+<<results="hide">>=
+extpl.resid <- extpl.chisq$stdres
+@
+
+A $\chi^2$ test on the contingency table produces a significant result at $\mathrm{sig}=0.05$ ($\chi^2=\Sexpr{nice.float(extpl.chisq$statistic)}$, $df=\Sexpr{min(dim(extpl.chisq$observed))-1}$, $p=\Sexpr{nice.float(extpl.chisq$p.value)}$).
+However, despite the very large sample size, the p-value is relatively close to $0.05$, and the effect size is quite low at $v=\Sexpr{nice.float(cramer.v(extpl.chisq))}$, which indicates that the effect is probably spurious.
+To make matters worse, an inspection of the symmetrical (standardised) residuals (\Sexpr{nice.float(extpl.resid[1,1])} for plural compounds with NPL and singular compounds with PL as well as \Sexpr{nice.float(extpl.resid[2,1])} for plural compounds with PL and singular compounds with NPL) shows that the spurious effect even has the wrong direction, \ie PL is less frequent in plural compounds than expected under the null hypothesis.
+
+Thus, we have found no evidence to support the external plural hypothesis in the global analysis of the data set (which is not the same as finding evidence \textit{against} it).
+There might be item-specific differences between N1s or groups of N1s which take different PLs.
+In order to check for this, we calculated one $\chi^2$ test for each N1 with an approximate sample size of $n=200$ for each test.
+Since we are testing a family of connected hypotheses, p-values need to be corrected (correction for group-wise error).
+We used Šidák's method \parencite{Sidak1967}, which is slightly less conservative than the well-known Bonferroni correction (at least for uncorrelated tests).%
+\footnote{We also tried Holm's and Hochberg's methods, but the differences between all those methods are small enough that they do not lead to different interpretations of the results.
+Instead of adapting the $\mathrm{sig}$ level, we corrected the p-value directly using $p_{S}=1-(1-p)^m$ where $m$ is the number of tests ($m=\Sexpr{nice.int(nrow(t.plot))}$ in this case).}
+The low counts in some cells in our data make the $\chi^2$ approximation inexact, so we used a Monte Carlo replacement for the traditional $\chi^2$ test \parencite{Hope1968} as implemented in the standard \texttt{chisq.test} function in R \parencite{R}.
+The procedure calculates these marginal sums and then generates random permutations for the contingency table given the marginals.
+We used $b=\Sexpr{nice.int(num.reps)}$ permutations.
+Finally, the effect sizes ($v$) were calculated and multiplied by the sign of the top left cell of the residual table.
+This means that, in addition to quantifying the magnitude of the effect size, they also reflect whether, for each N1, the co-occurrence of PL and plural semantics on N1 is preferred (positive sign) or dispreferred (negative sign).
+
+These results confirm those of the global test reported above.
+Only one test reaches $\mathrm{sig}=0.05$.
+The effect sizes are centred around $0$ with a mean of $\bar{v}=\Sexpr{nice.float(mean(p.plot$phi))}$, a median of $\tilde{v}=\Sexpr{nice.float(median(p.plot$phi))}$, and a standard deviation of $s(v)=\Sexpr{nice.float(sd(p.plot$phi))}$.
+This is expected in a situation where there are no effects.
+
+<<results="asis">>=
+intpl.chisq <- chisq.test(table(conc$LE, conc$N2TypStrict))
+intpl.chisq.lax <- chisq.test(table(conc$LE, conc$N2TypLax))
+intpl.obs <- intpl.chisq$observed
+intpl.obs.lax <- intpl.chisq.lax$observed
+intpl.obs.both <- matrix(paste(as.character(nice.int(intpl.obs)), as.character(nice.int(intpl.obs.lax)), sep = ";"),
+                         nrow = 2, byrow = F)
+rownames(intpl.obs.both) <- c("NPL", "PL")
+colnames(intpl.obs.both) <- c("Internal pl.\ relation", "No internal pl.\ relation")
+intpl.obs.xt <- xtable(intpl.obs.both, booktabs = T,
+                         caption = "Contingency table for internal plural sub-study; the tuples represent the values for \\textit{strict};\\textit{lax} annotation",
+                         label = "tab:ctintplural")
+align(intpl.obs.xt) <- c("l", "r", "r")
+print(intpl.obs.xt,
+      floating = T,
+      table.placement = 'h!',
+      booktabs = T,
+      rotate.colnames = F)
+@
+
+The picture changes when we move on to the analysis of the internal plural sub-study.
+Here, we examine whether the occurrence of PL is more frequent in internally plural compounds, \ie compounds with an N2 that forces plural semantics on the N1.
+Recall from Section~\ref{sec:annotation} that we carefully distinguished between clear cases and less clear cases, calling the two annotation schemes \textit{strict} and \textit{lax}.
+We therefore specify two values separated by a semicolon for the relevant statistics (\textit{strict};\textit{lax}).
+The sample contains $\Sexpr{nice.int(length(which(conc$N2TypStrict == "Coll")))};\Sexpr{nice.int(length(which(conc$N2TypLax == "Coll")))}$ cases with an internal plural relation and $\Sexpr{nice.int(length(which(conc$N2TypStrict == "Ind")))};\Sexpr{nice.int(length(which(conc$N2TypLax == "Ind")))}$ cases with no internal plural relation.
+Table~\ref{tab:ctintplural} shows the contingency table for the two variables PL vs.\ NPL and internal plural relation vs.\ no internal plural relation.
+
+<<differenceplcoll, fig.pos="h!", fig.height=4, fig.width=4, fig.cap="Distribution of signed Cramérs $v$ scores for the internal and external plural data">>=
+the.cex <- 0.7
+plot(x=NULL, y=NULL,
+     xlim = c(0.5, 1.5),
+     ylim=c(-0.5, 0.6),
+     type="n", ann=FALSE, axes=F
+     )
+axis(1, at=c(0.85, 1.15), tick = F,
+     labels=c("external pl.", "internal pl."),
+     cex.axis = the.cex)
+axis(2, cex.axis = the.cex)
+abline(h = 0, lwd = 2, lty = 2, col = "darkgray")
+vioplot2(p.plot$phi,
+         frame = F,
+         at = 1,
+         side = "left",
+         col = "yellow",
+         add = T)
+vioplot2(t.plot$phi.lax,
+         at = 1,
+         side = "right",
+         col = "white",
+         add = T)
+vioplot2(t.plot$phi.strict,
+         at = 1,
+         side = "right",
+         col = "darkorange",
+         add = T)
+title(cex.lab = 0.7,
+      xlab = "Sub-study")
+legend("bottomright", fill = c("white", "darkorange"),
+       legend = c("lax annotation", "strict annotation"),
+       box.lty=0,
+       cex = the.cex)
+@
+
+A $\chi^2$ test reaches $\mathrm{sig}=0.05$ ($\chi^2=\Sexpr{nice.float(intpl.chisq$statistic)};\Sexpr{nice.float(intpl.chisq.lax$statistic)}$, $df=\Sexpr{min(dim(intpl.chisq$observed))-1};\Sexpr{min(dim(intpl.chisq$observed))-1}$, $p\approx 0;0$).
+However, the overall effect size is still not very high at $v=\Sexpr{nice.float(cramer.v(intpl.chisq))};\Sexpr{nice.float(cramer.v(intpl.chisq.lax))}$.
+At least for the lax annotation scheme $v\geq 0.2$, making the effect worthy of mention.
+Individual (per-N1) tests were also calculated with the same parameters as described above for the external plural sub-study.
+Figure~\ref{fig:differenceplcoll} compares the distribution of $v$ values for the external plural sub-study (left) and the internal plural sub-study (right) in the form of a split violin plot.
+Violin plots are extensions of standard box plots; see \textcite{HintzeNelson1998}.
+The horizontal line represents the median and the black vertical bar the interquartile range (\ie the range of the middle $50\%$ of the sample).
+The additional outer shape represents a kernel density estimate of the sample.
+For the internal plural sub-study, strict and lax annotation are both shown.
+Obviously, the difference between the two annotation schemes is not huge, and virtually identical conclusions can be drawn based on either of them.
+While the external plural has zero average effect, the internal plural has an average effect of roughly $0.2$.
+
+<<corpuseffects, fig.pos="htbp", fig.height=10, fig.cap="Individual per-N1 effect strengths and Šidák-corrected p-values for the internal plural sub-study; groups (PLs) are sorted by descending overall effect strength (strict); per group, N1s are sorted by descending effect strength (strict)">>=
+corpuseffects.colors <- colorRampPalette(c("gray", "darkgreen"))(100)
+
+# The dots are in fact invisible (pch="") so we can draw freely later.
+dotchart(t.plot$phi.strict,
+         xlim=c(-0.2, +0.6),
+         labels = t.plot$lemma,
+         pch = "",
+         cex=0.75,
+         cex.axis = 5,
+         gcolor = "black",
+         groups = t.plot$link,
+         color = unlist(lapply(t.plot$p.sidak.strict, function(x) map.my.ramp(x, corpuseffects.colors))),
+         xlab=paste0("Cramer's v (signed)")
+         )
+
+abline(v = seq(-0.2, 0.6, 0.2), col = "lightgray", lty = 1, lwd=1)
+
+# Now add first level to dotchart on top of verticl lines.
+# Unfortunately not supported by built-in function.
+this.y <- 1
+for (l in rev(levels(t.plot$link))) {
+
+  .t.subplot <- t.plot[which(t.plot$link == l),]
+  for (n1 in 1:nrow(.t.subplot)) {
+    points(.t.subplot[n1, "phi.strict"], this.y,
+           pch = 16,
+           col = map.my.ramp(.t.subplot$p.sidak.strict[n1], corpuseffects.colors)
+    )
+    this.y <- this.y + 1
+  }
+  this.y <- this.y + 2
+}
+
+# Now add second level to dotchart.
+# Unfortunately not supported by built-in function.
+this.y <- 1
+for (l in rev(levels(t.plot$link))) {
+
+  .t.subplot <- t.plot[which(t.plot$link == l),]
+  for (n1 in 1:nrow(.t.subplot)) {
+    points(.t.subplot[n1, "phi.lax"], this.y,
+           pch = 1,
+           cex = 1.7,
+           col = map.my.ramp(.t.subplot$p.sidak.lax[n1], corpuseffects.colors)
+    )
+    this.y <- this.y + 1
+  }
+  this.y <- this.y + 2
+}
+
+
+legend("right", title = "p-values",
+       legend = c("0", "0.05", "0.1", "0.5", "1"),
+       col = c(corpuseffects.colors[100], corpuseffects.colors[65], corpuseffects.colors[50], corpuseffects.colors[16], corpuseffects.colors[1]),
+       pch=19, bg = "white",
+       cex = 1.0
+       )
+legend("bottomright",
+      legend = c("strict", "lax"),
+      title = "Annotation",
+      bg = "white",
+      pch = c(16,1),
+      cex = 1.0
+      )
+@
+
+Even more informative is a closer look at the individual results.
+Figure~\ref{fig:corpuseffects} represents for each N1 the signed effect strength in the internal plural sub-study as the dot's location on the horizontal dimension and the p-value through the colour coding.
+The darker the dot is, the lower the p-value.
+The colour mapping is logarithmic, such that any dot representing a p-value above $\mathrm{sig}=0.05$ is already significantly lighter than the darkest colour.
+The N1s are arranged in groups defined by their PL.
+The groups are sorted by their mean effect strengths, and within each group N1s are sorted by their effect strengths.
+
+The detailed analysis shows that there are considerable differences between linking elements.
+N1s with \textit{=e} and \textit{=er} especially show good effect strengths in addition to reaching reasonable significance levels.
+Those with \textit{-er} and \textit{=} show mixed results, and for \textit{-e}, \textit{-en}, and \textit{-n}, we find only very weak effects and non-significant p-values, which would normally be dismissed completely.
+However, even though the results for the last-mentioned PLs are negligible by themselves, it should still be noticed that all N1s show a positive effect except \textit{Ei} `egg' and \textit{Katze} `cat', which lean ever so slightly towards the negative side.
+
+If there were no general co-occurrence preference between a PL and an internal plural relation, we would not expect this strong positive trend in the distribution of $v$ scores.
+Rather, roughly as many negative as positive $v$ scores distributed around $0$ would be expected, as was the case in the external plural condition; see Figure~\ref{fig:differenceplcoll}.
+These results thus support the hypothesis that there is a general co-occurrence preference between PL and an internal plural relation.
+
+Finally, it is noteworthy that the order of the PLs in Figure~\ref{fig:corpuseffects} is the mirror image of their order in Figure~\ref{fig:proddots} and Figure~\ref{fig:corpusselection}.
+The less type-frequent a plural marker is, the more strongly it tends to be interpreted as a plural marker even when used as a linking element.
+It should be noted that these less type-frequent plural markers are those with an umlaut on N1.
+We return to these results in our theoretical interpretation in Section~ \ref{sec:conclusion}.
+But first, we report the results of a split-100 experiment in Section~\ref{sec:split100experiment}.

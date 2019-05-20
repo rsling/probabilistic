@@ -1,7 +1,0 @@
-% !Rnw root = ../smil.Rnw
-<<setupcomp, cache=FALSE, echo=FALSE, include=FALSE, results='asis'>>=
-opts_knit$set(self.contained=FALSE)
-@
-
-\chapter{Function and meaning: plural linking elements}
-\label{sec:functionandmeaning}

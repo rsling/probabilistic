@@ -1,0 +1,244 @@
+\documentclass[a4paper, biblatex, charis, linguex]{glossa}
+
+\bibliography{rs} 
+
+\usepackage{sectsty} 
+\allsectionsfont{\normalfont\sffamily\bfseries}
+\subsectionfont{\normalfont\sffamily\bfseries\itshape}
+\let\B\relax 
+\let\T\relax
+\usepackage[linguistics]{forest}
+\usepackage{ragged2e}
+
+% \usepackage[firstpage]{draftwatermark}
+% \SetWatermarkFontSize{24pt}
+% \SetWatermarkHorCenter{300pt}
+% \SetWatermarkColor[rgb]{1,0,0}
+% \SetWatermarkText{\textsf{\parbox{18cm}{\centering%
+%                 This is not necessarily the version submitted to\\
+% 		the Faculty of Languages and Letters\\
+% 	        of Humboldt University Berlin.\\[\baselineskip]
+% 	        This version was compiled on \today.}}}
+
+
+\pdfauthor{Roland Schäfer}
+\pdftitle{Probabilistic German Morphosyntax}
+\pdfkeywords{probabilistic grammar, morpho-syntax, alternations, corpus and experimental data, German}
+
+\title{Probabilistic German Morphosyntax}
+
+\author{
+  \spauthor{Roland Schäfer\\ 
+  \small{Nürnberger Straße 45\\
+  10789 Berlin\\
+  mail@rolandschaefer.net}
+  }
+}
+
+\usepackage{booktabs}
+\usepackage{rotating}
+
+\include{localcommands}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\centering
+\sffamily
+{\Large\textbf{Probabilistic German Morphosyntax}}\\[\baselineskip]
+
+{\large HABILITATIONSSCHRIFT\\
+  zur Erlangung der Lehrbefähigung für das Fach\\
+  Germanistische und Allgemeine Sprachwissenschaft\\[0.5\baselineskip]
+
+  vorgelegt 
+  der Philosophischen Fakultät II\\
+  der Humboldt-Universität zu Berlin\\[0.5\baselineskip]
+  
+  von\\
+  Dr.\ Roland Schäfer\\
+  geb.\ am 06. Janur 1974 in Düsseldorf\\[3\baselineskip]
+
+  \raggedright
+  \large
+  Präsidentin der Humboldt-Universität zu Berlin:\\[0.25\baselineskip]
+  Prof.\ Dr.-Ing.\ Dr.\ Sabine Kunst
+  \vspace{1.5\baselineskip}
+
+  Dekanin:\\[0.25\baselineskip]
+  Prof.\ Dr.\ Ulrike Vedder
+  \vspace{1.5\baselineskip}
+
+  Berlin, den 29. Mai 2018\\[1.5\baselineskip]
+
+  Gutachterinnen\slash Gutachter:\\[0.5\baselineskip]
+  1.~Prof.\ Dr.\ Anke Lüdeling (Humboldt-Universität zu Berlin)\\[0.25\baselineskip]
+  2.~Prof.\ Dr.\ Stefan Müller (Humboldt-Universität zu Berlin)\\[0.25\baselineskip]
+  3.~Prof.\ Dr.\ Matthias Hüning (Freie Universität Berlin)\\
+}
+
+\justifying
+\rmfamily
+
+\newpage
+\thispagestyle{empty}
+
+\section*{Erklärung über Zusammenarbeit mit anderen Wissenschaftlern\slash Wissenschaftlerinnen und den eigenen Anteil an der vorgelegten Leistung}
+
+Von den vier Zeitschriftenartikeln, die in der hier vorgelegten kumulativen Habilitationsschrift zusammengefasst wurden, entstanden die folgenden beiden in Zusammenarbeit mit Frau Dr.\ Ulrike Sayatz (Deutsche und niederländische Philologie, Freie Universität Berlin):
+
+\vspace{1\baselineskip}
+
+\begin{enumerate}[label=\arabic*.]
+  \item Schäfer, Roland \& Ulrike Sayatz.\ 2014.\ Die Kurzformen des Indefinit\-artikels im Deutschen.\ Zeitschrift für Sprachwissenschaft 33(2).\ 215--250.
+  \item Schäfer, Roland \& Ulrike Sayatz.\ 2016.\ Punctuation and syntactic structure in ``obwohl'' and ``weil'' clauses in nonstandard written German.\ Written Language and Literacy 19(2).\ 212--245.
+\end{enumerate}
+
+\vspace{1\baselineskip}
+
+\noindent Ich erkläre hiermit für die beiden oben genannten Artikel gleichermaßen:
+
+\vspace{1\baselineskip}
+
+\begin{enumerate}[label=\arabic*.]
+  \item Die Aufarbeitung der bestehenden Literatur erfolgte zu gleichen Teilen durch Frau Dr.\ Sayatz und mich.
+  \item Die theoretische Einordnung und die Hypothesenbildung erfolgte in Diskussionen mit Frau Dr.\ Sayatz.
+    Das schriftliche Ergebnis dieser Diskussionen geht zu ungefähr einem von drei Teilen auf Frau Dr.\ Sayatz und zu zwei von drei Teilen auf mich zurück.
+  \item Die empirische Forschung wurde vollumfänglich und eigenverantwortlich von mir durchgeführt.
+  \item Die Niederschrift erfolgte vollumfänglich durch mich.
+\end{enumerate}
+
+\vspace{1\baselineskip}
+
+\noindent Alle anderen Teile der vorgelegten Habilitationsschrift sind vollumfänglich durch meine eigene Leistung entstanden.
+
+\vspace{1.5\baselineskip}
+
+\noindent Berlin, den 29. Mai 2018\\[1.5\baselineskip]
+
+\noindent \underline{\hspace{8cm}}\\[0.5\baselineskip]
+\noindent Dr. Roland Schäfer
+
+\newpage
+
+\setcounter{page}{1}
+
+\tableofcontents
+
+\section*{Attachments (published papers)}
+\begin{enumerate}
+  \item \RODefArt
+  \item \ROWeakN
+  \item \ROMeasure
+  \item \ROWeil 
+\end{enumerate}
+
+\newpage
+
+\section*{Acknowledgements}
+
+First and foremost, I want to thank Ulrike Sayatz, without whom the work presented here would not exist.
+Among other things, Ulrike convinced me that graphemics is a highly relevant discipline and an integral part of linguistics and grammar.
+Together, we developed the ideas of usage-based graphemics, which underlie some of the work presented here.
+Ulrike also helped me to understand German morphosyntax much better through many discussions.
+
+Furthermore, I am grateful to Felix Bildhauer for our joint work on the COW corpora (the data base underlying all of my research presented here) as well as for ongoing discussions about corpus construction, corpus analysis, and statistics (worth a substantial amount of Złoty).
+
+I also thank Elizabeth Pankratz for being an inspiring collaborator, co-author, and moral supporter.
+(Not to mention proofreader under difficult circumstances.)
+
+Moreover, I want to express my highest gratitude to (in alphabetical order) Matthias Hüning, Anke Lüdeling, and Stefan Müller for agreeing to act as referees in the official process of my \textit{Habilitation} at \textit{Humboldt-Universität zu Berlin}.
+
+For their support as teachers, colleagues, employers, enablers, thesis advisors, friends, moral supporters -- or any combination thereof -- throughout my career, I am indebted to (in alphabetical order) Dirk Buschbom, Susanne Flach, Thomas M.\ Groß, Iris Hasselberg, Götz Keydana, Michael Job, Stefan Müller, Bjarne Ørsnes, Erich Poppe, Manfred Sailer, Nicolai Sinn, and Gert Webelhuth.
+
+Student assistants who contributed significantly to the success of my research by doing a lot of painstaking work on corpus data and supervising experiments are (in alphabetical order) Sarah Dietzfelbinger, Lea Helmers, Kim Maser, and Luise Rißmann.
+
+Finally, I want to thank everyone who supported me on a personal level (and put up with my quirks and mannerisms) during my life in the academia so far, including but surely not restricted to (in alphabetical order) Matthias B.\ Döring, Michael Karg, Tanja Hagedorn, my parents, and Julia Schmidt.
+
+\newpage
+
+\section*{Preface}
+
+\begin{quote}
+  Thus, [what we do] may, because of the neglect of other important structural properties, be to classify natural language along an ultimately irrelevant dimension. \citep[436--437]{ParteeEa1990}
+\end{quote}
+
+I used the same quote from Partee, ter Meulen, and Wall's introduction to \textit{mathematical methods in linguistics} in the preface to my doctoral dissertation \citep{Schaefer2010}.
+In their book, the sentence alerts readers that the Chomsky hierarchy and the theory of automata might not be an adequate framework for the description of human language.
+In my dissertation, I used it to articulate my doubts that predicate logic (with event ontologies) and lambda calculus are adequate frameworks for the description of linguistic meaning, advocating a purely set theoretic description of sentence meaning.
+In the present context, I reuse the quote to mark two aspects of linguistic theory which seem important to me at the present point in the field's development.
+
+First, in recent decades, evidence has been collected which points to the fact that language is more of a probabilistic phenomenon (where rule application is a random process governed by chance and weighted lexical, grammatical, and contextual factors) than linguists thought before the 1990s (see, for example, the programmatic paper by \citealt{Bresnan2007}).
+Prominently, among the influencing factors are even item-specific frequency-driven effects such as the co-occurrence affinities of words to each other (as examined in the much older tradition of collocation research; \citealt{Evert2008}) as well as co-occurrence affinities of words and constructions \citep{StefanowitschGries2003,GriesStefanowitsch2004,Gries2015b}.
+This begs the questions of whether and how language users do not only learn rules (or \textit{generalisations}, to use a more neutral term) but also probability distributions over rules\slash generalisations and lexical items, \ie\ whether the probabilistic nature of language as used is part of the linguistic knowledge or can be traced to performance effects.
+Since the work presented here consists of explorations in probabilistic German morphosyntax, I use the quote above to mark my belief that traditional grammatical modelling might be deficient in some relevant way.
+Section~\ref{sec:probabilisticgrammar} discusses this in some detail, taking a careful stance and avoiding far-reaching claims about the architecture of the human language faculty.
+
+Second, I find it particularly interesting that \citet{ParteeEa1990} was called an introduction to \textit{mathematical methods in linguistics}, and that many (but by no means all) present-day readers would expect something completely different under this label.
+In the textbook, the relevant mathematical methods are considered to be theoretical algebra, set theory, systems of logic, the theory of automata, etc., while many of today's readers might expect statistics from such a volume.
+At the time, quantitative statistical methods were not widely used in linguistics, except maybe in experimental psycholinguistics and some strains of sociolinguistics.%
+\footnote{Also, in some functional\slash cognitive circles, small-scale corpus studies were analysed using simple statistics for counts since the 1980s; see \citet[8]{Gries2017a}.}
+Grammar (comprising at least phonology, morphology, syntax, and referential semantics) was not seen as requiring a stochastic approach, and statistics was not part of most linguistic curricula.
+Thus, by taking the quote out of its original context, I want to highlight the fact that statistical analysis and statistical modelling might now be on their way to becoming \textit{mathematical methods in linguistics} which are just as important as algebra, set theory, and the theory of automata.
+Ideally, statistical modelling should eventually go far beyond the use of statistics in the analysis of results obtained from corpus studies and psycholinguistic experiments, leading to integrated stochastic models of language which require knowledge of all kinds of \textit{mathematical methods} (for example, \citealt{Bod2006}).
+While linguistics as a discipline is clearly on its way to such an approach, a lot more theoretical and empirical work is still required.
+
+The work presented here is theory-driven but mainly empirical.
+In this work, I use the methods of probabilistic grammar, specifically the now-standard methods of alternation modelling.
+While a lot of work exists on English alternations, German can be said to be under-researched in this kind of alternation modelling.
+This is surprising considering the fact that German is famous for its numerous so-called grammatical \textit{Zweifelsfälle} `cases of doubt' \citep{Klein2009,Duden09}, which are nothing but alternations between equally acceptable forms and constructions.
+These phenomena are ideal test cases for probabilistic approaches.
+
+I also present some work in which I contribute to gauging the importance and the relation between corpus data (my main source of data) and psycholinguistic experiments.
+Furthermore, my work makes methodological contributions by advancing relatively new sources of data (mainly web corpora), analysing non-standard language, and using and evaluating state-of-the-art statistical methods.
+Section~\ref{sec:theoriesmethodsanddata} deals with the methodological issues in detail.
+While no strict formal systems have been established for the modelling of the observed effects, my work contributes to defining and delimiting the requirements to be met by future integrated formal systems of language as represented in the minds of language users.
+I consider it of great importance to gather data in a methodologically sound way -- as opposed to rushing linguistic theory towards another battle of frameworks (see Section~\ref{sec:probabilisticgrammar}).
+
+\begin{figure}[htpb]
+  \centering
+  \includegraphics[width=\textwidth]{graphics/langsuse}
+  \caption{Languages covered in the three major corpus linguistics journals; \textit{None} was assigned for papers which only address general or theoretical issues without reporting any original empirical work; (\textit{English}) was assigned to papers where English is used for comparison in papers predominantly about other languages; 35 languages which only occurred once are not shown}
+  \label{fig:langsuse}
+\end{figure}
+
+There is one final point I would like to make right at the outset.\label{abs:survey}
+My research on German was mostly published in international journals (such as Corpus Linguistics and Linguistic Theory [CLLT] and Cognitive Linguistics [COGL]).
+The international corpus linguistics scene is very active, with at least three major journals (International Journal of Corpus Linguistics [IJCL], Corpora, CLLT) publishing large numbers of papers per year.
+In 2016, in preparation for \citet{Schaefer2019}, an open-access introduction to statistical inference and statistical modelling for linguists, I performed a manual annotation of all 198 papers published in IJCL, CLLT, and Corpora between 2010 and 2015.%
+\footnote{The raw data will be published with the book.}
+The list of languages covered, the corpora used, and the statistical methods used in each paper were annotated.
+Figure~\ref{fig:langsuse} shows the distribution of languages (as raw counts).%
+\footnote{Since some papers deal with more than one language, 236 language codes were assigned in total.}
+
+English featured prominently in 136 papers (146 if World Englishes and English sign languages are added), followed by Spanish with eleven mentions as a distant second.
+German, on the other hand, was a major object of study in only seven papers (four in IJCL, two in Corpora, one in CLLT).
+Of course, this does not mean that linguists working on German (or Spanish, Chinese, Dutch, French, etc.\ for that matter) do not use corpora or do not publish their research.
+However, this result shows how corpus linguistics as a field is still very much identified with English corpus linguistics (or even BNC linguistics, see Section~\ref{sec:corporaincognitivelyorientedlinguistics}, esp.\ Figure~\ref{fig:corpususe} on p.~\pageref{fig:corpususe}).
+While this state of affairs is not detrimental for corpus linguistics, I suggest that corpus linguists working on languages other than English could benefit from taking part in the active theoretical and methodological discussions taking place in international journals.
+From my own point of view as a linguist working on German, it seems evident that the German language and German linguistics has a lot to contribute to current debates in corpus linguistics, especially given that German is famous for the probabilistic phenomena labelled \textit{cases of doubt}.
+Thus, I hope my work encourages other linguists working on German (and other under-represented languages) to increase the visibility of their object of study in international corpus linguistics for mutual benefit.
+While the case studies focus strongly on German grammar, this general introduction predominantly takes up the foundational theoretical and methodological issues.
+
+\newpage
+
+\input{sections/1probabilisticgrammaticalmodelling}
+
+\newpage
+
+\input{sections/2theoriesmethodsanddata}
+
+\newpage
+
+\input{sections/3casestudies}
+
+\newpage
+
+\input{sections/4futuredirections}
+
+\newpage
+
+\printbibliography
+
+\end{document}
