@@ -23,7 +23,10 @@
 
 \currentpdfbookmark{Contents}{name}
 \tableofcontents
-\include{chapters/preface}
+
+<<child="chapters/preface.Rnw">>=
+@
+
 \include{chapters/acknowledgments}
 \include{chapters/abbreviations}
 \mainmatter
@@ -36,8 +39,8 @@ opts_chunk$set(cache.path='cache/',
                fig.pos='H', message=FALSE,
                cache=TRUE, warning=FALSE,
                fig.align='center', comment ="",
-	       background='#F7F7F7',
-	       tidy=FALSE,
+               background='#F7F7F7',
+               tidy=FALSE,
                formatR.arrow = TRUE)
 
 
@@ -47,8 +50,17 @@ render_listings()
 
 \part{Probabilistic morphosyntax}
 
+\include{chapters/introduction/1probabilisticgrammaticalmodelling}
+<<child="chapters/introduction/2theoriesmethodsanddata.Rnw">>=
+@
+<<child="chapters/introduction/3statistics.Rnw">>=
+@
+\include{chapters/introduction/4casestudies}
+% RS 5futuredirections not included. Will be covered in final chapter.
 
 \part{Studies in probabilistic German morphosyntax}
+
+\include{chapters/clitics/0frame}
 
 \appendix
 \input{chapters/weaknounlist}

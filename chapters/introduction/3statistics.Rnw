@@ -1,333 +1,11 @@
-\section{Theories, methods, and data}
-\label{sec:theoriesmethodsanddata}
+<<ststcs, cache=FALSE, echo=FALSE, include=FALSE, results='asis'>>=
+  opts_knit$set(self.contained=FALSE)
+@
 
-\subsection{Prototypes and exemplars}
-\label{sec:prototypesandexemplars}
-
-In this section I discuss one major overarching theoretical theme of the case studies, namely prototype theory and its rival, exemplar theory.
-The central question is which type of cognitive representation research on alternations provides evidence for.%
-\footnote{This is an extended and modified version of Section~1 from \citet{Schaefer2018} with additions from \citet{Schaefer2016c}.}
-The typical approach in alternation research is to annotate a large number of corpus sentences with linguistic features and to model the probability of the variants being chosen given these features.
-The idea is that a variant is chosen when the influencing features cumulatively assume typical values for that variant.
-For several reasons, a variant of prototype theory with features \citep{Rosch1978} is a good candidate for the appropriate cognitive model.
-I will first introduce prototype theory and exemplar theory, including a discussion of the state of the art in linguistics and cognitive science.
-The discussion then focusses specifically on the data-driven corpus-based approaches which have been used very prominently in probabilistic modelling and alternation research (see \citealt{Gries2017a}), and whether such approaches have anything to contribute to the prototype vs.\ exemplar debate.
-
-In Aristotelian approaches to linguistic categorisation, category membership is determined by rules and defining features, and it is consequently not viewed as a matter of degree (\citealt{Sutcliffe1993}; \citealt[11--16]{Murphy2002}).
-However, based on evidence pointing to the fact that humans often categorise objects by similarity and with varying degrees of fuzziness, prototype theory (\citealt{Rosch1973}; see \citealt{Taylor2008} for an overview) and exemplar theory \citep{MedinSchaffer1978,Hintzman1986} were developed.
-Prototype theory assumes that categories are defined by the similarity of their members to a mentally stored abstraction.
-This abstraction takes the form of the most prototypical member or -- in later versions of the theory -- weighted features defining the prototype (see \RAWeakN\ for a detailed description of prototype theory with features including \textit{cue validity}).
-Many researchers such as \citet{Gries2003,Gilquin2006,NessetJanda2010,Dobric2015} have used prototype theory in some form of corpus-based linguistic modelling.%
-\footnote{In the influential framework of cognitive grammar \citep{Langacker1987}, prototypes (which, as should be remembered, represent abstractions already) are literally taken as prototypical exemplars, and there is an additional level of fully discrete abstractions in the form of schemas.
-Schemas are characterised by the properties common to all members of the category, whereas a prototypical category member might have very specific additional properties not at all shared by all or even most members \citep[371-375]{Langacker1987}.
-The prototype can serve as a reference point when classifying new objects which do not share all properties of the schema, but this would (if repeated) lead to the creation of an even more abstract (hierarchically higher and less specific) schema which describes the new member and the ones belonging to the previous schema.
-As pointed out by \citet[136--137]{Langacker1987}, schemas and prototypes thus fulfil different roles and can be assumed to co-exist.
-A strict exemplar view of language is incompatible, as far as I can see, with Langacker's view of schemas, but any theory of categorisation that allows for at least some kind of abstraction is not in fundamental contradiction with it.
-In my research, I do not use schemas in my descriptions of the relevant categories, mostly because the aspect of similarity and fuzzy classification is central to probabilistic modelling, and a formulation in terms of schemas would bring about an unnecessarily high degree of abstraction (see \citealt[70--71]{Taylor2003} for a parallel argument).}
-
-While prototype theory is well suited for modeling constructional choices, it has a prominent adversary in exemplar theory (\citealt{MedinSchaffer1978,Hintzman1986}).
-Prototype theory and exemplar theory model essentially the same types of effects but differ significantly in whether they assume higher-level abstractions in the form of single maximally prototypical exemplars or their features (prototype theory) or assume that categories emerge through the storage of many exemplars and similarity classification on those exemplars (exemplar theory).
-\citet{Barsalou1990} already showed that prototype and exemplar theory model the same types of surface effects and are informationally equivalent, at least when it comes to the results of cognitive agents' behaviour.
-\citet[84]{Barsalou1990} states that
-
-\begin{quote}
-  we can not say whether category knowledge is distributed in exemplars or centralized abstractions.
-  But we do know that any account of knowledge that excludes idiosyncratic information, cooccurrence information, or dynamic representation is inadequate.
-\end{quote}
-
-Consequently, research producing evidence in favour of one theory or the other commonly does not use mere output data but tests the procedural behaviour of subjects in controlled experiments, for example the speed of category retrieval.
-In very early experiments, \citet{PosnerKeele1968} showed, for example, that highly prototypical unseen exemplars were categorised more easily by subjects compared to less prototypical ones which had been included in the data made available to them in order to learn the categories.
-This was (at least at the time) taken as evidence that subjects categorise by prototypes.
-Since corpus data only show artefacts of production events and we have no experimental access to the speaker's or writer's performance and their actual similarity judgements, one should be sceptical whether corpus analysis alone could ever decide which theory of mental representation is more suitable.
-\citet[22]{Gries2003} can be taken as recognising this, when he says:
-
-\begin{quote}
-  Frequently, Rosch’s results were [\ldots] interpreted as if they were statements on the structure of mental representations as such; cf.\ the effects = structure fallacy and the prototype = representation fallacy.
-  I do not wish to support such interpretations.
-  [\ldots]
-  Still, even if the form of analysis does not translate into statements on mental representations, the high predictive power [\ldots] shows that the cognitive factors underlying the choice of construction have been identified properly and weighted in accordance with their importance for actual usage.
-\end{quote}
-
-A similar caveat (without direct reference to prototypes and exemplars) can be found in \citet[486--487]{Dabrowska2016}, who states that we cannot ``deduce mental representations from patterns of use'', \ie\ from corpus data.\label{abs:dabrowska}
-As corpus data are artefacts of cognitive agents' behaviour, they cannot decide between two theories for which Barsalou's informational equivalence criterion holds.
-
-Given this situation, the question arises of how the discussion in the usage-based linguistics community connects with the current discussion in cognitive science.
-In cognitive science, it is mostly accepted that exemplar theories have greater explanatory power \citep[184]{Vanpaemel2016} and that abstraction is only needed marginally, if at all.%
-\footnote{The hard empirical evidence in favour of exemplar models is substantial.
-For example, in \citet{HahnEa2010}, the authors show that subjects even use exemplar similarity over abstract knowledge even when they are given very simple explicit rules to be learned.
-This is highly relevant because most other studies focus on the learning of implicit rule-based knowledge, which involves many auxiliary assumptions in actual experiments \citep[2]{HahnEa2010}.
-On the other hand, there is evidence that neither theory is fully adequate to model humans' capabilities to form categories.
-For example, \citet{ConawayKurtz2016} show that both prototype theory and exemplar theory fail to explain certain experimental results where subjects learn to generalise beyond the input in a way that cannot be explained by similarity.
-}
-Still, various attempts have been made over the past decades to settle the dispute between abstraction-based models (models with rules or prototypes) and exemplar models, or to find models which unite the two extremes.
-\citet{VanpaemelStorms2008} and \citet{LeeVanpaemel2008} proposed the \textit{varying abstraction model} (VAM) which ``attempt[s] to balance economy and informativeness'' \citep[745]{LeeVanpaemel2008}, treating models with full abstraction (radical prototype theory) and no abstraction at all (radical exemplar theory) as special cases of a model which allows for both abstraction and exemplar effects.
-The mixture model of categorisation (MMC) by \citet{Rosseel2002} is a model with abstraction in the form of hierarchical clusters of exemplars, and these clusters of objects are characterised by a probability distribution over their features, and categorising new objects is a process of estimating the probability of this object belonging to one of the clusters.
-\citet{GriffithsEa2009} go further and present a computational model which is able to choose the appropriate complexity of representation for a given category.
-However, despite these (and more) attempts to reconcile or unite the two approaches while developing spelled-out mathematical models, \citet[183--184]{Vanpaemel2016} describes the state of affairs between adherents of neo-prototype theory (such as \citealt{MindaSmith2001,MindaSmith2002}) and exemplar theory as a stalemate.
-
-In cognitive linguistics, \citet{DivjakArppe2013} is a very rare example of a paper where such issues are taken up with reference to the current research in cognitive science.
-Their corpus-based approach shows ``one way of systematically analyzing usage data as contained in corpora to yield a scheme, compatible with usage-based theories of language, by which the assumptions of both the prototype and exemplar theories can be operationalized'' \citep[267]{DivjakArppe2013}.
-Their approach to implementing a varying abstraction model \citep[254--260]{DivjakArppe2013} is based on hierarchical clustering of annotated properties of sentences.
-They cluster sentences containing Russian verbs of trying.
-Then, they single out the one sentence from each cluster which scores the highest probability for any of the six \textit{try} verbs according to a polytomous regression model estimated on the same data.
-The clusters are interpreted as intermediate-level exemplar-derived abstractions of typical contexts for these high-probability verbs (typically more than one cluster for each verb; \citealt[255--256]{DivjakArppe2013}).
-The crucial difference between such data-driven corpus-based analyses and experiments in cognitive science (\citealt{DivjakArppe2013} use \citealt{VerbeemenEa2007} as their reference) is that cognitive research is based on experiments where subjects produce actual category assignments or similarity judgements, and in corpus studies, the categories and category membership are determined purely from existing data.
-The experimental approach with reduced and\slash or artificial stimuli makes it much easier to examine very specific effects in the behaviour of the subjects.
-While I do not think the results of the case study presented in \citet{DivjakArppe2013} are invalid, any data set can be analysed to yield a certain number of clusters, and this fact alone does not substantiate any claim about one mental representation or another.
-Thus, the study does not ensure that the clusters emerging from the data correspond to any speaker's cognitive representation.
-In other words, \citet[229--230]{DivjakArppe2013} fall victim to Barsalou's equivalence trap when they state without further motivation that
-
-\begin{quote}
-  [t]he objectives of this study are, first, to explore how the prototype and exemplar models of categorization manifest themselves in corpus data [\ldots].
-  Although corpus data do not reflect the characteristics of mental grammars directly, we do consider corpus data a legitimate source of data about mental grammars.
-\end{quote}
-
-The second sentence of this quote has at least one reading in which it is contradictory.
-Compare the (already mentioned) more realistic views in \citet[84]{Barsalou1990}, \citet[486--487]{Dabrowska2016} and \citet[22]{Gries2003}.
-
-As mentioned above, in cognitive science, experimental setups which allow access to the cognitive agents' performance over time are preferred in order to produce evidence for either one of the two competing theories.
-See \citet{StormsEa2000} for a comparison of the theories in different experimental settings.
-However, the trade-off one has to accept when doing experiments with highly simplified stimuli and very simple tasks is their lower \textit{external validity} (\ie\ their lower degree of generalisability) and their high dependence on potentially problematic operationalisations of constructs, control of confounding factors in the face of a limited number of available subjects, etc. (in other words, critical dependence on \textit{construct validity} and \textit{internal validity}).%
-\footnote{Construct validity requires the measurements made in a experiment to be credible and substantive indicators of a theoretically postulated construct (such as a prototype).
-Under internal validity an experiment establishes a causal relationship between experimental manipulations and the measured effects through minimisation of systematic measurement error.  
-An accessible overview of the different types of validity can be found in Chapter~1 of \citet{MaxwellDelaney2004}.
-The discussion of types of validity goes back to \citet{CronbachMeehl1955,CampbellFiske1959}.}
-Tasks in cognitive science have been criticised exactly for their lack of external validity, for example by \citet{Murphy2003}.
-From a linguistic perspective, it is remarkable in this context that \citet{VoorspoelsEa2011} consider their experimental task -- which is the assignment of typicality scores to nouns from the domains of \textit{animals} and \textit{artefacts} to categories like \textit{bird}, \textit{fish}, \textit{clothing}, or \textit{tools} -- a study of ``superordinate natural language categories, whereas most evidence supporting exemplar representations has been found in artificial categories of a more subordinate level'' \citep[1013]{VoorspoelsEa2011}.
-Corpus linguists interested in probabilistic alternation modelling deal with much more complex high-level categories and use large and complex feature sets, especially in (morpho-)syntax.%
-\footnote{Notice, however, that recently, approaches have emerged which solve at least some problems by abandoning linguistic high-level features altogether \citep{BaayenEa2016,RamscarPort2016}.
-Clearly, they have not (or at least not yet) reached mainstream popularity, and it remains to be seen how well they perform on a broader range of questions.}
-It is thus an advantage of much linguistic work on categorisation that it deals with complex and realistically produced data, because this greatly improves the external validity of studies, albeit by sacrificing some construct validity.
-An ideal contribution by cognitive corpus linguists to the research on (levels of) category abstraction in the human mind would thus be to provide analyses which have great external validity and complexity while carefully making sure that (and determining to what extent) these finding correlate with reactions from cognitive agents under more controlled experimental conditions, which increases the construct validity.
-This is why experimental validations of corpus-derived models should under all circumstances become the standard procedure.
-Section~\ref{sec:corporaincognitivelyorientedlinguistics} briefly discusses this approach.
-
-In closing, I want to point out that my work often conveniently uses prototype-theoretical formulations (\RAWeil, \RAWeakN, \RAMeasure) because the high-level contentful features which are mostly used in probabilistic modelling (such as semantic classes of lemmas, definiteness of noun phrases, discourse status, or register, to name just a few) invite a description that allows for abstractions.
-However, \ROMeasure\ argues that certain types of effects are at least implausible to model as abstractions.
-In the study, it is shown that lemma frequency and construction-lemma attraction influence the choice of alternants.
-Such item-specific effects indeed appear to favour an exemplar view.
-However, it must be noted that it is always possible that item-specific effects can in fact be traced back to abstraction effects (such as semantic properties of lemmas).
-Again, in the spirit of Section~\ref{sec:probabilisticgrammar}, we should be aware that our inferences are more often than not abductive, \ie\ inferences to the (in the view of our research community) best explanation.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Corpora in cognitively oriented linguistics}
-\label{sec:corporaincognitivelyorientedlinguistics}
-
-\subsubsection{Problems with corpora and some solutions}
-\label{sec:problemswithcorporaandsomesolutions}
-
-The empirical analysis of probabilistic phenomena such as alternations requires researchers to make choices with regard to the data they use for their scientific inferences.
-Depending on the amount of data available and type of inference, methods for the numerical analysis of the data are also required.
-In the present section, I argue why web corpora (\ie\ corpora built using material collected from the WWW) are ideal for the corpus-based work presented here, and I briefly introduce the idea of experimental validation of corpus findings.
-Section~\ref{sec:statistics} will then discuss methods of statistical analysis.
-
-Corpora have been used as a major source of data in alternation research and cognitively oriented linguistics in general, and my research is no exception.
-Since cognitively oriented linguistics is an attempt to model cognitive representations as well as the cognitive mechanisms involved in using these representations to produce and understand utterances, the question arises whether corpus data -- \ie\ artefacts of language use -- are an appropriate source of data in cognitively oriented linguistics.
-
-Prominently, \citet[591--592]{Gries2017b} argues that corpus linguistics is essentially the quantitative analyses of co-occurrence frequencies (\eeg\ of words and words or words and constructions, words and senses) in collections of texts, which is often related to the \textit{distributional hypothesis} and traced back to \citet{Harris1954}.
-Gries also notes that the major tenet of cognitively oriented linguistics is that language users learn language by acquiring knowledge about the probabilities of words, constructions, senses, etc. in a given context (in the broadest sense of the word \textit{context}).
-Thus, Gries concludes, both disciplines deal with distributional phenomena and are highly compatible.
-Clearly, this is accurate inasmuch as both corpus linguistics and cognitively oriented linguistics examine types of distributional phenomena, but one distributional phenomenon is not necessarily like any other one.
-The implicit claim made by Gries is that both fields deal with \textit{the same or at least two highly and causally related distributional phenomena}.
-While it is impossible to refute this implicit additional assumption, it is also difficult to substantiate it.
-Therefore, I suggest that we accept it as a working hypothesis.
-At least, however, the approach begs the question of whether corpora represent the cognitive reality of language users in any meaningful and reliable way.%
-\footnote{I do, however, contradict the categorically contemptuous tone found in many works from cognitively oriented linguistics (\citealt[590--593]{Gries2017b} is no exception) against earlier work based on researchers' intuitions.
-As \citet{SprouseAlmeida2012,SprouseEa2013} have shown with significant methodological rigour, judgements collected in a traditional way through intuition by linguists can be highly reliable.
-The question is rather which types of data are used as evidence to support which claims.
-Intuitive judgements (even by linguists) are not intrinsically unreliable; they might just be the wrong tool in certain situations.}
-The traditional discussion of the \textit{representativeness} of a corpus does not necessarily help in this context, because it is more often than not centred around the concept of a corpus being \textit{representative of a language} as a whole, using as points of reference:
-(i) the distribution of texts or text types in the output of all speakers of a language (production-based),
-(ii) the distribution of the relevance of texts or text types in the whole speech community (relevance-based), or
-(iii) the distribution of speakers' exposure to different texts or text types (perception-based).%
-\footnote{For overviews from different perspectives, see \citet{Biber1993}, \citet{MceneryEa2006}, \citet{Leech2007}, \citet{Hunston2008}.
-A summary of the discussion is found in Chapter~5 of \citet{SchaeferBildhauer2013}.}
-
-Indeed, given the argumentation from \citet{Gries2017b} discussed above, a perception-based view of corpora seems to be the most appropriate for a cognitive approach to language where input frequencies play the most crucial role.
-However, the linguistic experience of language users is most definitely a highly individual matter, and most corpora force researchers to work with highly problematic abstractions.
-In a recent contribution where the percep\-tion-based view is argued to be valid in cognitively oriented corpus linguistics, \citet[104]{StefanowitschFlach2016} take a quite cavalier stance on representativeness:%
-\footnote{The picture does not change significantly if corpora are seen as collections of linguistic output events under a cognitively oriented perspective \citep{TummersEa2005}.}
-
-\begin{quote}
-In this wider context, large, register-mixed corpora such as the British National Corpus [\ldots] may not be perfect models of the linguistic experience of adult speakers, but they are reasonably close to the input of an idealized average member of the relevant speech community.
-\end{quote}
-
-The assumption that an \textit{idealised average speaker} is a valid construct seems naïve at best.%
-\footnote{Essentially, they argue for a license to conclude that any distributional pattern found in the BNC automatically has a cognitive reality.
-If life were this easy, many more researchers would certainly use the BNC exclusively.}
-If the concept of an idealised average speaker were admissible and if there were indeed corpora (like the BNC) representative of this idealised speaker's input, then different actual speakers should not learn considerably diverging grammars.
-If it turns out that actual speakers indeed acquire fundamentally different grammars, however, then the idealisation is unwarranted.
-There is growing evidence from both psycholinguistic research and cognitively oriented linguistics that differences between competent adult speakers of a language are substantial and should not be averaged.
-This concerns speakers' performance in linguistic tasks (\citealt{HuettigJanse2016} and references therein), but it also affects their individual grammars.
-For example, \citet{Dabrowska2008,Dabrowska2012} clearly found that there is no convergence of the grammars of different Polish adult speakers towards a unified grammar (with respect to the phenomena under study), and \citet{Dabrowska2015} puts this into a larger picture.
-This does, of course, not entail that speakers would perceive each other's languages as \textit{different} like foreign languages or dialects -- or that they would be expected to have problems communicating in their everyday life.
-However, this clearly questions the usefulness of the concept of an \textit{idealised average speaker}.
-A commonly adopted solution is to model speaker-variation as a nuisance variable, usually by adding a per-speaker random effect to the statistical models (\citealt{Gries2015}; \citealt{Schaefer2018}; see Section~\ref{sec:statistics}).
-Most corpora, however, lack metadata to identify the authors of specific texts reliably.
-If they do, single authors usually contribute far too few data to take individual variation into account in an informative way.
-But even if there are enough data, the random-effect approach is just a way of taking care of unmodelled heterogeneity (see also Section~\ref{sec:modeleverything}).
-It does not make the remaining \textit{averaged} part of the model more cognitively real.%
-\footnote{Although without specific empirical backup, \citet[695--698]{Newmeyer2003} already made this point convincingly, which is something one can admit without committing to the full argument he put forward.}
-
-In the corpus linguistic discussion on representativeness (as mentioned above), this problem has received little attention, mostly because this discussion has traditionally focussed on a global notion of representativeness.
-An ideal corpus of a language is assumed to be representative of a language (such as English or German) as a whole (whatever that means).
-This holistic approach to the question of representativeness (which surely still inspired the view argued for by \citealt{StefanowitschFlach2016}) is not applicable to cognitively oriented linguistics, which probably requires techniques for experiments and observational studies similar to those in the social sciences, psychology, and cognitive science.
-The goal in scientific experiments (or scientific studies, to use a more general term) is to make inferences about a \textit{population of interest} using a sample of data from that population.
-The population of interest has to be defined with regard to each experiment individually, and it might be something very specific (such as the written output of speakers of a certain age, in a specific register, etc.) instead of \textit{the language} or \textit{the average speaker} (across all communicative settings and modes).
-In the social sciences, the concepts of \textit{global and specific representativeness} \citep[86]{Bortz2005} are used to describe the relevant distinction.
-The crucial point is thus not whether a corpus is \textit{representative of a language} but whether a sample taken for a specific purpose represents the population of interest for the concrete study.
-
-A standard approach implicitly adopted in many corpus studies (including mine) is to define the population of interest as \textit{corpus exemplars in which a certain range of constructions, words, etc.\ occurs}.%
-\footnote{This implicitly assumes something similar to what \citet[27]{BerkFreedman2009} call an \textit{imaginary population}.
-Their criticism applies only in limited ways to corpus sampling given the argument I make here.}
-This is effectively what we do if we run unrestricted queries looking for specific morphological or syntactic patterns in some large corpus like the DeReKo of the Institut für Deutsche Sprache (IDS; \citealt{KupietzEa2010}) or the DECOW16A \citep{SchaeferBildhauer2012,BiemannEa2013,SchaeferBildhauer2013,Schaefer2015b}.
-With certain caveats taken into consideration and given the right research question, nothing speaks against this approach, as I will argue below.
-Going beyond this unrestricted query approach, however, \citet{Gries2015,Gries2017b} argues that by using metadata (as available for the British National Corpus; \citealt{Lee2001,Burnard2007}), searches can be refined to specifically examine phenomena with different (relative) frequencies in different modes, genres, etc.
-If there is no hypothesis that mode, register, etc. have an influence on (relative) frequencies, however, such refinements are not strictly required.%
-\footnote{Note that the word \textit{influence} implies a \textit{causal relationship}.}
-
-The unrestricted query approach works when the hypothesis is that the relative frequencies of two structures A and B change when going from condition x to condition y.
-Mathematically, this hypothesis can be expressed as (\ref{eq:001}) (see also Section~\ref{sec:nevereverrandomfallacy}).%
-\footnote{f(A|x) is to be read as in the notation for conditional probabilities, except with frequencies instead of probabilities.
-  It is thus the \textit{frequency of item A under condition x}.}
-
-\begin{equation}
-  \frac{f(A|x)}{f(B|x)}\not =\frac{f(A|y)}{f(B|y)}
-  \label{eq:001}
-\end{equation}
-
-For example, in \ROWeakN\ one hypothesis was that the frequency of the singular non-nominative form of a weak noun such as (\textit{den}\slash\textit{dem}\slash\textit{des}) \textit{Planeten} `planet' (structure A) compared to the frequency of its (non-standard) strong form (\textit{den}\slash\textit{dem}\slash\textit{des}) \textit{Planet} (structure B) is different in the genitive (condition x) than in the accusative and dative (condition y).
-
-As long as a corpus contains both structures and \textit{given the randomness assumption} (RA), the hypothesis can be examined using an unrestricted query.
-The RA holds if all other potential influencing factors which favour the occurrence of A or B are distributed equally in the conditions x and y.
-In the example, individual lemmas might have a tendency to favour the strong form over the weak form or vice versa, or different registers might favour one form over the other etc.
-However, given a random assignment of lemmas, registers, and so on, condition x and condition y would always yield a different distribution of A and B under hypothesis (\ref{eq:001}).
-The RA could thus still hold even if the strong (non-standard) form occurred predominantly in a specific register or mode, and if (additionally) the corpus did not contain very many texts from this register or mode.%
-\footnote{In the given example, this might be the case with the DeReKo.
-It contains predominantly edited newspaper texts, and the strong forms -- being non-standard -- are probably very rare in such texts.}
-However, effects might be more difficult to detect in such a situation; see Section~\ref{sec:nevereverrandomfallacy} for more on this.
-In the worst case, a corpus might simply contain not enough exemplars of a certain phenomenon as a result of an inappropriate register or mode composition.
-This would be detrimental for any study, but it is also definitely not related to the RA.
-In any case, problems with the RA are not exclusive to linguistics or corpus linguistics, but represent standard problems with data sampling for experiments.%
-\footnote{``Drawing a random sample of the U.\,S.\ population, in this technical sense, would cost several billion dollars (since it requires a census as a preliminary matter) and would probably require the suspension of major constitutional guarantees. Random sampling is not an idea to be lightly invoked.'' \citep[23]{BerkFreedman2009}}
-
-On the basis of these elaborations, I propose that the core problem for corpus studies in cognitively oriented linguistics is not the RA.
-Rather, it is one of the following problems (depending on the research question):
-
-\vspace{\baselineskip}
-
-\begin{itemize}
-  \item\label{it:pooled} \textbf{Problem 1}: The corpus contains pooled output data from numerous individual speakers, making it impossible or difficult to draw conclusions about cognitive representations (see \citealt{Dabrowska2008,Dabrowska2012,Dabrowska2015}).
-  \item\label{it:meta} \textbf{Problem 2}: The corpus does not contain the relevant meta-information to draw a sample which represents the population of interest in a given study (for example, if genre or register effects are of interest and the corpus does not contain the relevant metadata).
-  \item\label{it:composition} \textbf{Problem 3}: Even if the composition of the corpus in terms of registers, modes, etc.\ is not a primary research interest, a phenomenon which occurs only in specific registers, modes, etc.\ might be underrepresented in a given corpus because of its composition.
-\end{itemize}
-
-\vspace{\baselineskip}
-
-\textbf{Problem~1} has multiple remedies.
-At first sight, it might seem a valid option to enrich corpora with metadata such that the writer\slash speaker of each exemplar can be identified, then taking per-speaker preferences into account (as promoted by \citealt{Gries2015,Gries2017a}).
-However, if the mental grammar of each speaker varies (as suggested by \citealt{Dabrowska2008,Dabrowska2012,Dabrowska2015}), then it would not be sufficient to take per-speaker \textit{tendencies} into account in the sense of: \textit{speaker i favours variant A over variant B with probability $p_i$}.
-Instead, a separate (statistical) model (or a complex model with per-speaker random slopes) would have to be built for each speaker, since the influencing factors guiding each speaker's grammatical choices would be weighted differently.
-This would lead either to extremely complex over-parametrised models (if random intercepts and slopes are used; see Section~\ref{sec:statistics}) or to a lot of different models with no way to come up with an interesting generalisation.
-\citet{KupermanBresnan2012} suggest (in the context of an experimental setting) to use multi-model averaging \citep{BurnhamAnderson2002} to take into account the variation between speaker-grammars (see also \citealt{BarthKapatsinski2014}).
-While this might be applicable for psycholinguistic experiments, it is clearly not feasible in corpus studies with large numbers of speakers, especially since the models over which one averages should be known theoretical options.
-In any case, the per-speaker data would be too sparse in any conceivable corpus to make such over-parametrised modelling feasible.
-
-Another more realistic option is to focus on the cognitive principles that theories of cognition predict should govern the formation of mentally represented grammars.
-Such cognitive principles should be observable with considerable stability across groups of speakers.
-In \ROWeakN, for example, I used predictions derived from \citet{Koepcke1995} about the prototype representations of weak nouns (in the sense of inter-individual cognitive principles) to derive predictions for the outcome of the corpus study.
-In \ROMeasure, I used arguments from grammaticalisation research \citep{Koptjevskaja2001} to argue for plausible general cognitive mechanisms which guide the relevant choice between two pseudo-partitive NP structures.
-Based on such assumptions, the use of massively pooled data from large corpora is not unjustified, and it avoids the dangers of data dredging and fishing for spurious correlations \citep{GoodHardin2012}.
-Even under the assumption of such theoretical predictions about general cognitive mechanisms, it should become standard practice to evaluate corpus-derived models using experimental techniques to check whether corpus data and reactions by native speakers under controlled conditions converge.
-A review of the state of the art was provided by \cite{NewmanSorensenduncan2015}, who enumerate a number of studies showing how corpus data and experimental data converge (such as \citealt{BresnanEa2007,DurrantDoherty2010,GriesWulff2005,GriesEa2005}) and a number of studies where the two types of data led to diverging or only partially converging results (such as \citealt{ArppeJaervikivi2007,Dabrowska2014,Mollin2009}).
-When researchers do not achieve convergence, they often try to explain this by differentiating between the actual cognitive construct and whatever the pooled usage data as found in corpora represent.
-For example, \citet[411]{Dabrowska2014} lists a number of possible reasons to explain why subjects in her experiment diverged in their word association preferences from collocation measures extracted from corpora.
-Alternatively, researchers argue for a more adequate statistical analysis to increase the fit between corpus data and experimental data.
-See, for example \cite{DivjakEa2016}, who show that generalised additive models (GAMs) are better suited than generalised linear models (GLMs) for correlating reading times and corpus data. 
-No general consensus and no commonly accepted best-practice approach has emerged so far, which is not surprising given the number of cognitive constructs assumed at diverse levels, the problems of corpus composition, the operationalisations involved in experiments, and the choice of statistical tools.
-Also, experimental validation of corpus-based findings has simply not become a general requirement.
-As \citet[3--4]{DivjakEa2016a} put it:
-
-\begin{quote}
-  There are now a number of published multivariate models that use data[,] extracted from corpora [\ldots] to predict the choice for one morpheme, lexeme or construction over another.
-  However, [\ldots] only a small number of these corpus-based studies have been cross-validated [\ldots].
-  Of these cross-validated studies, few have directly evaluated the prediction accuracy of a complex, multivariate corpus-based model on humans using authentic corpus sentences [\ldots].
-\end{quote}
-
-Therefore, in \ROMeasure, I used experimental validation in two different paradigms and provide possible explanations for the quality of the fit between the corpus data and the experimental data, much in the spirit of \citet{Dabrowska2014}.%
-\footnote{See also \citet{SchaeferPankratz2018}, where a different type of experimental validation of corpus-based findings is used.}
-
-Turning to \textbf{problem~2}, there is a relatively simple solution in theory, which might, however, be difficult to implement in practice.
-If the corpus lacks the appropriate metadata, one can simply draw an unrestricted sample and manually annotate the relevant registers, styles, etc.\ afterwards.
-While this might sound quite laborious, it also ensures that the relevant categories are the ones the researcher has a theory-driven hypothesis about.
-Given the many different definitions of registers and similar categories, it is not likely that corpus creators would annotate a corpus with exactly the taxonomy the researcher has in mind.%
-\footnote{Also notice that recent approaches to automatic large-scale register identification failed with a classification accuracy in the region of 50\% \citep{BiberEgbert2016}.}
-Of all of my studies collected here, only \ROMeasure\ made reference to style (not register) as an influencing factor.
-Fortunately, as one of the creators of the DECOW corpora, I could implement the necessary technology to automatically annotate the corpus with proxy variables to style (see \RAMeasure, also \citealt{SchaeferEa2013}).
-
-Finally, \textbf{problem~3} has a relatively simple solution.
-Under the unrestricted query approach (which -- I want to stress once again -- was used for all research collected here), data sparsity can be remedied by creating larger and at the same time more varied corpora.
-Research on phenomena which are simply rare in general benefit from sheer corpus size.
-In all case studies collected here, one of the examined variants had a low frequency, and the studies all benefitted from the fact that the corpus used (DECOW in different versions) was very large.
-In \ROWeakN, the proportion of forms of the weak nouns inflected according to the strong paradigm was reported to be between approximately 1\% and 2\%.
-In \RODefArt, the forms of the cliticised indefinite article was estimated to account for roughly 2.5\% of all forms of the indefinite article.
-Furthermore, in \ROWeil, clauses headed by \textit{obwohl} `although, then again' and \textit{weil} `because' showing verb-second order made up roughly 6\% to 7\% of all clauses headed by those particles.
-Only in \ROMeasure\ was the situation less extreme, with the rarer of the two competing measure NP constructions accounting for approximately 22\% of all exemplars in the sample.
-
-Furthermore, DECOW is a web-derived corpus created by an unrestricted crawl of the German-speaking web.
-As such, it contains documents written in all sorts of styles, registers, and text types.
-These include sources of non-standard written language such as forums, which is not true of the other very large German corpus, the DeReKo.
-The fact that such sources are included in the corpus was vital for at least \RODefArt, \ROWeakN,  and \ROWeil\ because the relevant alternation is only truly productive in non-standard language, as normative grammars ban one of the alternants.%
-\footnote{Some normative grammars take similarly clear stances on the phenomenon discussed in \ROMeasure, as pointed out in the paper.
-However, the normatively dispreferred variant is still used quite often, despite such attempts to suppress it.}
-With any other available corpus, the case studies would have run into problem~3 (data sparsity due to an inappropriate composition of the corpus in terms of registers, modes, text types, etc.).
-In Section~\ref{sec:webcorpora}, I therefore provide a short motivation of why web corpora are an important new source of data.
-
-\subsubsection{Web corpora}
-\label{sec:webcorpora}
-
-Web corpora were made popular through the WaCky initiative \citep{BaroniEa2009} starting around 2005.
-The WaCky corpora were attractive to many researchers because they were made available freely and could be downloaded fully, which allows for all kinds of local processing not possible through web-based query interfaces.
-In parallel, the SketchEngine corpora were developed as a commercial alternative \citep{KilgarriffEa2014}, and the SketchEngine project probably represents the most significant current provider of web-derived linguistic corpora.
-The COW corpora have been under development since 2012 \citep{SchaeferBildhauer2012,SchaeferEa2013,SchaeferBildhauer2013,Schaefer2015b,BildhauerSchaefer2016,Schaefer2016a,Schaefer2017,BildhauerSchaefer2017}.
-Like the WaCky corpora, they are freely available both for download and via a web interface for easy querying.%
-\footnote{\url{https://www.webcorpora.org/}}
-
-While smaller specialised corpora are sometimes derived from web data (\eeg\ \citealt{Krause2016}), the major advantages of web data in the context of the research presented here (see especially problem~3 from Section~\ref{sec:problemswithcorporaandsomesolutions}) is that there is a virtually unlimited supply of textual data available on the web.
-Also, web data includes non-standard written forms, and the breadth of the variation contained within it is enormous.
-For example, in \citet{BildhauerSchaefer2016,BildhauerSchaefer2017}, it was shown that the DECOW16 web corpus has a much broader spread of topics than the DeReKo newspaper corpus.%
-\footnote{Additionally, a large-scale analysis of the distribution of automatically extracted lexico-grammatical features in web documents and the DeReKo corpus is being prepared for publication by the Institut für Deutsche Sprache and the present author.}
-
-Thus, web corpora were the obvious choice for the case studies, and the DECOW corpus was created by me specifically for the purpose of conducting my linguistic research published between 2014 and today.%
-\footnote{This is not the place to discuss technical details of web corpus construction.
-  \citet{SchaeferBildhauer2013} provides a convenient introduction to the subject.}
-Given the data from the survey to be published in \citet{Schaefer2019} (see p.~\pageref{abs:survey}), we can assess the impact web corpora have had on current research in corpus linguistics by looking at the frequency with which different corpora have been used in research published in the three major international corpus linguistics journals between 2010 and 2015.
-Figure~\ref{fig:corpususe} plots the distribution of the corpora used (328 usages of corpora in 198 papers).
-
-\begin{figure}[htpb]
-  \centering
-  \includegraphics[width=\textwidth]{graphics/corpususe}
-  \caption{Corpora used in the three major corpus linguistics journals; CUSTOM was assigned when authors reported the creation of a custom corpus for the concrete study (a selection of newspaper articles, of academic papers, etc.); LITERATURE was assigned to papers about specific literary works; 111 corpora which were only used once (including DeReKo) are not shown}
-  \label{fig:corpususe}
-\end{figure}
-
-Figure~\ref{fig:corpususe} clearly shows that the distribution of the use of corpora follows almost a power law distribution.
-Custom corpora built for a specific research project are most frequent (used 68 times), followed by the BNC (used 36 times) and a distant third, the COCA (nine times).%
-\footnote{I do not even begin to discuss the problems of reproducibility involved when a custom corpus is created ad-hoc for a single research paper.
-The problem is even graver when web data is used in an ad-hoc fashion for corpus creation or even gathered by googling \citep{Kilgarriff2006}.}
-The English UKWAC web corpus was used only four times, and the French FRWAC and the German DEWAC were each used once.
-Given the advantages of web corpora as argued for above, this is a baffling result.
-Before turning to an in-depth view of statistical methods used in my research, I therefore wish to point out that web corpora clearly seem to be underused in contemporary corpus linguistics.
-I hope the case studies presented below demonstrate their usefulness and inspire other corpus linguists to use them in their research.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Statistics}
+\chapter{Statistics}
 \label{sec:statistics}
 
-\subsubsection{Overview}
+\section{Overview}
 \label{sec:methods:overview}
 
 This section is exclusively about statistical modelling, which is often seen as an indispensable part of probabilistic modelling \citep{Gries2017b}.
@@ -337,7 +15,7 @@ Directly related to the previous subsection, Subsection~\ref{sec:modeleverything
 Finally, Subsection~\ref{sec:bayesianhype} briefly shows that Bayesian modelling (as sometimes advocated for these days) usually will not lead to different results.
 
 
-\subsubsection{On statistical inference}
+\section{On statistical inference}
 \label{sec:onstatisticalinference}
 
 In this section, I briefly discuss my position on data analysis and so-called \textit{hypothesis testing}.
@@ -357,7 +35,7 @@ A great many statisticians and researchers have shown that the major problem wit
 I follow Fisher's statistical philosophy, and I briefly compare it to Neyman and Pearson's now.
 
 Neyman and Pearson developed a system where two hypotheses are specified:
-the \textit{main hypothesis} (H\Sub{M}) and the \textit{alternative hypothesis} (H\Sub{A}).
+  the \textit{main hypothesis} (H\Sub{M}) and the \textit{alternative hypothesis} (H\Sub{A}).
 These hypotheses have to exhaust the probability space such that $p(H_M\cup H_A)=1$.
 The goal is to accept either of these hypotheses and reject the other, where typically H\Sub{M} is the hypothesis predicted by the experimenter's favoured theory and the one they would like to accept.
 The reason why the Neyman-Pearson approach can be hard to implement is that H\Sub{M} needs to be specified \textit{precisely}, \ie including the effect size.
@@ -376,13 +54,13 @@ I refer to this quote from \citet[290-291]{NeymanPearson1933} on hypothesis test
 
 Similarly, \citet[349]{Neyman1937} has this to say about frequentist confidence intervals (italics in the original):
 
-\begin{quote} 
+\begin{quote}
   It will be noticed that in the above description the probability statements refer to the problems of estimation with which the statistician will be concerned in the future.
   In fact, I have repeatedly stated that the frequency of correct results \textit{will} tend to $\alpha$. [fn.\ omitted, RS]
   Consider now the case when a sample, $E'$, is already drawn and the calculations have given, say, $\underline{\theta}(E')=1$ and $\bar{\theta}(E')=2$.
-  Can we say that in this particular case the probability of the true value of $\theta_1$ falling between $1$ and $2$ is equal to $\alpha$?
+Can we say that in this particular case the probability of the true value of $\theta_1$ falling between $1$ and $2$ is equal to $\alpha$?
   The answer is obviously in the negative.
-  The parameter $\theta_1$ is an unknown constant and no probability statement concerning its value may be made [\ldots] .
+The parameter $\theta_1$ is an unknown constant and no probability statement concerning its value may be made [\ldots] .
 \end{quote}
 
 In empirical linguistics (both corpus-based and experimental), following the Neyman-Pearson protocol is often impossible because theories do not predict effect sizes and\slash or no previous knowledge exists about the expected effect size.
@@ -393,7 +71,7 @@ It is \textit{not} a Bayesian posterior probability which allegedly quantifies t
 Changing the experiment design changes the sample space and thus leads to different frequentist probabilities, even if the actual measurements are the same.
 Therefore, unrealised events play a role in the frequentist interpretation of experiments.%
 \footnote{This is seen as a problem by some statisticians and researchers who favour the likelihood principle (and Bayesian inference) over frequentism \citep{Birnbaum1962}.
-See \citet{Mayo2014} for a summary of the defense of frequentism against likelihoodism.}
+  See \citet{Mayo2014} for a summary of the defense of frequentism against likelihoodism.}
 
 Now, \citet[504]{Fisher1926} suggests an informal, adaptive, and approximate \textit{threshold of significance} (or \textit{sig}), for example $0.05$, below which researchers might suspect that there is something going on.
 While Fisher did not recommend the direct inspection or interpretation of p-values (at least not until very late in his life; see Section~4.4 of \citealt{Lehmann2011}), he recommended that experimenters set \textit{sig} appropriately based on previous experimental or theoretical knowledge.
@@ -433,7 +111,7 @@ Fisherian statistical inference is only valid if the randomness assumption (RA; 
 If practitioners do not conduct a proper random experiment (wilfully or out of ignorance), they are changing the sample space and thereby invalidating the actual computations of the statistical tests.
 This was addressed in a prominent paper on statistics for corpus linguistics, and the next section discusses this problem.
 
-\subsubsection{Language is never ever random?}
+\section{Language is never ever random?}
 \label{sec:nevereverrandomfallacy}
 
 In \citet{Kilgarriff2005}, Adam Kilgarriff made an interesting argument about corpora, statistics, and the RA.
@@ -466,26 +144,26 @@ This is why hypotheses are usually chosen with great care and based on sophistic
 It is essential to test only substantive hypotheses and give the test the best and toughest chances of finding errors in the theory which generated the hypotheses.
 In other words, while Kilgarriff is entirely right, it is also completely unjustified to expect statistics to do the job that theory and experiment design usually do.
 To illustrate this point further, Kilgarriff's example goes like this:
-A study might find that shoe polish and cat food are bought simultaneously significantly more often than to be expected under the null (\ie\ given the number of times the items are bought).
-A statistical test might reject the null, which states that \textit{the probability of shoe polish being bought when cat food is also bought is the same as the probability that shoe polish is bought when no cat food is bought}.
-However, we would have no reason to assume that the relationship between the two types of events would be anything but arbitrary, although it would be very likely not random.
-He argues that this could be accounted for if both articles are more often bought together for independent reasons during hot weather or something along those lines.
-The point is that any researcher who would conduct such an experiment \textit{without a substantive theory-driven hypothesis} about why buying shoe polish and buying cat food should be correlated has already engaged in bad science, and frequentist statistics cannot be blamed for this.
+                                                                                                                                                                                         A study might find that shoe polish and cat food are bought simultaneously significantly more often than to be expected under the null (\ie\ given the number of times the items are bought).
+                                                                                                                                                                                       A statistical test might reject the null, which states that \textit{the probability of shoe polish being bought when cat food is also bought is the same as the probability that shoe polish is bought when no cat food is bought}.
+                                                                                                                                                                                       However, we would have no reason to assume that the relationship between the two types of events would be anything but arbitrary, although it would be very likely not random.
+                                                                                                                                                                                       He argues that this could be accounted for if both articles are more often bought together for independent reasons during hot weather or something along those lines.
+                                                                                                                                                                                       The point is that any researcher who would conduct such an experiment \textit{without a substantive theory-driven hypothesis} about why buying shoe polish and buying cat food should be correlated has already engaged in bad science, and frequentist statistics cannot be blamed for this.
 
-A second major point raised in \citet[266]{Kilgarriff2005} is that
+                                                                                                                                                                                       A second major point raised in \citet[266]{Kilgarriff2005} is that
 
-\begin{quote}
-  [w]hether we can reject the null hypothesis [\ldots] is a function of the sample size and the level of correlation.
-Where sample size is held constant (and is not enormous), whether or not we can reject H\Sub{0} can be seen as a way of providing statistical support for distinguishing the arbitrary and the motivated.
-This is a role that hypothesis testing plays across the social sciences.
-\end{quote}
+                                                                                                                                                                                       \begin{quote}
+                                                                                                                                                                                       [w]hether we can reject the null hypothesis [\ldots] is a function of the sample size and the level of correlation.
+                                                                                                                                                                                       Where sample size is held constant (and is not enormous), whether or not we can reject H\Sub{0} can be seen as a way of providing statistical support for distinguishing the arbitrary and the motivated.
+                                                                                                                                                                                       This is a role that hypothesis testing plays across the social sciences.
+                                                                                                                                                                                       \end{quote}
 
-This, too, is undoubtedly true.
-It is a known triviality that whenever the sample size is large enough, any minor (and arbitrary in the sense explained above) correlation leads to a significant test result.
-Kilgarriff argues that language is never random, in the sense that grammar, semantics, pragmatics, etc.\ always cause words to be chained together in a non-random fashion, and that it should be expected that in large corpora virtually any co-occurrence of words will turn out to significantly contradict the null.
-At the same time, these significant co-occurrences of words will often be arbitrary, \ie\ merely an accidental result of theoretically meaningless interactions of the non-random mechanisms of grammar.
-While this is also very true, it is neither specific to linguistics nor is it an argument against significance testing per se.
-It is an argument against the search for significant results unguided by concrete theoretical knowledge and without paying attention to setting the appropriate \textit{sig} levels or to the sensitivity of the test (all in Fisher's terms, see Section~\ref{sec:onstatisticalinference}).
+                                                                                                                                                                                       This, too, is undoubtedly true.
+                                                                                                                                                                                       It is a known triviality that whenever the sample size is large enough, any minor (and arbitrary in the sense explained above) correlation leads to a significant test result.
+                                                                                                                                                                                       Kilgarriff argues that language is never random, in the sense that grammar, semantics, pragmatics, etc.\ always cause words to be chained together in a non-random fashion, and that it should be expected that in large corpora virtually any co-occurrence of words will turn out to significantly contradict the null.
+                                                                                                                                                                                       At the same time, these significant co-occurrences of words will often be arbitrary, \ie\ merely an accidental result of theoretically meaningless interactions of the non-random mechanisms of grammar.
+                                                                                                                                                                                       While this is also very true, it is neither specific to linguistics nor is it an argument against significance testing per se.
+                                                                                                                                                                                       It is an argument against the search for significant results unguided by concrete theoretical knowledge and without paying attention to setting the appropriate \textit{sig} levels or to the sensitivity of the test (all in Fisher's terms, see Section~\ref{sec:onstatisticalinference}).
 If researchers in social sciences simply searched large databases containing socioeconomic data for correlations between variables, numerous correlations would be detected as significant which at the same time would be completely arbitrary and even entertainingly funny.%
 \footnote{The book \citet{Vigen2015} is an amusing illustration of such spurious correlations.}
 
@@ -503,48 +181,52 @@ For corpus studies like the ones presented here, the unrestricted query approach
 The samples are then annotated (often manually) for a number of theoretically well-founded \textit{regressors} (independent variables, also called \textit{predictors}) and a \textit{response variable} (dependent variable, also called the \textit{outcome}), which is (in the case of a binary alternation) simply a binary variable encoding the choice of the alternant.
 This is substantially different from collocation research, where arbitrary sequences of words are examined for unusually high co-occurrence frequencies.%
 \footnote{Using an analogy from the social sciences, the difference would resemble that between, on the one hand, looking for correlations between arbitrary socioeconomic factors in census data, and on the other hand, a specific correlation between peoples' voting behaviour in general elections and certain socioeconomic factors which are known to influence voting behaviour.
-Both types of data could be drawn from the same large existing database, but the studies differ significantly in their theoretical well-foundedness and the sampling scheme.}
+                                                                                                                                                                                                                                                                                                                                                                                                              Both types of data could be drawn from the same large existing database, but the studies differ significantly in their theoretical well-foundedness and the sampling scheme.}
 The default assumption (the null) in alternation research is indeed that any regressor (all other things being random) does not correlate with the response variable, \ie\ the choice of the alternant.
 In other words, the arbitrary (but non-random) influence of grammar, which mars hypothesis testing for collocations as pointed out by Kilgarriff, is eliminated, because the study focusses on a very narrowly defined grammatical configuration anyway.
 Furthermore, samples are usually of a moderate size (several thousands of exemplars) given the complexity of the multifactorial statistical models, such that the tests have a reasonable level of sensitivity.
 
-\subsubsection{Model everything?}
+\section{Model everything?}
 \label{sec:modeleverything}
 
 This section discusses some technical points related to the statistical models used in contemporary alternation modelling.
-Readers with a background in statistics or those not interested in in-depth statistical discussions are invited to skip it. 
+Readers with a background in statistics or those not interested in in-depth statistical discussions are invited to skip it.
 
-\paragraph{Introduction}
+\subsection{Introduction}
 
 In my research, generalised (mixed\slash hierarchical) linear models (\ie\ some form of regression) are used as a de facto standard.
 Looking at the frequency with which statistical procedures are applied in the three major corpus linguistics journals (according to the survey to be published as part of \citealt{Schaefer2019}), regression is the most prominent advanced multifactorial statistical method used in corpus linguistics.
 See Figure~\ref{fig:statsuse}, which shows that simple descriptive statistics (appearing 84 times) and monofactorial methods like the likelihood ratio test (LLR; 32 times) and the $\chi^2$ test (CHISQ; 31 times) are still dominant, but that regression comes in fifth with 22 uses (198 papers in total with 378 distinct uses of statistical methods).
 
 \begin{figure}[htpb]
-  \centering
-  \includegraphics[width=\textwidth]{graphics/statsuse}
-  \caption{Use of statistical methods in major corpus linguistics journals; multiple codes per paper were possible; SIMPLE was coded for papers using descriptive statistics, plots, or simple comparisons of relative or absolute frequencies; NONE was coded for papers using no statistics at all; META was coded for methodological papers (in which case individual methods were \textit{not} coded)}
-  \label{fig:statsuse}
+\centering
+\includegraphics[width=\textwidth]{graphics/statsuse}
+\caption{Use of statistical methods in major corpus linguistics journals; multiple codes per paper were possible; SIMPLE was coded for papers using descriptive statistics, plots, or simple comparisons of relative or absolute frequencies; NONE was coded for papers using no statistics at all; META was coded for methodological papers (in which case individual methods were \textit{not} coded)}
+\label{fig:statsuse}
 \end{figure}
 
 With regression models becoming (at least a part of) the state of the art in corpus linguistics, I want to point out that a recent trend to \textit{model everything} might be justified but not strictly required.
 First, I provide a brief introduction to regression modelling using binary regression, a highly popular type of regression in the modelling of binary alternations, as an example.%
 \footnote{My view on regression and multilevel models is strongly guided by \citet{GelmanHill2006}.
-I also use \citet{ZuurEa2009,FahrmeirEa2013,Fox2016} as reference text books.}
+  I also use \citet{ZuurEa2009,FahrmeirEa2013,Fox2016} as reference text books.}
 Then, I discuss the programme laid out in \citet{Gries2017a}, where a number of factors are enumerated that regression models \textit{should} take into account.
 
-\paragraph{Generalised linear models}
+\subsection{Generalised linear models}
 
 Binary regression (usually logistic regression) models the influence a number of independent variables cumulatively exert on a binary dependent variable.%
 \footnote{This short introduction is partially based on \citet{Schaefer2019a}.}
 In the regression literature, the independent variables are usually called \textit{regressors} and the dependent variable is called the \textit{response}.
 In \ROMeasure, for example, the dependent variable was 0 when the alternant given here as \ref{ex:intro:alternation1}, where the kind-denoting noun (\textit{Wein}) and the measure noun (\textit{Glas}) agree in case, was chosen in the exemplar, and it was 1 when the alternant given here as \ref{ex:intro:alternation2}, where the kind-denoting noun has genitive case, was chosen.
 
-\ex.\label{ex:intro:alternation}
-    \ag. Wir trinken [[ein Glas]\Sub{Acc} [guten Wein]\Sub{Acc}]\Sub{Acc}.\\
-         we drink a glass good wine \\
-         \glt We drink a glass of good wine.\label{ex:intro:alternation1}
-    \b.  Wir trinken [[ein Glas]\Sub{Acc} [guten Weins]\Sub{Gen}]\Sub{Acc}.\label{ex:intro:alternation2}
+\begin{exe}
+\ex\label{ex:intro:alternation}
+\begin{xlist}
+\ex\gll Wir trinken [[ein Glas]\Sub{Acc} [guten Wein]\Sub{Acc}]\Sub{Acc}.\\
+we drink a glass good wine \\
+\glt We drink a glass of good wine.\label{ex:intro:alternation1}
+\ex Wir trinken [[ein Glas]\Sub{Acc} [guten Weins]\Sub{Gen}]\Sub{Acc}.\label{ex:intro:alternation2}
+\end{xlist}
+\end{exe}
 
 The regression estimates the influence of any number of predictors on the probability that the response is 0 or 1.
 The theoretically motivated regressors in this particular study included the case of the measure head noun, the semantic class of the measure noun, lemma frequencies of both the measure noun and the kind-denoting noun, document-level indicators of style, and the type of determiner (cardinal or not) used for the whole NP.
@@ -595,7 +277,7 @@ Generalised linear models are abbreviated as GLM.%
 \footnote{Actually, there is a technical distinction to be made between the logistic regression introduced here, which models probabilities, and a proper binomial GLM, which models counts using a binomial regression.
 The difference can be neglected for the present purpose.}
 
-\paragraph{Random effects}
+\subsection{Random effects}
 
 An extension of GLMs are \textit{generalised linear mixed models} (GLMMs) or simply \textit{multilevel GLMs}.
 The difference is that GLMMs contain so-called \textit{random effects}.
@@ -612,10 +294,10 @@ What happens if we use such a variable as a fixed-effect predictor in a GLM (ins
     Actual variable & \multicolumn{3}{l}{Dummy variables} \\
     \textbf{Case}   & \textbf{accusative} & \textbf{dative} & \textbf{genitive} \\
     \midrule
-    Nominative      & 0 & 0 & 0 \\ 
-    Accusative      & 1 & 0 & 0 \\ 
-    Dative          & 0 & 1 & 0 \\ 
-    Genitive        & 0 & 0 & 1 \\ 
+    Nominative      & 0 & 0 & 0 \\
+    Accusative      & 1 & 0 & 0 \\
+    Dative          & 0 & 1 & 0 \\
+    Genitive        & 0 & 0 & 1 \\
     \bottomrule
   \end{tabular}
   \caption{Dummy coding of a categorical variable \textit{Case} with four levels, resulting in the three binary dummy variables \textit{accusative}, \textit{dative}, \textit{genitive}}
@@ -661,7 +343,7 @@ In fact, we can regard (\ref{eq:glmm02}) as a minimal second-level linear model 
 All more complex mixed or multilevel models are extensions of this approach.
 
 
-\paragraph{Choosing fixed or random effects}
+\subsection{Choosing fixed or random effects}
 
 The decision between a fixed (dummy-coded) effect and a varying intercept boils down to two points.
 First, the variance in the intercepts needs to be estimated.
@@ -690,7 +372,7 @@ It appears that there is little foundation to such claims.
 They conclude that there is essentially no universally accepted and tenable conceptual criterion for deciding what should be a random effect and what a fixed effect.
 I agree with them and consider the decision primarily a technical one, \ie\ we use what works best, preferring random effects whenever possible.
 
-\paragraph{Varying intercepts and slopes}
+\subsection{Varying intercepts and slopes}
 
 If the coefficients $\beta$ also vary by group, varying slopes are a possible extension of simple GLMs.
 We extend the model from (\ref{eq:glmm01}) by giving $\beta^1$ a random slope.
@@ -708,10 +390,10 @@ If in groups with a higher-than-average intercept, the slope is also higher than
 These relations are captured in the \textit{covariance}.
 Condition (\ref{eq:glmm06}) is added (the superscript indices on $\alpha$ and $\beta$ have been omitted for readability).
 
-\begin{equation} 
+\begin{equation}
   \left( \begin{smallmatrix} \alpha \\ \beta \end{smallmatrix}\right) \sim
     \left(
-    \left( \begin{smallmatrix} \mu_{\alpha}\vphantom{\beta} \\ \mu_{\beta}\vphantom{\beta} \end{smallmatrix} \right), 
+    \left( \begin{smallmatrix} \mu_{\alpha}\vphantom{\beta} \\ \mu_{\beta}\vphantom{\beta} \end{smallmatrix} \right),
       \left( \begin{smallmatrix} \sigma_{\alpha}^2 & \rho\sigma_{\alpha}\sigma_{\beta} \\
 	\rho\sigma_{\alpha}\sigma_{\beta} & \sigma_{\beta}^2 \end{smallmatrix} \right)
     \right)
@@ -734,7 +416,7 @@ The estimator might converge, but typically covariance estimates of $-1$ or $1$ 
 In this case, the model is \textit{over-parametrised} and needs to be simplified.
 See \citet{BatesEa2015a,MatuschekEa2017}.
 
-\paragraph{Second-level predictors}
+\subsection{Second-level predictors}
 
 The linear Gaussian models for random intercepts and slopes can also have fixed-effect regressors themselves (see \RAMeasure\ for an application).
 This means that the random effects are partially predicted from a set of separate fixed-effect regressors.
@@ -766,18 +448,18 @@ This short introduction demonstrates that GLMMs or multilevel models can quickly
 With increasing complexity, however, more and more data are required for the estimation of the parameters and the predictions of the random variables.
 This leads nicely into the final point I want to make in this section.
 
-\paragraph{Modelling everything}
+\subsection{Modelling everything}
 
 So far, this section has provided a minimal introduction to GLMMs and true multilevel models.
 I have shown that models become rather complex relatively easily, and it was pointed out that especially in VIVS models, the necessary estimation of variance-covariance matrices requires a lot of data.
 Over-parametrisation in models for experimental data (as touted by \citealt{BarrEa2013}) was heavily criticised by \citet{BatesEa2015a,MatuschekEa2017}.
 In a situation of over-parametrisation, it should be noted that even an estimator which is more robust (such as maybe Bayesian estimators) cannot make reliable inferences possible where the data are insufficient given the model's complexity.%
 \footnote{Read more comments on Bayesian estimators in Section~\ref{sec:bayesianhype}.}
-\citet[1]{BatesEa2015a} state (emphasis is mine): 
+\citet[1]{BatesEa2015a} state (emphasis is mine):
 
-\begin{quote}
-  We show that failure to converge typically is not due to a suboptimal estimation algorithm, but is a consequence of attempting to fit a model that is too complex to be properly supported by the data, \textit{irrespective of whether estimation is based on maximum likelihood or on Bayesian hierarchical modelling with uninformative or weakly informative priors}.
-  Importantly, even under convergence, over-parametrisation may lead to uninterpretable models.
+  \begin{quote}
+We show that failure to converge typically is not due to a suboptimal estimation algorithm, but is a consequence of attempting to fit a model that is too complex to be properly supported by the data, \textit{irrespective of whether estimation is based on maximum likelihood or on Bayesian hierarchical modelling with uninformative or weakly informative priors}.
+Importantly, even under convergence, over-parametrisation may lead to uninterpretable models.
 \end{quote}
 
 For corpus-based alternation research, \citet{Gries2017a} argues for massively more complex models compared to the current state of the art (including his own work), and over-parametrisation will certainly occur in many cases.
@@ -787,7 +469,7 @@ In \citet{Gries2015}, he argues that random effects for text types, speakers, le
 \citet[24]{Gries2017a} admits that
 
 \begin{quote}
-  [t]he bad news, as so often, is that this requires an ever increasing or nearly overwhelming degree of sophistication and knowledge not only in linguistics but also in matters of data analysis and statistical evaluation.
+[t]he bad news, as so often, is that this requires an ever increasing or nearly overwhelming degree of sophistication and knowledge not only in linguistics but also in matters of data analysis and statistical evaluation.
 \end{quote}
 
 Given that complex models are used in many fields, I would argue that what can be expected of biologists, sociologists, econometricians, etc.\ (or students of these fields) can be expected of linguists, too.
@@ -854,7 +536,7 @@ Instead, I argue for model specifications grounded in substantive theory and pre
 If such types of model specifications are difficult to come up with, I suggest the field invest more time and resources into producing powerful, highly predictive, and formally specified theories instead of engaging in data dredging.
 
 
-\subsubsection{Just go Bayesian?}
+\section{Just go Bayesian?}
 \label{sec:bayesianhype}
 
 In this section, I justify the choice of statistics which I used in all my studies collected here, namely non-Bayesian statistics.
@@ -866,7 +548,7 @@ Second, it has been proposed that the Bayesian interpretation of probability is 
 Third and very specific to this paper, given the established methods in the modeling of alternation and variation, it has to be decided whether so-called Bayesian methods lead to substantially different results.
 
 As for the first point, the relevant fundamentals of frequentism have already been mentioned in Section~\ref{sec:onstatisticalinference}.
-The basic distinction between frequentism and Bayesianism is a philosophical one and related to the concepts of \textit{direct} and \textit{inverse probability} (\eeg\ \citealt{Senn2011}).
+The basic distinction between frequentism and Bayesianism is a philosophical one and related to the concepts of \textit{direct} and \textit{inverse probability} (\eg\ \citealt{Senn2011}).
 Frequentists assume that models and parameters are fixed and given by theories, for example a model specifying that a coin is fair.
 We can then calculate for observed data (for example a measurement of three heads in an experiment with ten tosses) how often such a result or a more extreme result would occur if the model were true and if we repeated the experiment arbitrarily often.
 This is essentially the frequentist notion of direct probability, \ie\ long-run frequencies under replication.
@@ -885,9 +567,9 @@ Yet, neither frequentist nor Bayesian methods were conceived of as cognitive mod
 The fundamental question that lurks behind such arguments is how we interpret our statistical models (estimated on corpus data).
 Are they inductive models of cognitive representations which human learners would also infer through being exposed to the corpus data?%
 \footnote{In which case we would be doing \textit{data science in language research} in the words of \citealt{MilinEa2016}.
-I see this as standing in contradiction to the view advocated in \citet{Dabrowska2016} as cited above (p.~\pageref{abs:dabrowska}).}
+  I see this as standing in contradiction to the view advocated in \citet{Dabrowska2016} as cited above (p.~\pageref{abs:dabrowska}).}
 Or are they tests of theories that are pre-specified and merely tested for predictive accuracy on linguistic output data contained in corpora?
-In the former case, we adopt a strong \textit{corpus as input} hypothesis \citep{StefanowitschFlach2016} and should maybe resort to cognitively plausible statistical methods (whatever these might be).
+  In the former case, we adopt a strong \textit{corpus as input} hypothesis \citep{StefanowitschFlach2016} and should maybe resort to cognitively plausible statistical methods (whatever these might be).
 In the latter and less extreme case, the cognitive commitment does not necessarily extend to the statistical methods used.
 These methods, then, do not need to be any more cognitively plausible than an ANOVA used to analyse the results from an experiment in cognitive science.
 I view my own work in the tradition of theory testing, and cognitive realism is thus not a requirement for my methods of statistical inference of choice.
@@ -914,12 +596,12 @@ Even \citet[347--348]{GelmanHill2006} ``view any noninformative prior distributi
                  & Genitives         &  0.001 &           && -0.693 & -0.711 && -0.768 & -0.801 && -0.592 & -0.616 && * & * \\
                  & Measurecase       &  0.001 & Acc       &&  0.030 &  0.031 && -0.150 & -0.159 &&  0.212 &  0.222 &&   &   \\
                  &                   &        & Dat       &&  0.705 &  0.729 &&  0.455 &  0.465 &&  0.944 &  0.995 && * & * \\[0.5\baselineskip]
-       
+
        Second    & Kindattraction    &  0.020 &           &&  0.225 &  0.244 &&  0.049 &  0.056 &&  0.393 &  0.422 && * & * \\
        (Kind)    & Kindfreq          &  0.095 &           &&  0.146 &  0.164 && -0.023 & -0.016 &&  0.301 &  0.341 &&   &   \\
                  & Kindgender        &  0.001 & Neut      &&  0.021 &  0.013 && -0.367 & -0.409 &&  0.392 &  0.435 &&   &   \\
                  &                   &        & Fem       &&  1.269 &  1.289 &&  0.800 &  0.788 &&  1.709 &  1.783 && * & * \\[0.5\baselineskip]
-       
+
        Second    & Measureattraction &  0.001 &           &&  0.282 &  0.299 &&  0.106 &  0.102 &&  0.447 &  0.515 && * & * \\
        (Measure) & Measureclass      &  0.001 & Container &&  0.252 &  0.257 && -0.265 & -0.303 &&  0.788 &  0.813 &&   &   \\
                  &                   &        & Rest      &&  0.421 &  0.379 && -0.209 & -0.378 &&  1.063 &  1.091 &&   &   \\
@@ -951,10 +633,10 @@ However, being ``Bayesian'' (as touted in the title of the paper) is most likely
 Additionally, I want to voice the concern that many practitioners are probably already struggling with getting an adequate grasp of advanced statistical methods and that it might therefore be wise to use the more conservative and better understood method if the alternative method is not absolutely required for substantive reasons.
 
 \begin{figure}[htpb]
-  \centering
-  \includegraphics[width=\textwidth]{graphics/corpus_fixeffs_mle+mcmc}
-  \caption{For the main study from \ROMeasure: coefficient plot comparing Maximum Likelihood Estimation (MLE, with 95\% bootstrap confidence interval; 1,000 replications) and Bayesian Markov-Chain Monte Carlo estimation (MCMC; 4 chains; 1,000 iterations; normal priors for coefficients); the intercept (\textit{Cardinal=Yes}, \textit{Measurecase=Nom}, \textit{Kindgender=Masc}, \textit{Measureclass=Physical}; 0 for all numeric z-transformed regressors) is -3.548 (MLE) and -3.700 (MCMC)}
-  \label{fig:fixeffs}
+\centering
+\includegraphics[width=\textwidth]{graphics/corpus_fixeffs_mle+mcmc}
+\caption{For the main study from \ROMeasure: coefficient plot comparing Maximum Likelihood Estimation (MLE, with 95\% bootstrap confidence interval; 1,000 replications) and Bayesian Markov-Chain Monte Carlo estimation (MCMC; 4 chains; 1,000 iterations; normal priors for coefficients); the intercept (\textit{Cardinal=Yes}, \textit{Measurecase=Nom}, \textit{Kindgender=Masc}, \textit{Measureclass=Physical}; 0 for all numeric z-transformed regressors) is -3.548 (MLE) and -3.700 (MCMC)}
+\label{fig:fixeffs}
 \end{figure}
 
 Finally, in order to demonstrate the convergence of the two types of estimators, I estimated the parameters of the hierarchical model presented in \ROMeasure\ with MLE and Markov-Chain Monte Carlo (MCMC) methods (the currently most prominent estimator used in Bayesian settings) to demonstrate their expectable convergence.
