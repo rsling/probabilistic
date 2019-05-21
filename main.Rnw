@@ -60,7 +60,20 @@ render_listings()
 
 \part{Studies in probabilistic German morphosyntax}
 
+%%% COMPOUNDS %%%
+
+%%% CLITICS %%%
+
 \include{chapters/clitics/0frame}
+
+%%% WEAK NOUNS %%%
+
+<<child="chapters/weaknouns/0frame.Rnw">>=
+@
+
+%%% MEASURE NPS %%%
+
+%%% CLAUSES %%%
 
 \appendix
 \input{chapters/weaknounlist}

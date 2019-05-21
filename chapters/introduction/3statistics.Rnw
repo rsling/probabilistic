@@ -1,4 +1,4 @@
-<<ststcs, cache=FALSE, echo=FALSE, include=FALSE, results='asis'>>=
+<<setupststcs, cache=FALSE, echo=FALSE, include=FALSE, results='asis'>>=
   opts_knit$set(self.contained=FALSE)
 @
 

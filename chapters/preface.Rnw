@@ -8,8 +8,6 @@
 Thus, [what we do] may, because of the neglect of other important structural properties, be to classify natural language along an ultimately irrelevant dimension. \citep[436--437]{ParteeEa1990}
 \end{quote}
 
-Y\Sub{x}
-
 I used the same quote from Partee, ter Meulen, and Wall's introduction to \textit{mathematical methods in linguistics} in the preface to my doctoral dissertation \citep{Schaefer2010}.
 In their book, the sentence alerts readers that the Chomsky hierarchy and the theory of automata might not be an adequate framework for the description of human language.
 In my dissertation, I used it to articulate my doubts that predicate logic (with event ontologies) and lambda calculus are adequate frameworks for the description of linguistic meaning, advocating a purely set theoretic description of sentence meaning.
