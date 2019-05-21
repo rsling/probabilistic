@@ -1,3 +1,7 @@
+<<setupmsrnscorpus, cache=FALSE, include=FALSE, results='asis'>>=
+opts_knit$set(self.contained=FALSE)
+@
+
 \section{Corpus study}
 \label{sec:corpusstudies}
 
@@ -6,7 +10,7 @@
 \subsubsection{Corpus choice}
 \label{sec:gettingdata}
 
-For the present study, I used the 21 billion token German \textit{Corpus from the Web} (COW) in its 2014 version DECOW14A (\citealp{SchaeferBildhauer2012full}, and \citealp{Schaefer2015b}, as well as \citealp{BiemannEa2013}, and \citealp{SchaeferBildhauer2013alt}, for overviews of web corpora in general and the methodology of their construction).%
+For the present study, I used the 21 billion token German \textit{Corpus from the Web} (COW) in its 2014 version DECOW14A (??TODO RS SCHAEFERBILDHAUER2012, and \citealp{Schaefer2015b}, as well as \citealp{BiemannEa2013}, and \citealp{SchaeferBildhauer2013alt}, for overviews of web corpora in general and the methodology of their construction).%
 \footnote{The COW corpora (Dutch, English, French, German, Spanish, Swedish) are made available for free at \url{https://www.webcorpora.org}.
 At the time of this writing, a newer 2016 version DECOW16A has already been released.}
 This corpus was chosen first because the external validity of any study is increased through a more heterogeneous sample \citep[30]{MaxwellDelaney2004}.
@@ -31,7 +35,7 @@ Then, the one hundred most frequent mass nouns were extracted manually from this
 Mass nouns were defined as concrete nouns which genuinely denote a substance, combine with uninflected mass quantifiers such as \textit{viel} `much' and \textit{wenig} `little' (\textit{viel Bier} `much beer'), and form only sortal and unit plurals (such as the plural \textit{Biere} `types of beer' or `glasses of beer').
 Abstract nouns which partially behave as mass nouns (for example, \textit{Spaß} `fun’ or \textit{Gefahr} `danger’) were excluded because they are not measured in the same way as concrete mass nouns.
 
-This list of mass nouns was used in the second step to derive a list of measure nouns co-occurring with the mass nouns. 
+This list of mass nouns was used in the second step to derive a list of measure nouns co-occurring with the mass nouns.
 In order to generate this list, I utilised the fact that a direct sequence of two nouns almost always instantiates the \NACb\ if the second noun is a mass noun.
 I searched for all sequences N\Sub{1}N\Sub{2} where N\Sub{2} was one of the mass noun lemmas extracted in the first step.
 Then, the resulting 100 lists of noun-noun combinations were each sorted by frequency in descending order and sieved manually to remove erroneous hits.
@@ -75,7 +79,7 @@ The higher the value for some noun, the (relatively) more often this noun occurs
 It could be argued that other measures of attraction strength should be used, for example those popularised in collostructional analysis (CA; \citealp{StefanowitschGries2003,GriesStefanowitsch2004}; see also \citealp{Gries2015a}).
 However, the goal here is to quantify how often lemmas occur in the \PGCd\ and the \NACb, and these constructions do not compete at all but are rather mutually exclusive.
 While this does not preclude the use of CA, it is an open question whether the marginals are cognitively relevant in this case.
-After all, the main difference between the quotient used here and measures used in CA (originally signed logarithmised p-values from a Fisher test) is that they take the marginals into account. 
+After all, the main difference between the quotient used here and measures used in CA (originally signed logarithmised p-values from a Fisher test) is that they take the marginals into account.
 However, using Fisher-p-based collexeme strength instead of the raw frequency quotient was tried as an alternative (variables \textit{Kindcollo} and \textit{Measurecollo}).
 See Section~\ref{sec:mainstudystatisticalmodel} for a discussion of the negative results.
 
@@ -134,10 +138,10 @@ An alternative \textit{BOBYQA} optimiser from the \textit{nloptr} package \citep
                      & Cardinal          & 0.001                  & No           &  1.419      &  0.869 &  1.993  &  *           \\
                      & Genitives         & 0.001                  &              & -0.710      & -0.815 & -0.556  &  *           \\[0.5\baselineskip]
 
-    
+
     2 (Kindlemma)    & (Kindfreq)        & (0.781)                &              &             &        &         &              \\
                      & (Kindgender)      & (0.199)                &              &             &        &         &              \\[0.5\baselineskip]
-    
+
     2 (Measurelemma) & Measureclass      & 0.005                  & Container    & 0.445       & -0.579 &  1.532  &              \\
                      &                   &                        & Rest         & 1.745       &  0.649 &  2.831  &  *           \\
                      &                   &                        & Amount       & 1.597       &  0.125 &  2.751  &  *           \\
@@ -200,7 +204,7 @@ Therefore, all noun-noun pairs from the process described above were also querie
 
 \begin{figure}[hb!]
   \centering
-  \includegraphics[width=0.85\textwidth]{../R/output/corpus_fixeffs}
+  %\includegraphics[width=0.85\textwidth]{../R/output/corpus_fixeffs}
   \caption{Coefficients with 95\% confidence intervals (for details see text); the intercept is -3.548}
   \label{fig:fixeffs}
 \end{figure}
@@ -227,12 +231,12 @@ Given the coding of the response variable, coefficients leaning to the positive 
                     & Genitives         &  0.001                 &              & -0.693      & -0.768 & -0.592  & *             \\
                     & Measurecase       &  0.001                 & Acc          &  0.030      & -0.150 &  0.212  &               \\
                     &                   &                        & Dat          &  0.705      &  0.455 &  0.944  & *             \\[0.5\baselineskip]
-    
+
     2 (Kindlemma)   & Kindattraction    &  0.020                 &              &  0.225      &  0.049 &  0.393  & *             \\
                     & Kindfreq          &  0.095                 &              &  0.146      & -0.023 &  0.301  &               \\
                     & Kindgender        &  0.001                 & Neut         &  0.021      & -0.367 &  0.392  &               \\
                     &                   &                        & Fem          &  1.269      &  0.800 &  1.709  & *             \\[0.5\baselineskip]
-    
+
     2 (Measurelemma) & Measureattraction &  0.001                 &              &  0.282      &  0.106 &  0.447  & *             \\
                     & Measureclass      &  0.001                 & Container    &  0.252      & -0.265 &  0.788  &               \\
                     &                   &                        & Rest         &  0.421      & -0.209 &  1.063  &               \\
@@ -261,7 +265,7 @@ The coefficients of determination dropped to $R_m^2=0.376$ and $R^2_c=0.480$.
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.5\textwidth]{../R/output/corpus_Measureattraction}~\includegraphics[width=0.5\textwidth]{../R/output/corpus_Kindattraction}
+  %\includegraphics[width=0.5\textwidth]{../R/output/corpus_Measureattraction}~\includegraphics[width=0.5\textwidth]{../R/output/corpus_Kindattraction}
   \caption{Effect plots for the regressors \textit{Measureattraction} and \textit{Kindattraction}; y-axes are not aligned}
   \label{fig:eff:attraction}
 \end{figure}
@@ -282,7 +286,7 @@ The effect can therefore be dismissed or treated as a nuisance variable.
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.5\textwidth]{../R/output/corpus_Measureclass}
+  %\includegraphics[width=0.5\textwidth]{../R/output/corpus_Measureclass}
   \caption{Effect plot for the regressor \textit{Measureclass}}
   \label{fig:eff:measureattraction}
 \end{figure}
@@ -295,7 +299,7 @@ These are referential nouns, confirming the hypothesis that it is prototypical o
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=0.5\textwidth]{../R/output/corpus_Cardinal}
+  %\includegraphics[width=0.5\textwidth]{../R/output/corpus_Cardinal}
   \caption{Effect plot for the regressor \textit{Cardinal}}
   \label{fig:eff:leftcontext}
 \end{figure}
@@ -304,7 +308,7 @@ Figure~\ref{fig:eff:leftcontext} shows that cardinals indeed influence the choic
 
 The style-related proxy variables point in the expected direction.
 Increased \textit{Badness} of the document favours the \NACa, and so does a lower density of genitives.
-While these are merely proxies to style, this result can at least encourage future work into stylistic effects. 
+While these are merely proxies to style, this result can at least encourage future work into stylistic effects.
 
 The influence of \textit{Measurecase} is as predicted in previous analyses.
 A measure noun in the dative favours the \PGCa\ (compared to the nominative, which is on the intercept).

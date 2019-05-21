@@ -1,3 +1,7 @@
+<<setupmsrnsexpr, cache=FALSE, include=FALSE, results='asis'>>=
+opts_knit$set(self.contained=FALSE)
+@
+
 \section{Experiments}
 \label{sec:experimental}
 
@@ -81,7 +85,7 @@ The pseudo-coefficients of determination are $R^2_{m}=0.185$ and $R^2_{c}=0.455$
 
 \begin{figure}[htbp!]
 \centering
-\includegraphics[width=0.5\textwidth]{../R/output/fc_effects}
+%\includegraphics[width=0.5\textwidth]{../R/output/fc_effects}
 \caption{Effect plot for the multilevel logistic regression in the forced-choice experiment: predictability of participants' choices using the probabilities derived from the corpus-based GLMM}
 \label{fig:afc:effects}
 \end{figure}
@@ -105,7 +109,7 @@ Future research with improved stimuli is the proper route to take.}
 
 \begin{figure}[htbp!]
   \centering
-  \includegraphics[width=0.5\textwidth]{../R/output/fc_proportions}
+  %\includegraphics[width=0.5\textwidth]{../R/output/fc_proportions}
   \caption{Spine plot of the proportion of responses plotted against the predictions from the corpus-based model in the forced-choice experiment}
   \label{fig:spines}
 \end{figure}
@@ -174,10 +178,10 @@ Random intercepts were specified for \textit{Participant} and \textit{Item} (the
   \caption{Fixed effect coefficient table for the LMM used to analyse the self-paced reading experiment; the intercept is 0.829}
   \begin{tabular}{lrrrc}
     Regressor & \multicolumn{1}{r}{Coefficient} & \multicolumn{1}{r}{CI low} & \multicolumn{1}{r}{CI high} & \multicolumn{1}{r}{CI excludes 0} \\ \midrule
-    Construction=PGCadj                 &  0.054 &  0.012 &  0.095 &  *  \\ 
-    Modelprediction                     & -0.003 & -0.113 &  0.110 &     \\ 
-    Position                            & -0.005 & -0.005 &  0.004 &     \\ 
-    Construction=PGCadj:Modelprediction & -0.125 & -0.234 & -0.023 &  *  \\ 
+    Construction=PGCadj                 &  0.054 &  0.012 &  0.095 &  *  \\
+    Modelprediction                     & -0.003 & -0.113 &  0.110 &     \\
+    Position                            & -0.005 & -0.005 &  0.004 &     \\
+    Construction=PGCadj:Modelprediction & -0.125 & -0.234 & -0.023 &  *  \\
   \end{tabular}
   \label{tab:exp:spr}
 \end{table}
@@ -197,7 +201,7 @@ The coefficients of determination indicate that there is a noteworthy correlatio
 
 \begin{figure}[htbp!]
 \centering
-\includegraphics[width=0.5\textwidth]{../R/output/spr_effects}
+%\includegraphics[width=0.5\textwidth]{../R/output/spr_effects}
 \caption{Effect plot for the LMM in the self-paced reading experiment: modelling participants' residualised log reading times on the probabilities given by the corpus-based GLMM}
 \label{fig:spr:effects}
 \end{figure}

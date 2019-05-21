@@ -13,7 +13,7 @@
 \input{localhyphenation.tex}
 \input{localcommands.tex}
 
-\addbibresource{localbibliography.bib}
+% \addbibresource{localbibliography.bib}
 \addbibresource{rs.bib}
 
 \begin{document}
@@ -73,7 +73,17 @@ render_listings()
 
 %%% MEASURE NPS %%%
 
+\include{chapters/measurenps/1intro}
+\include{chapters/measurenps/2descriptive}
+<<child="chapters/measurenps/3corpus.Rnw">>=
+@
+<<child="chapters/measurenps/4experiments.Rnw">>=
+@
+\include{chapters/measurenps/5conclusions}
+
 %%% CLAUSES %%%
+
+\input{chapters/clauses/0frame}
 
 \appendix
 \input{chapters/weaknounlist}
