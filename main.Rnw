@@ -18,6 +18,59 @@
 
 \begin{document}
 
+
+<< setup, cache=FALSE, echo=FALSE, include=FALSE, results='asis'>>=
+opts_knit$set(self.contained=FALSE)
+
+opts_chunk$set(cache.path='cache/',
+               fig.path='figures/',
+               fig.pos='H', message=FALSE,
+               cache=TRUE, warning=FALSE,
+               fig.align='center', comment ="",
+               background='#F7F7F7',
+               tidy=FALSE,
+               formatR.arrow = TRUE,
+               echo=FALSE)
+
+
+render_listings()
+@
+
+
+<<rinitialisation>>=
+require(gamlss)
+require(xtable)
+require(vioplot)
+require(pwr)
+require(data.table)
+
+source('RCode/functions.R')
+source('RCode/vioplot2.R')
+
+my.root = '~/Workingcopies/Probabilistic/'
+prod.plot.order <- c('n', 'en', 'EMPTY_PLOT', 'e', 'Ue', 'EMPTY_PLOT', 'Uer', 'er', 'U')
+
+decow.tokens <- 19835843151
+decow.words  <- 15687969372
+decow.docs   <- 17116160
+@
+
+
+<<loaddata>>=
+load(paste0(my.root, "RData/compounds/n1.frequencies.RData"))
+load(paste0(my.root, "RData/compounds/nouns.RData"))
+load(paste0(my.root, "RData/compounds/blacklists.RData"))
+
+load(paste0(my.root, "RData/compounds/analyses.full.plus.RData")) # Basic frequency and productivity data.
+load(paste0(my.root, "RData/compounds/t.plot.RData"))        # Analysis of the corpus study. Funny file name.
+load(paste0(my.root, "RData/compounds/p.plot.RData"))        # Analysis of the corpus study. Funny file name.
+load(paste0(my.root, "RData/compounds/corpus.candidates.RData"))
+load(paste0(my.root, "RData/compounds/observations.RData"))
+stims.freqs <- read.csv2(paste0(my.root, "RData/compounds/stimuli_freqs.csv"), header = T, sep = "\t", row.names = NULL)
+@
+
+
+
 \maketitle
 \frontmatter
 
@@ -30,23 +83,6 @@
 \include{chapters/acknowledgments}
 \include{chapters/abbreviations}
 \mainmatter
-
-<< setup, cache=FALSE, echo=FALSE, include=FALSE, results='asis'>>=
-opts_knit$set(self.contained=FALSE)
-
-opts_chunk$set(cache.path='cache/',
-               fig.path='figures/',
-               fig.pos='H', message=FALSE,
-               cache=TRUE, warning=FALSE,
-               fig.align='center', comment ="",
-               background='#F7F7F7',
-               tidy=FALSE,
-               formatR.arrow = TRUE)
-
-
-render_listings()
-
-@
 
 \part{Probabilistic morphosyntax}
 
@@ -61,6 +97,16 @@ render_listings()
 \part{Studies in probabilistic German morphosyntax}
 
 %%% COMPOUNDS %%%
+
+\include{chapters/compounds/1linkingelementsinprobabilisticmorphology}
+\include{chapters/compounds/2linkingelementsingerman}
+<<child="chapters/compounds/3data.Rnw">>=
+@
+<<child="chapters/compounds/4corpusstudy.Rnw">>=
+@
+<<child="chapters/compounds/5split100experiment.Rnw">>=
+@
+\include{chapters/compounds/6conclusion}
 
 %%% CLITICS %%%
 

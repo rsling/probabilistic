@@ -1,3 +1,4 @@
+% !Rnw root = ../../main.Rnw
 <<setupthrsmethds, cache=FALSE, echo=FALSE, include=FALSE, results='asis'>>=
   opts_knit$set(self.contained=FALSE)
 @

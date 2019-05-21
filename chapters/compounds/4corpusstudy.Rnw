@@ -1,5 +1,5 @@
-% !Rnw root = ../leglossa.Rnw
-<<setupcorpus, cache=FALSE, include=FALSE, results='asis'>>=
+% !Rnw root = ../../main.Rnw
+<<setupcmndscorpus, cache=FALSE, include=FALSE, results='asis'>>=
 opts_knit$set(self.contained=FALSE)
 @
 
@@ -19,10 +19,10 @@ First, as explained at the beginning of Section~\ref{sec:databaseandproductivity
 Furthermore, it was explained that the productivity measures can be misleading in the case of low type frequencies.
 Therefore, only N1s which had a minimal type frequency of $\Sexpr{n1asn1.typfreq.lim}$ as N1 with PL and NPL were used.
 In order to exclude nouns which occur with reasonable type frequency in compounds but infrequently as standalone nouns, only N1s with a minimal token frequency outside of compounds were included.
-To implement this restriction, we used the notion of the \textit{frequency class} (or \textit{frequency band}) of a word \parencite[80]{PerkuhnEa2012}.
+To implement this restriction, we used the notion of the \textit{frequency class} (or \textit{frequency band}) of a word \citep[80]{PerkuhnEa2012}.
 The frequency class $c(w)$ of a word $w$ increases with the word's token frequency $f(w)$.
 Calculation of the frequency class additionally relates the token frequency of the word in question to the number of tokens of the most frequent word in the corpus ($f^{max}$) and accounts for the power law distribution of word frequencies.%
-\footnote{See \textcite{Piantadosi2014} for a recent overview, including the many problems with actual word frequency distributions.}
+\footnote{See \citet{Piantadosi2014} for a recent overview, including the many problems with actual word frequency distributions.}
 It is given by (\ref{eq:frequencyclass}), where $\lfloor~\rfloor$ denotes the function that rounds down to the next integer.
 
 \begin{equation}
@@ -101,8 +101,8 @@ Examples include \textit{Äpfel=+lager} or \textit{Apfel+lager} `storage for app
 In theory, the N2s in these compounds \textit{could} denote some sort of container which holds only one object (for instance, it is conceivable -- if unlikely -- that the storage space for apples could have only one apple in it), but both world knowledge and the particular context in which the compound appears render this sort of interpretation impossible.
 However, since the interpretation of this kind of containment compound is context- and world-knowledge-dependent, we will analyse them separately from the clear-cut cases shown above.
 The presentation of the final sample will show the results for only the first, clear-cut cases under the label of \textit{strict annotation} and the combined results for both the clear-cut and the extended cases under the label of \textit{lax annotation}.%
-\footnote{We think it is encouraging that \textcite{BangaEa2013b} found the stable and expected results even using a more cavalier operationalisation of what they call conceptual plurals.
-``These form types could be divided into two conceptual types: the modifier of the compound was either conceptually singular (\egg \textit{bananenschil} `banana skin' and \textit{ballonvaart} `balloon ride') or conceptually plural (\egg \textit{aardbeienjam} ‘strawberry jam’ and \textit{appeltaart} ‘apple pie’)''.
+\footnote{We think it is encouraging that \citet{BangaEa2013b} found the stable and expected results even using a more cavalier operationalisation of what they call conceptual plurals.
+``These form types could be divided into two conceptual types: the modifier of the compound was either conceptually singular (\eg \textit{bananenschil} `banana skin' and \textit{ballonvaart} `balloon ride') or conceptually plural (\eg \textit{aardbeienjam} ‘strawberry jam’ and \textit{appeltaart} ‘apple pie’)''.
 The problem with \textit{strawberry jam} is that \textit{strawberry} could address the generic meaning (`strawberry type') or a mass noun version (`strawberry substance'), in which case the numerosity of referents of N1 would be much weaker conceptually.
 We had to assume that there would be more confounding factors in the corpus study than in a controlled experiment.
 Therefore, to be on the safe side, we did not consider hazy cases like these to be internal plurals.
@@ -141,7 +141,7 @@ print(extpl.obs.xt,
 extpl.resid <- extpl.chisq$stdres
 @
 
-A $\chi^2$ test on the contingency table produces a significant result at $\mathrm{sig}=0.05$ ($\chi^2=\Sexpr{nice.float(extpl.chisq$statistic)}$, $df=\Sexpr{min(dim(extpl.chisq$observed))-1}$, $p=\Sexpr{nice.float(extpl.chisq$p.value)}$).
+A $\chi^2$ test on the contingency table produces a significant result at $\textrm{sig}=0.05$ ($\chi^2=\Sexpr{nice.float(extpl.chisq$statistic)}$, $df=\Sexpr{min(dim(extpl.chisq$observed))-1}$, $p=\Sexpr{nice.float(extpl.chisq$p.value)}$).
 However, despite the very large sample size, the p-value is relatively close to $0.05$, and the effect size is quite low at $v=\Sexpr{nice.float(cramer.v(extpl.chisq))}$, which indicates that the effect is probably spurious.
 To make matters worse, an inspection of the symmetrical (standardised) residuals (\Sexpr{nice.float(extpl.resid[1,1])} for plural compounds with NPL and singular compounds with PL as well as \Sexpr{nice.float(extpl.resid[2,1])} for plural compounds with PL and singular compounds with NPL) shows that the spurious effect even has the wrong direction, \ie PL is less frequent in plural compounds than expected under the null hypothesis.
 
@@ -149,17 +149,17 @@ Thus, we have found no evidence to support the external plural hypothesis in the
 There might be item-specific differences between N1s or groups of N1s which take different PLs.
 In order to check for this, we calculated one $\chi^2$ test for each N1 with an approximate sample size of $n=200$ for each test.
 Since we are testing a family of connected hypotheses, p-values need to be corrected (correction for group-wise error).
-We used Šidák's method \parencite{Sidak1967}, which is slightly less conservative than the well-known Bonferroni correction (at least for uncorrelated tests).%
+We used Šidák's method \citep{Sidak1967}, which is slightly less conservative than the well-known Bonferroni correction (at least for uncorrelated tests).%
 \footnote{We also tried Holm's and Hochberg's methods, but the differences between all those methods are small enough that they do not lead to different interpretations of the results.
-Instead of adapting the $\mathrm{sig}$ level, we corrected the p-value directly using $p_{S}=1-(1-p)^m$ where $m$ is the number of tests ($m=\Sexpr{nice.int(nrow(t.plot))}$ in this case).}
-The low counts in some cells in our data make the $\chi^2$ approximation inexact, so we used a Monte Carlo replacement for the traditional $\chi^2$ test \parencite{Hope1968} as implemented in the standard \texttt{chisq.test} function in R \parencite{R}.
+Instead of adapting the $\textrm{sig}$ level, we corrected the p-value directly using $p_{S}=1-(1-p)^m$ where $m$ is the number of tests ($m=\Sexpr{nice.int(nrow(t.plot))}$ in this case).}
+The low counts in some cells in our data make the $\chi^2$ approximation inexact, so we used a Monte Carlo replacement for the traditional $\chi^2$ test \citep{Hope1968} as implemented in the standard \texttt{chisq.test} function in R \citep{R}.
 The procedure calculates these marginal sums and then generates random permutations for the contingency table given the marginals.
 We used $b=\Sexpr{nice.int(num.reps)}$ permutations.
 Finally, the effect sizes ($v$) were calculated and multiplied by the sign of the top left cell of the residual table.
 This means that, in addition to quantifying the magnitude of the effect size, they also reflect whether, for each N1, the co-occurrence of PL and plural semantics on N1 is preferred (positive sign) or dispreferred (negative sign).
 
 These results confirm those of the global test reported above.
-Only one test reaches $\mathrm{sig}=0.05$.
+Only one test reaches $\textrm{sig}=0.05$.
 The effect sizes are centred around $0$ with a mean of $\bar{v}=\Sexpr{nice.float(mean(p.plot$phi))}$, a median of $\tilde{v}=\Sexpr{nice.float(median(p.plot$phi))}$, and a standard deviation of $s(v)=\Sexpr{nice.float(sd(p.plot$phi))}$.
 This is expected in a situation where there are no effects.
 
@@ -226,12 +226,12 @@ legend("bottomright", fill = c("white", "darkorange"),
        cex = the.cex)
 @
 
-A $\chi^2$ test reaches $\mathrm{sig}=0.05$ ($\chi^2=\Sexpr{nice.float(intpl.chisq$statistic)};\Sexpr{nice.float(intpl.chisq.lax$statistic)}$, $df=\Sexpr{min(dim(intpl.chisq$observed))-1};\Sexpr{min(dim(intpl.chisq$observed))-1}$, $p\approx 0;0$).
+A $\chi^2$ test reaches $\textrm{sig}=0.05$ ($\chi^2=\Sexpr{nice.float(intpl.chisq$statistic)};\Sexpr{nice.float(intpl.chisq.lax$statistic)}$, $df=\Sexpr{min(dim(intpl.chisq$observed))-1};\Sexpr{min(dim(intpl.chisq$observed))-1}$, $p\approx 0;0$).
 However, the overall effect size is still not very high at $v=\Sexpr{nice.float(cramer.v(intpl.chisq))};\Sexpr{nice.float(cramer.v(intpl.chisq.lax))}$.
 At least for the lax annotation scheme $v\geq 0.2$, making the effect worthy of mention.
 Individual (per-N1) tests were also calculated with the same parameters as described above for the external plural sub-study.
 Figure~\ref{fig:differenceplcoll} compares the distribution of $v$ values for the external plural sub-study (left) and the internal plural sub-study (right) in the form of a split violin plot.
-Violin plots are extensions of standard box plots; see \textcite{HintzeNelson1998}.
+Violin plots are extensions of standard box plots; see \citet{HintzeNelson1998}.
 The horizontal line represents the median and the black vertical bar the interquartile range (\ie the range of the middle $50\%$ of the sample).
 The additional outer shape represents a kernel density estimate of the sample.
 For the internal plural sub-study, strict and lax annotation are both shown.
@@ -308,7 +308,7 @@ legend("bottomright",
 Even more informative is a closer look at the individual results.
 Figure~\ref{fig:corpuseffects} represents for each N1 the signed effect strength in the internal plural sub-study as the dot's location on the horizontal dimension and the p-value through the colour coding.
 The darker the dot is, the lower the p-value.
-The colour mapping is logarithmic, such that any dot representing a p-value above $\mathrm{sig}=0.05$ is already significantly lighter than the darkest colour.
+The colour mapping is logarithmic, such that any dot representing a p-value above $\textrm{sig}=0.05$ is already significantly lighter than the darkest colour.
 The N1s are arranged in groups defined by their PL.
 The groups are sorted by their mean effect strengths, and within each group N1s are sorted by their effect strengths.
 

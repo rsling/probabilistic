@@ -1,3 +1,4 @@
+% !Rnw root = ../../main.Rnw
 <<setupmsrnscorpus, cache=FALSE, include=FALSE, results='asis'>>=
 opts_knit$set(self.contained=FALSE)
 @
